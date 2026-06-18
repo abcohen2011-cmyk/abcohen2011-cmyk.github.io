@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abby Hammer | Buyer's Agent | Logical Move</title>
+<meta name="description" content="Abby Hammer — Buyer's Agent with Logical Move. Exclusive buyer representation in Salt Lake City, Park City & beyond. No conflicts. Just results." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0d2340;
+    --navy-mid: #1a3a5c;
+    --navy-light: #2a5080;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --white: #ffffff;
+    --off-white: #f7f6f2;
+    --gray-100: #eeecea;
+    --gray-300: #c5c3be;
+    --gray-500: #888580;
+    --gray-700: #4a4844;
+    --text: #1a1816;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --radius: 4px;
+    --radius-lg: 8px;
+    --shadow: 0 2px 16px rgba(13,35,64,0.08);
+    --shadow-lg: 0 8px 40px rgba(13,35,64,0.14);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13,35,64,0.97);
+    backdrop-filter: blur(8px);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    border-bottom: 1px solid rgba(201,168,76,0.25);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius);
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+  /* Hamburger */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 68px; left: 0; right: 0;
+    background: var(--navy);
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 99;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+  .mobile-menu a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu.open { display: flex; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, #1e4878 100%);
+    display: flex;
+    align-items: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 75% 30%, rgba(201,168,76,0.07) 0%, transparent 55%),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.012) 40px,
+        rgba(255,255,255,0.012) 41px
+      );
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 5rem;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+    display: block;
+  }
+  .hero-desc {
+    color: rgba(255,255,255,0.72);
+    font-size: 1.05rem;
+    max-width: 520px;
+    margin-bottom: 2.25rem;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 0.925rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 0.85rem 2rem;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 0.925rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* Profile card in hero */
+  .hero-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp 0.7s ease both;
+    animation-delay: 0.2s;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-card-photo {
+    background: var(--gray-100);
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card-photo svg { opacity: 0.45; }
+  .hero-card-photo-label {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(13,35,64,0.75);
+    color: var(--white);
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+  .hero-card-body { padding: 1.5rem; }
+  .hero-card-body h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+  }
+  .hero-card-body p {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-bottom: 1.25rem;
+  }
+  .hero-card-contact { display: flex; flex-direction: column; gap: 0.6rem; }
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.875rem;
+    color: var(--navy-mid);
+    text-decoration: none;
+  }
+  .contact-row:hover { color: var(--gold); }
+  .contact-icon {
+    width: 32px; height: 32px;
+    background: var(--off-white);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .contact-icon svg { width: 14px; height: 14px; stroke: var(--navy-mid); fill: none; stroke-width: 2; }
+  .hero-card-badge {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--gray-100);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--gray-500);
+  }
+  .hero-card-badge strong { color: var(--navy); font-weight: 500; }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .hero-stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 5rem 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 20px; height: 1px;
+    background: var(--gold);
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--gray-500);
+    max-width: 580px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  /* ─── WHY BUYERS-ONLY ─── */
+  .why-section { background: var(--off-white); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .why-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid var(--gray-100);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .why-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+  .why-icon {
+    width: 44px; height: 44px;
+    background: var(--navy);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .why-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.8; }
+  .why-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+  .why-card p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.7; font-weight: 300; }
+
+  /* ─── SERVICES ─── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .service-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--gray-100);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+  .service-card-header {
+    background: var(--navy);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.1);
+  }
+  .service-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.25);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+  }
+  .service-card-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .service-card-body { padding: 1.75rem; background: var(--white); }
+  .service-card-body p { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 1.25rem; font-weight: 300; line-height: 1.75; }
+  .service-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .service-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+  }
+  .service-features li::before {
+    content: '';
+    display: block;
+    width: 16px; height: 16px;
+    min-width: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.5' stroke='%23c9a84c' stroke-width='1' fill='none'/%3E%3Cpolyline points='5,8 7,10.5 11,6' stroke='%23c9a84c' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    margin-top: 3px;
+  }
+
+  /* ─── PROCESS ─── */
+  .process-section { background: var(--navy); }
+  .process-section .section-title { color: var(--white); }
+  .process-section .section-subtitle { color: rgba(255,255,255,0.5); }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+    margin-top: 3rem;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 30px; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(201,168,76,0.3), transparent);
+  }
+  .process-step { padding: 0 1.5rem 2rem; text-align: center; }
+  .process-step-num {
+    width: 60px; height: 60px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--navy);
+    position: relative;
+    z-index: 1;
+  }
+  .process-step h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+  .process-step p { font-size: 0.85rem; color: rgba(255,255,255,0.45); font-weight: 300; line-height: 1.7; }
+
+  /* ─── MARKETS ─── */
+  .markets-section { background: var(--off-white); }
+  .markets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .market-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-100);
+  }
+  .market-card-img {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .market-slc { background: linear-gradient(135deg, #1a3a5c 0%, #0d2340 100%); }
+  .market-pc  { background: linear-gradient(135deg, #2d4a2a 0%, #1a2e18 100%); }
+  .market-card-img .market-bg-text {
+    position: absolute;
+    font-size: 7rem;
+    opacity: 0.07;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    user-select: none;
+  }
+  .market-card-img span { position: relative; z-index: 1; }
+  .market-card-body { padding: 1.5rem; }
+  .market-card-body h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .market-card-body p { font-size: 0.875rem; color: var(--gray-500); font-weight: 300; line-height: 1.75; margin-bottom: 1rem; }
+  .market-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .market-tag {
+    font-size: 0.72rem;
+    background: var(--off-white);
+    color: var(--navy-mid);
+    border: 1px solid var(--gray-100);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* ─── ABOUT ─── */
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .about-photo-wrap {
+    position: relative;
+  }
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--gray-100);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .about-photo-deco {
+    position: absolute;
+    bottom: -16px; right: -16px;
+    width: 120px; height: 120px;
+    background: var(--gold);
+    border-radius: var(--radius-lg);
+    z-index: -1;
+    opacity: 0.35;
+  }
+  .about-photo-badge {
+    position: absolute;
+    bottom: 20px; left: 20px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    box-shadow: var(--shadow-lg);
+  }
+  .about-photo-badge strong { color: var(--gold); display: block; font-size: 1rem; font-family: var(--font-display); }
+  .about-text .section-title { margin-bottom: 1.25rem; }
+  .about-text p { font-size: 0.95rem; color: var(--gray-500); font-weight: 300; line-height: 1.85; margin-bottom: 1.25rem; }
+  .credentials { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
+  .credential {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+  }
+  .credential-dot {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials-section { background: var(--off-white); }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .testimonial-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid var(--gray-100);
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .testimonial-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 1.25rem; left: 1.75rem;
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--gold);
+    opacity: 0.25;
+    line-height: 1;
+  }
+  .testimonial-text {
+    font-size: 0.925rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+  .testimonial-avatar {
+    width: 40px; height: 40px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .testimonial-name { font-weight: 500; font-size: 0.875rem; color: var(--navy); }
+  .testimonial-role { font-size: 0.78rem; color: var(--gray-500); }
+
+  /* ─── CONTACT ─── */
+  .contact-section { background: var(--navy); }
+  .contact-section .section-title { color: var(--white); }
+  .contact-section .section-subtitle { color: rgba(255,255,255,0.5); margin-bottom: 0; }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 3rem;
+    align-items: start;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+  .contact-info-item { display: flex; align-items: flex-start; gap: 1rem; }
+  .contact-info-icon {
+    width: 44px; height: 44px;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .contact-info-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.8; }
+  .contact-info-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.35); margin-bottom: 0.2rem; }
+  .contact-info-value { font-size: 0.95rem; color: var(--white); font-weight: 400; }
+  .contact-info-value a { color: var(--gold); text-decoration: none; }
+  .contact-info-value a:hover { text-decoration: underline; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; color: rgba(255,255,255,0.45); }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-group select option { background: var(--navy); color: var(--white); }
+  .form-submit {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 0.925rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .form-submit:hover { background: var(--gold-light); }
+  .form-submit svg { width: 16px; height: 16px; stroke: var(--navy); fill: none; stroke-width: 2; }
+  .form-note { font-size: 0.78rem; color: rgba(255,255,255,0.3); margin-top: 0.5rem; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #07131f;
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-card { max-width: 380px; }
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .process-steps::before { display: none; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    section { padding: 3.5rem 1.25rem; }
+  }
+
+  /* Fade-in on scroll */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Abby Hammer <span>| Logical Move</span></a>
+  <ul class="nav-links">
+    <li><a href="#why-buyers-only">Why Buyers-Only</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#markets">Markets</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#why-buyers-only" onclick="toggleMenu()">Why Buyers-Only</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#markets" onclick="toggleMenu()">Markets</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#contact" onclick="toggleMenu()">Get In Touch</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Logical Move Brokerage</div>
+      <h1>
+        Your Advocate.
+        <em>Not Their Agent.</em>
+      </h1>
+      <p class="hero-desc">
+        When you buy a home or commercial property, you deserve someone who works 100% for you — not for the seller, not for the commission, not for both sides of the deal. That's the Logical Move difference.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Schedule a Consultation</a>
+        <a href="#why-buyers-only" class="btn-outline">How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-num">30+</span>
+          <span class="hero-stat-label">Years Combined Experience</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">100%</span>
+          <span class="hero-stat-label">Buyer-Side Only</span>
+        </div>
+        <div>
+          <span class="hero-stat-num" style="font-size:2.5rem;">10+</span>
+          <span class="hero-stat-label">Team Members · Buy · Manage · Invest</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="hero-card">
+      <div class="hero-card-photo">
+        <img src="Headshot.png" alt="Abby Hammer" style="width:100%; height:100%; object-fit:cover; object-position:center top;" />
+      </div>      <div class="hero-card-body">
+        <h3>Abby Hammer</h3>
+        <p>Buyer's Agent · Logical Move Brokerage</p>
+        <div class="hero-card-contact">
+          <a href="tel:4355132171" class="contact-row">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            435-513-2171
+          </a>
+          <a href="mailto:abby@logicalmove.com" class="contact-row">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            abby@logicalmove.com
+          </a>
+        </div>
+        <div class="hero-card-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Serving <strong style="color:var(--navy); margin: 0 3px;">Salt Lake City</strong> &amp; <strong style="color:var(--navy); margin: 0 3px;">Park City</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BUYERS ONLY -->
+<section class="why-section" id="why-buyers-only">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Buyers-Only Advantage</div>
+    <h2 class="section-title">Be Represented,<br>Not Brokered.</h2>
+    <p class="section-subtitle">Most agents represent both buyers and sellers — a fundamental conflict of interest. At Logical Move, we never list or market properties. We only represent you.</p>
+
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Zero Conflict of Interest</h3>
+        <p>Because we never list properties, we are never in a dual agency situation — where one agent claims to represent both the buyer and the seller. Our loyalty is legally and ethically 100% yours.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Unbiased Market Intelligence</h3>
+        <p>When your agent doesn't profit from steering you toward certain listings, you get honest, comprehensive market information — including off-market opportunities and listings that aren't being actively promoted to buyers.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3>Negotiation That Saves You Money</h3>
+        <p>With 30+ years of combined experience negotiating exclusively for buyers, we know every lever. Our track record includes millions in documented client savings across residential and commercial deals.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Expert Timing &amp; Due Diligence</h3>
+        <p>From market timing and property analysis to inspections, title review, and closing coordination — we quarterback the entire process, so you make informed decisions at every step.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>A Network Built for Buyers</h3>
+        <p>Access to off-market opportunities, trusted inspectors, lenders, attorneys, and property managers — all curated over decades to serve one purpose: getting you the best possible outcome.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3>Commercial &amp; Residential Expertise</h3>
+        <p>Whether you're buying your first home, moving up, or acquiring commercial property for your business, our team has deep expertise across both asset classes in Utah's most active markets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-eyebrow">What I Do</div>
+    <h2 class="section-title">Services</h2>
+    <p class="section-subtitle">From your first home purchase to a commercial investment portfolio, I provide dedicated buyer representation and property management across Northern Utah.</p>
+
+    <div class="services-grid">
+      <!-- Commercial -->
+      <div class="service-card fade-in">
+        <div class="service-card-header">
+          <div class="service-tag">Commercial</div>
+          <h3>Commercial Buyer<br>&amp; Tenant Rep</h3>
+        </div>
+        <div class="service-card-body">
+          <p>The deal you negotiate at occupancy often determines your company's long-term success. I represent business owners and investors with the same conflict-free advocacy as Logical Move's proven commercial team.</p>
+          <ul class="service-features">
+            <li>Office, retail, industrial &amp; mixed-use</li>
+            <li>Investment property acquisition</li>
+            <li>Lease negotiation &amp; renewal strategy</li>
+            <li>Market analysis, traffic counts &amp; demographics</li>
+            <li>Build-to-suit &amp; sale-leaseback transactions</li>
+            <li>1031 exchange coordination</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Residential -->
+      <div class="service-card fade-in">
+        <div class="service-card-header">
+          <div class="service-tag">Residential</div>
+          <h3>Home Buyer<br>Representation</h3>
+        </div>
+        <div class="service-card-body">
+          <p>Whether you're a first-time buyer or a seasoned homeowner, I guide you through every step — from neighborhood search to closing — with your interests as the only priority.</p>
+          <ul class="service-features">
+            <li>Comprehensive neighborhood &amp; school analysis</li>
+            <li>Comparative market analysis (CMA) on every offer</li>
+            <li>Expert negotiation on price, terms &amp; contingencies</li>
+            <li>Due diligence coordination (inspections, appraisals)</li>
+            <li>New construction buyer representation</li>
+            <li>Relocation assistance</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Property Management -->
+      <div class="service-card fade-in">
+        <div class="service-card-header">
+          <div class="service-tag">Property Management</div>
+          <h3>Full-Service<br>Property Management</h3>
+        </div>
+        <div class="service-card-body">
+          <p>Once you've acquired your property, I help you protect and grow your investment with professional management focused on Northern Utah.</p>
+          <ul class="service-features">
+            <li>Tenant screening &amp; placement</li>
+            <li>Lease administration &amp; renewals</li>
+            <li>Rent collection &amp; financial reporting</li>
+            <li>Maintenance coordination &amp; vendor oversight</li>
+            <li>Vacancy marketing &amp; leasing</li>
+            <li>Owner portals with real-time reporting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--gold);">How It Works</div>
+    <h2 class="section-title">From First Call to Closing</h2>
+    <p class="section-subtitle">A straightforward process designed around you — transparent at every stage.</p>
+    <div class="process-steps">
+      <div class="process-step fade-in">
+        <div class="process-step-num">1</div>
+        <h4>Free Consultation</h4>
+        <p>We learn your goals, timeline, and budget. No pressure, no obligation — just an honest conversation.</p>
+      </div>
+      <div class="process-step fade-in">
+        <div class="process-step-num">2</div>
+        <h4>Buyer Representation Agreement</h4>
+        <p>You're formally represented. From this point forward, my fiduciary duty is solely to you.</p>
+      </div>
+      <div class="process-step fade-in">
+        <div class="process-step-num">3</div>
+        <h4>Market Survey</h4>
+        <p>We identify all available options — on-market and off — and deliver unbiased analysis on each.</p>
+      </div>
+      <div class="process-step fade-in">
+        <div class="process-step-num">4</div>
+        <h4>Offer &amp; Negotiation</h4>
+        <p>We craft a strategic offer and negotiate hard on price, terms, and contingencies — with your budget in mind.</p>
+      </div>
+      <div class="process-step fade-in">
+        <div class="process-step-num">5</div>
+        <h4>Due Diligence</h4>
+        <p>Inspections, title review, environmental assessments — we quarterback every detail so nothing slips through.</p>
+      </div>
+      <div class="process-step fade-in">
+        <div class="process-step-num">6</div>
+        <h4>Closing &amp; Beyond</h4>
+        <p>We guide you to the finish line — and stay available after closing for property management or your next acquisition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section class="markets-section" id="markets">
+  <div class="section-inner">
+    <div class="section-eyebrow">Where I Work</div>
+    <h2 class="section-title">Local Expertise in Utah's<br>Most Active Markets</h2>
+    <p class="section-subtitle">Deep local knowledge is the edge that wins deals. I live and work in these communities — not just passing through.</p>
+    <div class="markets-grid">
+      <div class="market-card fade-in">
+        <div class="market-card-img market-slc">
+          <span class="market-bg-text">SLC</span>
+          <span>Salt Lake City</span>
+        </div>
+        <div class="market-card-body">
+          <h3>Salt Lake &amp; Surrounding Areas</h3>
+          <p>From single-family homes in established neighborhoods to multi-family investment properties, retail storefronts, and industrial space — the Salt Lake metro offers one of the most diverse real estate landscapes in the West. Every corner of it, covered.</p>
+          <div class="market-tags">
+            <span class="market-tag">Residential</span>
+            <span class="market-tag">Commercial</span>
+            <span class="market-tag">Property Management</span>
+            <span class="market-tag">Investment</span>
+          </div>
+        </div>
+      </div>
+      <div class="market-card fade-in">
+        <div class="market-card-img market-pc">
+          <span class="market-bg-text">PC</span>
+          <span>Park City</span>
+        </div>
+        <div class="market-card-body">
+          <h3>Park City &amp; Summit County</h3>
+          <p>Park City buyers come with different goals — a primary residence, a ski condo, a short-term rental, or a long-term investment property. Full-service representation and property management across all of it, including the unique regulations, HOA considerations, and seasonal market dynamics that make Summit County unlike anywhere else in Utah.</p>
+          <div class="market-tags">
+            <span class="market-tag">Luxury Residential</span>
+            <span class="market-tag">Vacation Rentals</span>
+            <span class="market-tag">Commercial</span>
+            <span class="market-tag">Property Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-inner">
+      <div class="about-photo-wrap">
+        <div class="about-photo">
+          <img src="Headshot.png" alt="Abby Hammer" style="width:100%; height:100%; object-fit:cover; object-position:center top;" />
+          <div class="about-photo-badge">
+            <strong>Abby Hammer</strong>
+            Buyer's Agent · Logical Move
+          </div>
+        </div>
+        <div class="about-photo-deco"></div>
+      </div>
+      <div class="about-text">
+        <div class="section-eyebrow">About Me</div>
+        <h2 class="section-title">An Advocate Who's<br>Truly in Your Corner</h2>
+        <p>I joined Logical Move because their model matched my values: you can't fully advocate for a buyer if you're also trying to sell properties. It's that simple. When I work with you, I work <em>only</em> for you.</p>
+        <p>As a buyer's agent with Logical Move, I'm backed by a brokerage with 30+ years of combined experience and a proven track record of saving clients significant money across residential and commercial transactions throughout Utah.</p>
+        <p>I specialize in the Salt Lake and Park City markets — two very different markets that reward local expertise. Whether you're buying your first home, upgrading, investing, or acquiring commercial space for your business, I bring the same dedication to every transaction.</p>
+        <div class="credentials">
+          <div class="credential">
+            <div class="credential-dot"></div>
+            <span>Licensed Utah Real Estate Agent</span>
+          </div>
+          <div class="credential">
+            <div class="credential-dot"></div>
+            <span>Affiliated with Logical Move — Utah's premier buyers-only brokerage</span>
+          </div>
+          <div class="credential">
+            <div class="credential-dot"></div>
+            <span>Residential &amp; commercial buyer representation</span>
+          </div>
+          <div class="credential">
+            <div class="credential-dot"></div>
+            <span>Property management — Salt Lake &amp; Park City markets</span>
+          </div>
+          <div class="credential">
+            <div class="credential-dot"></div>
+            <span>Member, Utah Association of Realtors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" style="display:none;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Client Stories</div>
+    <h2 class="section-title">What Clients Say</h2>
+    <p class="section-subtitle">Placeholder testimonials — replace these with real client reviews as you collect them.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-text">Abby was incredible to work with. As first-time buyers, we were nervous about the process — she walked us through every step, negotiated hard on our behalf, and we ended up under our budget in a home we love. Knowing she worked only for us made all the difference.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MJ</div>
+          <div>
+            <div class="testimonial-name">Mike &amp; Jennifer T.</div>
+            <div class="testimonial-role">First-time home buyers · Salt Lake City</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-text">We were relocating from out of state and needed someone who really knew the Park City market. Abby gave us an honest, thorough picture of every neighborhood we considered. No hype, no steering — just facts and advice. We found exactly the right property.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SR</div>
+          <div>
+            <div class="testimonial-name">Sandra R.</div>
+            <div class="testimonial-role">Relocation buyer · Park City</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <p class="testimonial-text">Abby helped us acquire commercial space for our second location. Her knowledge of the Salt Lake market and her negotiation skills saved us tens of thousands. I'd never go through a traditional agent again after seeing what buyers-only representation actually looks like.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">DL</div>
+          <div>
+            <div class="testimonial-name">David L.</div>
+            <div class="testimonial-role">Commercial buyer · South Jordan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--gold);">Let's Connect</div>
+    <h2 class="section-title">Ready to Buy Smart?</h2>
+    <p class="section-subtitle">Schedule a free, no-obligation consultation. I'll listen to your goals and show you exactly how buyers-only representation works in your favor.</p>
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Phone / Text</div>
+            <div class="contact-info-value"><a href="tel:4355132171">435-513-2171</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value"><a href="mailto:abby@logicalmove.com">abby@logicalmove.com</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Markets Served</div>
+            <div class="contact-info-value">Salt Lake City &amp; Park City, Utah</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Response Time</div>
+            <div class="contact-info-value">Typically within a few hours</div>
+          </div>
+        </div>
+        <div style="margin-top:1rem; padding: 1.5rem; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius-lg);">
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); line-height:1.7; font-weight:300;">
+            <strong style="color:var(--gold); display:block; margin-bottom:0.4rem;">No pressure. No obligation.</strong>
+            A consultation is just a conversation. Tell me what you're looking for, and I'll give you an honest picture of the market and how I can help.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(801) 555-0000" />
+          </div>
+          <div class="form-group">
+            <label for="interest">I'm Interested In</label>
+            <select id="interest" name="interest">
+              <option value="">Select one...</option>
+              <option>Buying a home (Salt Lake area)</option>
+              <option>Buying a home (Park City area)</option>
+              <option>Commercial buyer representation</option>
+              <option>Property management</option>
+              <option>Investment property</option>
+              <option>Just exploring my options</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Me About Your Goals</label>
+            <textarea id="message" name="message" placeholder="What are you looking for? Timeline, budget range, any specifics — the more you share, the better I can help."></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Send Message
+            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="form-note">Your information is never sold or shared. I'll be in touch within a few hours.</p>
+        </form>
+        <div id="formSuccess" style="display:none; background:rgba(29,158,117,0.12); border:1px solid rgba(29,158,117,0.3); border-radius:var(--radius-lg); padding:1.5rem; text-align:center;">
+          <p style="color:#5dcaa5; font-weight:500; margin-bottom:0.4rem;">Message sent!</p>
+          <p style="color:rgba(255,255,255,0.5); font-size:0.875rem;">Thanks for reaching out. I'll be in touch shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="#top" class="footer-logo">Abby Hammer <span>| Logical Move</span></a>
+    <p class="footer-text">© 2025 Abby Hammer · Logical Move Brokerage · Licensed in Utah</p>
+    <div class="footer-links">
+      <a href="https://logicalmove.com" target="_blank" rel="noopener">LogicalMove.com</a>
+      <a href="mailto:abby@logicalmove.com">Email Abby</a>
+      <a href="tel:4355132171">435-513-2171</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  document.querySelector('.contact-form').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+  // To connect a real form backend, replace this with a fetch() call to
+  // Formspree (https://formspree.io), Netlify Forms, or EmailJS.
+}
+
+// Fade-in on scroll
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.12 }
+);
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
