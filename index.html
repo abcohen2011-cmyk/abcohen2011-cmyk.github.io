@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Abby Hammer | Buyer's Agent | Logical Move</title>
-<meta name="description" content="Abby Hammer — Buyer's Agent with Logical Move. Exclusive buyer representation in Salt Lake City, Park City & beyond. No conflicts. Just results." />
+<title>Hammer Realty | Abby Hammer | Buyer's Agent</title>
+<meta name="description" content="Hammer Realty, a division of Logical Move Brokerage — Abby Hammer, Buyer's Agent. Exclusive buyer representation in Salt Lake City, Park City & beyond. No conflicts. Just results." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -445,7 +445,7 @@
     color: var(--white);
     line-height: 1.2;
   }
-  .service-card-body { padding: 1.75rem; background: var(--white); }
+  .service-card-body { padding: 1.75rem; background: var(--white); display: flex; flex-direction: column; }
   .service-card-body p { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 1.25rem; font-weight: 300; line-height: 1.75; }
   .service-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
   .service-features li {
@@ -464,6 +464,21 @@
     background-size: contain;
     margin-top: 3px;
   }
+  .service-learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: var(--navy);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    transition: color 0.2s, gap 0.2s;
+  }
+  .service-learn-more:hover { color: var(--navy-light); gap: 0.75rem; }
+  .service-learn-more svg { flex-shrink: 0; }
 
   /* ─── PROCESS ─── */
   .process-section { background: var(--navy); }
@@ -798,7 +813,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Abby Hammer <span>| Logical Move</span></a>
+  <a href="#" class="nav-logo">Hammer Realty <span>| A Division of Logical Move</span></a>
   <ul class="nav-links">
     <li><a href="#why-buyers-only">Why Buyers-Only</a></li>
     <li><a href="#services">Services</a></li>
@@ -822,13 +837,13 @@
 <section class="hero" id="top">
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow">Logical Move Brokerage</div>
+      <div class="hero-eyebrow">Hammer Realty · A Division of Logical Move</div>
       <h1>
         Your Advocate.
         <em>Not Their Agent.</em>
       </h1>
       <p class="hero-desc">
-        When you buy a home or commercial property, you deserve someone who works 100% for you — not for the seller, not for the commission, not for both sides of the deal. That's the Logical Move difference.
+        When you buy a home or commercial property, you deserve someone who works 100% for you — not for the seller, not for the commission, not for both sides of the deal. That's the Hammer Realty difference.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Schedule a Consultation</a>
@@ -856,7 +871,7 @@
         <img src="Headshot.png" alt="Abby Hammer" style="width:100%; height:100%; object-fit:cover; object-position:center 15%;" />
       </div>      <div class="hero-card-body">
         <h3>Abby Hammer</h3>
-        <p>Buyer's Agent · Logical Move Brokerage</p>
+        <p>Buyer's Agent · Hammer Realty</p>
         <div class="hero-card-contact">
           <a href="tel:4355132171" class="contact-row">
             <div class="contact-icon">
@@ -885,7 +900,7 @@
   <div class="section-inner">
     <div class="section-eyebrow">The Buyers-Only Advantage</div>
     <h2 class="section-title">Be Represented,<br>Not Brokered.</h2>
-    <p class="section-subtitle">Most agents represent both buyers and sellers — a fundamental conflict of interest. At Logical Move, we never list or market properties. We only represent you.</p>
+    <p class="section-subtitle">Most agents represent both buyers and sellers — a fundamental conflict of interest. At Hammer Realty, we never list or market properties. We only represent you.</p>
 
     <div class="why-grid">
       <div class="why-card fade-in">
@@ -949,7 +964,7 @@
           <h3>Commercial Buyer<br>&amp; Tenant Rep</h3>
         </div>
         <div class="service-card-body">
-          <p>The deal you negotiate at occupancy often determines your company's long-term success. I represent business owners and investors with the same conflict-free advocacy as Logical Move's proven commercial team.</p>
+          <p>The deal you negotiate at occupancy often determines your company's long-term success. I represent business owners and investors with the same conflict-free advocacy as Hammer Realty's proven commercial team.</p>
           <ul class="service-features">
             <li>Office, retail, industrial &amp; mixed-use</li>
             <li>Investment property acquisition</li>
@@ -992,8 +1007,11 @@
             <li>Rent collection &amp; financial reporting</li>
             <li>Maintenance coordination &amp; vendor oversight</li>
             <li>Vacancy marketing &amp; leasing</li>
-            <li>Owner portals with real-time reporting</li>
           </ul>
+          <a href="property-management.html" class="service-learn-more">
+            Learn More About Property Management
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -1093,7 +1111,7 @@
           <img src="Headshot.png" alt="Abby Hammer" style="width:100%; height:100%; object-fit:cover; object-position:center top;" />
           <div class="about-photo-badge">
             <strong>Abby Hammer</strong>
-            Buyer's Agent · Logical Move
+            Buyer's Agent · Hammer Realty
           </div>
         </div>
         <div class="about-photo-deco"></div>
@@ -1101,9 +1119,6 @@
       <div class="about-text">
         <div class="section-eyebrow">About Me</div>
         <h2 class="section-title">An Advocate Who's<br>Truly in Your Corner</h2>
-        <p>I joined Logical Move because their model matched my values: you can't fully advocate for a buyer if you're also trying to sell properties. It's that simple. When I work with you, I work <em>only</em> for you.</p>
-        <p>As a buyer's agent with Logical Move, I'm backed by a brokerage with 30+ years of combined experience and a proven track record of saving clients significant money across residential and commercial transactions throughout Utah.</p>
-        <p>I specialize in the Salt Lake and Park City markets — two very different markets that reward local expertise. Whether you're buying your first home, upgrading, investing, or acquiring commercial space for your business, I bring the same dedication to every transaction.</p>
         <div class="credentials">
           <div class="credential">
             <div class="credential-dot"></div>
@@ -1111,7 +1126,7 @@
           </div>
           <div class="credential">
             <div class="credential-dot"></div>
-            <span>Affiliated with Logical Move — Utah's premier buyers-only brokerage</span>
+            <span>Hammer Realty — a division of Logical Move, Utah's premier buyers-only brokerage</span>
           </div>
           <div class="credential">
             <div class="credential-dot"></div>
@@ -1175,9 +1190,9 @@
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="section-inner">
-    <div class="section-eyebrow" style="color:var(--gold);">Let's Connect</div>
-    <h2 class="section-title">Ready to Buy Smart?</h2>
-    <p class="section-subtitle">Schedule a free, no-obligation consultation. I'll listen to your goals and show you exactly how buyers-only representation works in your favor.</p>
+    <div class="section-eyebrow" style="color:var(--gold);">Get In Touch</div>
+    <h2 class="section-title">Let's Talk</h2>
+    <p class="section-subtitle">Whether you're buying, leasing, or looking for property management, send a message and I'll get back to you to talk through what you need.</p>
     <div class="contact-inner">
       <div class="contact-info">
         <div class="contact-info-item">
@@ -1218,15 +1233,15 @@
         </div>
         <div style="margin-top:1rem; padding: 1.5rem; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius-lg);">
           <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); line-height:1.7; font-weight:300;">
-            <strong style="color:var(--gold); display:block; margin-bottom:0.4rem;">No pressure. No obligation.</strong>
-            A consultation is just a conversation. Tell me what you're looking for, and I'll give you an honest picture of the market and how I can help.
+            <strong style="color:var(--gold); display:block; margin-bottom:0.4rem;">How to Reach Me</strong>
+            Call or text anytime, send an email, or fill out the form — whichever is easiest for you. I'll follow up to learn more about what you're working on.
           </p>
         </div>
       </div>
 
       <!-- Contact Form -->
       <div>
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjgdnelv" method="POST" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
@@ -1279,8 +1294,8 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <a href="#top" class="footer-logo">Abby Hammer <span>| Logical Move</span></a>
-    <p class="footer-text">© 2025 Abby Hammer · Logical Move Brokerage · Licensed in Utah</p>
+    <a href="#top" class="footer-logo">Hammer Realty <span>| A Division of Logical Move</span></a>
+    <p class="footer-text">© 2025 Hammer Realty · A Division of Logical Move Brokerage · Licensed in Utah</p>
     <div class="footer-links">
       <a href="https://logicalmove.com" target="_blank" rel="noopener">LogicalMove.com</a>
       <a href="mailto:abby@logicalmove.com">Email Abby</a>
@@ -1294,12 +1309,25 @@ function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
 }
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
-  document.querySelector('.contact-form').style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
-  // To connect a real form backend, replace this with a fetch() call to
-  // Formspree (https://formspree.io), Netlify Forms, or EmailJS.
+  const form = e.target;
+  const data = new FormData(form);
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      alert('Something went wrong sending your message. Please try emailing or calling directly.');
+    }
+  } catch (error) {
+    alert('Something went wrong sending your message. Please try emailing or calling directly.');
+  }
 }
 
 // Fade-in on scroll
