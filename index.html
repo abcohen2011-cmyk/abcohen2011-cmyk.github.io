@@ -81,6 +81,37 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--charcoal); }
+.nav-dropdown { position: relative; }
+.nav-dropdown > a::after { content: ' ▾'; font-size: 0.6rem; vertical-align: middle; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--warm-white);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 0.5rem 0;
+  min-width: 190px;
+  white-space: nowrap;
+  z-index: 200;
+}
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.78rem;
+  color: var(--stone);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.15s, background 0.15s;
+  border-bottom: 1px solid var(--stone-light);
+}
+.nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown-menu a:hover { color: var(--charcoal); background: var(--cream); }
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
 .nav-cta {
   font-size: 0.8rem !important;
   font-weight: 500 !important;
@@ -941,6 +972,14 @@ footer {
   <div class="nav-inner">
     <a href="#" class="nav-logo">Hammer Realty <span>&amp; Co.</span></a>
     <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="manage.html">Manage</a>
+        <div class="nav-dropdown-menu">
+          <a href="vacation-rental-management.html">Vacation Rental</a>
+          <a href="home-watch.html">Home Watch</a>
+          <a href="grocery-stocking.html">Grocery Stocking</a>
+        </div>
+      </li>
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#rentals">Rentals</a></li>
@@ -953,6 +992,10 @@ footer {
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
+  <a href="manage.html" onclick="toggleMenu()">Manage</a>
+  <a href="vacation-rental-management.html" onclick="toggleMenu()" style="padding-left:1.5rem;font-size:0.85rem;color:var(--stone);">↳ Vacation Rental</a>
+  <a href="home-watch.html" onclick="toggleMenu()" style="padding-left:1.5rem;font-size:0.85rem;color:var(--stone);">↳ Home Watch</a>
+  <a href="grocery-stocking.html" onclick="toggleMenu()" style="padding-left:1.5rem;font-size:0.85rem;color:var(--stone);">↳ Grocery Stocking</a>
   <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
   <a href="#rentals" onclick="toggleMenu()">Rentals</a>
