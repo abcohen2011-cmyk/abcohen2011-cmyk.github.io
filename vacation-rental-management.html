@@ -34,16 +34,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.6;}
 
-nav{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:env(safe-area-inset-top,0px);z-index:50;}
-.nav-inner{max-width:var(--max);margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px;}
-.nav-logo{font-family:'DM Serif Display',Georgia,serif;font-size:17px;color:var(--fg);text-decoration:none;white-space:nowrap;}
-.nav-logo em{color:var(--sage);font-style:normal;}
-.nav-links{display:flex;gap:28px;list-style:none;}
-.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.15s;}
-.nav-links a:hover,.nav-links a.active{color:var(--fg);}
-.nav-cta{font-size:13px;font-weight:500;color:var(--sage-dark);text-decoration:none;border:1px solid var(--sage);border-radius:var(--radius);padding:7px 16px;white-space:nowrap;transition:background 0.15s;}
-.nav-cta:hover{background:var(--sage-light);}
-@media(max-width:700px){.nav-links{display:none;}}
+@media(max-width:700px){}
 
 .hero{background:var(--cream);border-bottom:1px solid var(--border);padding:72px max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
 .hero-inner{max-width:var(--max);margin:0 auto;}
@@ -135,24 +126,68 @@ footer{background:var(--charcoal);color:var(--stone-light);padding:40px max(16px
 .footer-links{display:flex;flex-direction:column;gap:8px;}
 .footer-links a{font-size:13px;color:var(--stone-light);text-decoration:none;transition:color 0.15s;}
 .footer-links a:hover{color:#fff;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--stone-light);height:64px;display:flex;align-items:center;}
+.nav-inner{max-width:var(--max,1200px);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 max(1.5rem,env(safe-area-inset-left,0px));padding-right:max(1.5rem,env(safe-area-inset-right,0px));}
+.nav-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.05rem;color:var(--charcoal,#1E1E1C);text-decoration:none;letter-spacing:-0.01em;white-space:nowrap;}
+.nav-logo em,.nav-logo span{color:var(--sage,#7A9E87);font-style:normal;}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none;}
+.nav-links a{font-size:0.78rem;font-weight:400;color:var(--stone,#8C8880);text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--charcoal,#1E1E1C);}
+.nav-dropdown{position:relative;}
+.nav-dropdown>a::after{content:' ▾';font-size:0.58rem;vertical-align:middle;}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:var(--warm-white,#FAFAF8);border:1px solid var(--stone-light,#D6D3CE);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.08);padding:0.4rem 0;min-width:185px;white-space:nowrap;z-index:200;}
+.nav-dropdown-menu a{display:block;padding:0.5rem 1.2rem;font-size:0.75rem;color:var(--stone,#8C8880);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.15s,background 0.15s;border-bottom:1px solid var(--stone-light,#D6D3CE);}
+.nav-dropdown-menu a:last-child{border-bottom:none;}
+.nav-dropdown-menu a:hover{color:var(--charcoal,#1E1E1C);background:var(--cream,#F5F3EE);}
+.nav-dropdown:hover .nav-dropdown-menu{display:block;}
+.nav-cta{font-size:0.78rem!important;font-weight:500!important;color:var(--warm-white,#FAFAF8)!important;background:var(--charcoal,#1E1E1C);padding:0.45rem 1.1rem;border-radius:3px;letter-spacing:0.02em!important;text-transform:none!important;transition:background 0.2s!important;text-decoration:none;white-space:nowrap;}
+.nav-cta:hover{background:var(--sage-dark,#5C7D69)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--charcoal,#1E1E1C);}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--warm-white,#FAFAF8);border-bottom:1px solid var(--stone-light,#D6D3CE);padding:1.25rem 1.5rem;flex-direction:column;gap:0;z-index:99;}
+.mobile-menu a{font-size:0.92rem;color:var(--charcoal,#1E1E1C);text-decoration:none;padding:0.55rem 0;border-bottom:1px solid var(--stone-light,#D6D3CE);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a.sub{padding-left:1.25rem;font-size:0.82rem;color:var(--stone,#8C8880);}
+.mobile-menu.open{display:flex;}
+@media(max-width:700px){.nav-links{display:none;}.hamburger{display:flex;}}
 </style>
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="https://hammerrealtyutah.com">Hammer Realty <em>&</em> Co.</a>
+    <a href="https://hammerrealtyutah.com" class="nav-logo">Hammer Realty <em>&amp;</em> Co.</a>
     <ul class="nav-links">
       <li><a href="https://hammerrealtyutah.com/#pillars">Buy</a></li>
       <li><a href="https://hammerrealtyutah.com/#pillars">Build</a></li>
-      <li><a href="/manage.html" class="active">Manage</a></li>
+      <li class="nav-dropdown">
+        <a href="/manage.html">Manage</a>
+        <div class="nav-dropdown-menu">
+          <a href="/vacation-rental-management.html" class="active">Vacation Rental</a>
+          <a href="/home-watch.html">Home Watch</a>
+          <a href="/grocery-stocking.html">Grocery Stocking</a>
+        </div>
+      </li>
       <li><a href="https://hammerrealtyutah.com/#about">About</a></li>
       <li><a href="https://hammerrealtyutah.com/#portfolio">Portfolio</a></li>
       <li><a href="https://hammerrealtyutah.com/#reviews">Reviews</a></li>
+      <li><a href="https://hammerrealtyutah.com/#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
-    <a class="nav-cta" href="#inquire">Get Started →</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
-
-<!-- Hero -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://hammerrealtyutah.com/#pillars" onclick="toggleMenu()">Buy</a>
+  <a href="https://hammerrealtyutah.com/#pillars" onclick="toggleMenu()">Build</a>
+  <a href="/manage.html" onclick="toggleMenu()">Manage</a>
+  <a href="/vacation-rental-management.html" onclick="toggleMenu()" class="sub">↳ Vacation Rental</a>
+  <a href="/home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
+  <a href="/grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
+  <a href="https://hammerrealtyutah.com/#about" onclick="toggleMenu()">About</a>
+  <a href="https://hammerrealtyutah.com/#portfolio" onclick="toggleMenu()">Portfolio</a>
+  <a href="https://hammerrealtyutah.com/#reviews" onclick="toggleMenu()">Reviews</a>
+  <a href="https://hammerrealtyutah.com/#contact" onclick="toggleMenu()">Get in Touch</a>
+</div><!-- Hero -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Vacation Rental Co-Hosting · Park City & Deer Valley</div>
@@ -437,5 +472,8 @@ function submitVR() {
       if (r.ok) { document.getElementById('vrForm').hidden=true; document.getElementById('vrSuccess').hidden=false; }
       else { alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.'); }
     }).catch(()=>{ alert('Could not send. Email abby@hammerrealtyutah.com or call (435) 513-2171.'); });
+}
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
 }
 </script>
