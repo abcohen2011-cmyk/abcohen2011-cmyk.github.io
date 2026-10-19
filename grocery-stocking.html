@@ -599,6 +599,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
 .mobile-menu a.sub{padding-left:1.25rem;font-size:0.82rem;color:var(--stone,#8C8880);}
 .mobile-menu.open{display:flex;}
 @media(max-width:700px){.nav-links{display:none;}.hamburger{display:flex;}}
+
+/* PHOTO BAND */
+.photo-band{width:100%;overflow:hidden;line-height:0;position:relative;}
+.photo-band img{width:100%;height:400px;object-fit:cover;object-position:center;display:block;}
+@media(max-width:700px){.photo-band img{height:220px;}}
 </style>
 
 <!-- Nav -->
@@ -659,6 +664,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
     </div>
   </div>
 </section>
+
+<!-- PHOTO BAND -->
+<div class="photo-band">
+  <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=80&auto=format&fit=crop&crop=center" alt="Beautiful stocked kitchen interior" loading="lazy"/>
+</div>
 
 <!-- How it works -->
 <section class="section">
