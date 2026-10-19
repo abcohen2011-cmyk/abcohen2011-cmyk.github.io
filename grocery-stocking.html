@@ -1,0 +1,1056 @@
+<title>Park City Grocery Stocking</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+/* ─── Design tokens — matches hammerrealtyutah.com exactly ─── */
+:root {
+  --cream:       #F5F3EE;
+  --warm-white:  #FAFAF8;
+  --charcoal:    #1E1E1C;
+  --stone:       #8C8880;
+  --stone-light: #D6D3CE;
+  --sage:        #7A9E87;
+  --sage-light:  #EBF0EC;
+  --sage-dark:   #5C7D69;
+  --radius:      3px;
+  --radius-lg:   8px;
+  --max:         1080px;
+
+  --bg:          var(--warm-white);
+  --surface:     #FFFFFF;
+  --fg:          var(--charcoal);
+  --muted:       var(--stone);
+  --border:      var(--stone-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:        #171715;
+    --surface:   #1E1E1C;
+    --fg:        #F0EDE8;
+    --muted:     #7A7772;
+    --border:    #333330;
+    --cream:     #1E1E1C;
+    --warm-white:#171715;
+    --sage-light:#1A2B1F;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:        #171715;
+  --surface:   #1E1E1C;
+  --fg:        #F0EDE8;
+  --muted:     #7A7772;
+  --border:    #333330;
+  --cream:     #1E1E1C;
+  --warm-white:#171715;
+  --sage-light:#1A2B1F;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ─── Nav ─── */
+nav {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 50;
+}
+.nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  gap: 24px;
+}
+.nav-logo {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 17px;
+  color: var(--fg);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-logo em { color: var(--sage); font-style: normal; }
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--fg); }
+.nav-cta {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--sage-dark);
+  text-decoration: none;
+  border: 1px solid var(--sage);
+  border-radius: var(--radius);
+  padding: 7px 16px;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.nav-cta:hover { background: var(--sage-light); }
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+}
+
+/* ─── Hero ─── */
+.hero {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  padding: 72px max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.hero-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 16px;
+}
+.hero-headline {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.12;
+  color: var(--fg);
+  text-wrap: balance;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+.hero-headline em { font-style: italic; color: var(--sage); }
+.hero-desc {
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 520px;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.hero-stat-num {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 30px;
+  color: var(--fg);
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Section layout ─── */
+.section {
+  padding: 72px max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  border-bottom: 1px solid var(--border);
+}
+.section-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+  color: var(--fg);
+  text-wrap: balance;
+  margin-bottom: 16px;
+}
+.section-title em { font-style: italic; }
+.section-desc {
+  color: var(--muted);
+  max-width: 560px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+/* ─── How it works ─── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.step-num {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 36px;
+  color: var(--sage);
+  line-height: 1;
+}
+.step-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--fg);
+}
+.step-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ─── Pricing cards ─── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.pricing-card.featured {
+  border-color: var(--sage);
+  background: var(--sage-light);
+}
+.pricing-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  margin-bottom: 16px;
+}
+.pricing-name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 22px;
+  color: var(--fg);
+  margin-bottom: 8px;
+}
+.pricing-price {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 4px;
+}
+.pricing-price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.pricing-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pricing-features li {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.pricing-features li::before {
+  content: "✓";
+  color: var(--sage);
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.pricing-note {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 16px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  line-height: 1.6;
+}
+
+/* ─── Add-ons ─── */
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.addon-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  background: var(--surface);
+}
+.addon-price {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 24px;
+  color: var(--sage-dark);
+  margin-bottom: 6px;
+}
+.addon-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--fg);
+  margin-bottom: 4px;
+}
+.addon-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ─── Booking section ─── */
+.booking-section {
+  background: var(--cream);
+}
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+@media (max-width: 760px) {
+  .booking-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+.booking-intro h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.2;
+  color: var(--fg);
+  text-wrap: balance;
+  margin-bottom: 16px;
+}
+.booking-intro h2 em { font-style: italic; }
+.booking-intro p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.booking-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.booking-checklist li {
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.booking-checklist li::before {
+  content: "→";
+  color: var(--sage);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ─── Form ─── */
+.booking-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+.booking-form h3 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 20px;
+  color: var(--fg);
+  margin-bottom: 24px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 13px;
+  font-size: 14px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--fg);
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--sage);
+}
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 480px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* File upload */
+.file-upload-area {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  background: var(--bg);
+}
+.file-upload-area:hover,
+.file-upload-area.drag-over {
+  border-color: var(--sage);
+  background: var(--sage-light);
+}
+.file-upload-area input[type="file"] {
+  display: none;
+}
+.file-upload-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.file-upload-text {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.file-upload-text strong {
+  color: var(--sage-dark);
+}
+.file-upload-accepted {
+  font-size: 12px;
+  color: var(--stone);
+  margin-top: 6px;
+}
+.file-selected {
+  font-size: 13px;
+  color: var(--sage-dark);
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Calendar placeholder */
+.calendar-placeholder {
+  border: 1px dashed var(--sage);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  background: var(--sage-light);
+  margin-bottom: 18px;
+}
+.calendar-placeholder p {
+  font-size: 13px;
+  color: var(--sage-dark);
+  line-height: 1.6;
+}
+.calendar-placeholder strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: var(--sage-dark);
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.slot-btn {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 13px;
+  font-family: 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s;
+}
+.slot-btn:hover { border-color: var(--sage); color: var(--sage-dark); }
+.slot-btn.selected { border-color: var(--sage); background: var(--sage-light); color: var(--sage-dark); font-weight: 600; }
+
+.form-submit {
+  width: 100%;
+  background: var(--charcoal);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.15s;
+}
+.form-submit:hover { background: var(--sage-dark); }
+
+#formSuccess {
+  background: var(--sage-light);
+  border: 1px solid var(--sage);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  color: var(--sage-dark);
+  font-size: 14px;
+  line-height: 1.6;
+}
+#formSuccess strong {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 8px;
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+/* ─── FAQ ─── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 680px;
+}
+.faq-item {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--border); }
+.faq-q {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--fg);
+  margin-bottom: 8px;
+}
+.faq-a {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ─── Footer ─── */
+footer {
+  background: var(--charcoal);
+  color: var(--stone-light);
+  padding: 40px max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-bottom: max(40px, env(safe-area-inset-bottom, 0px));
+}
+.footer-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+.footer-logo {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.footer-sub {
+  font-size: 12px;
+  color: var(--stone);
+  line-height: 1.6;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-links a {
+  font-size: 13px;
+  color: var(--stone-light);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: #fff; }
+</style>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://hammerrealtyutah.com">Hammer Realty <em>&</em> Co.</a>
+    <ul class="nav-links">
+      <li><a href="https://hammerrealtyutah.com/#pillars">Buy</a></li>
+      <li><a href="https://hammerrealtyutah.com/#pillars">Build</a></li>
+      <li><a href="/manage.html" class="active">Manage</a></li>
+      <li><a href="https://hammerrealtyutah.com/#about">About</a></li>
+      <li><a href="https://hammerrealtyutah.com/#portfolio">Portfolio</a></li>
+      <li><a href="https://hammerrealtyutah.com/#reviews">Reviews</a></li>
+    </ul>
+    <a class="nav-cta" href="#book">Book a Stocking →</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Home Stocking · Park City & Deer Valley</div>
+    <h1 class="hero-headline">Your kitchen, stocked.<br><em>Before you arrive.</em></h1>
+    <p class="hero-desc">Send us your list in any format — a photo, a screenshot, a text file, or plain text. We shop, deliver, and put everything away so your first night feels like home.</p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">24hr</div>
+        <div class="hero-stat-label">Minimum notice</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">$150</div>
+        <div class="hero-stat-label">Grocery minimum</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Stocked & put away</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">Simple from <em>start to finish</em></h2>
+    <p class="section-desc">No forms to fill out item by item. No phone calls to schedule. Just send your list and we handle the rest.</p>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Book your slot</div>
+        <div class="step-desc">Choose a morning or afternoon delivery window at least 24 hours before your arrival. Slots are limited during peak season and holidays — book early.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Send your list</div>
+        <div class="step-desc">Text, screenshot, photo of a handwritten list, PDF — whatever's easiest. Include brand preferences and dietary notes.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">We shop</div>
+        <div class="step-desc">We use Smith's or Whole Foods for most orders. Specialty items or Costco runs are available as an add-on. We'll confirm any substitutions.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Arrive to a full kitchen</div>
+        <div class="step-desc">Everything is delivered, organized, and put away before you arrive. You'll receive a completion photo when we're done.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section" style="background: var(--warm-white);">
+  <div class="section-inner">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Transparent. <em>No surprises.</em></h2>
+    <p class="section-desc">You pay for the groceries at cost, plus our service fee. No markups on groceries, no hidden charges.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card featured">
+        <div class="pricing-badge">For Home Watch & Rental Clients</div>
+        <div class="pricing-name">Member Stocking</div>
+        <div class="pricing-price">+ 20%<span> of grocery total</span></div>
+        <div class="pricing-desc">For current Home Watch or Vacation Rental Management clients. No delivery fee — stocking service is part of the relationship.</div>
+        <ul class="pricing-features">
+          <li>Groceries billed at cost</li>
+          <li>20% service fee</li>
+          <li>No delivery fee</li>
+          <li>Costco add-on available (+$75)</li>
+          <li>$150 grocery minimum</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-badge">One-Time & Public Orders</div>
+        <div class="pricing-name">Standard Stocking</div>
+        <div class="pricing-price">+ 20%<span> + $50 delivery</span></div>
+        <div class="pricing-desc">For guests, visitors, and first-time customers. Book online, send your list, and we handle the rest.</div>
+        <ul class="pricing-features">
+          <li>Groceries billed at cost</li>
+          <li>20% service fee</li>
+          <li>$50 delivery fee</li>
+          <li>Costco add-on available (+$75)</li>
+          <li>$150 grocery minimum</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pricing-note">
+      A grocery estimate is collected at booking. Final charge is adjusted to reflect the actual receipt after delivery. Payment processed securely via Square.
+    </div>
+  </div>
+</section>
+
+<!-- Add-ons -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Add-Ons</div>
+    <h2 class="section-title">A little extra, <em>if you'd like it</em></h2>
+    <p class="section-desc">Available on any order. Add them in the notes field when you book.</p>
+    <div class="addons-grid">
+      <div class="addon-card">
+        <div class="addon-price">+$75</div>
+        <div class="addon-name">Costco Run</div>
+        <div class="addon-desc">We'll make a Costco trip for bulk items. Covers the drive to Salt Lake City and back. Costco items billed at cost + 20%.</div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-price">+$75</div>
+        <div class="addon-name">Liquor Store Run</div>
+        <div class="addon-desc">Wine, spirits, mixers — we'll handle it. Items billed at cost + 20% service fee.</div>
+      </div>
+      <div class="addon-card">
+        <div class="addon-price">$35</div>
+        <div class="addon-name">Fresh-Baked Cookies</div>
+        <div class="addon-desc">A dozen homemade chocolate chip cookies, packaged and waiting in the kitchen when you arrive. A warm welcome.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking -->
+<section class="section booking-section" id="book">
+  <div class="section-inner">
+    <div class="booking-grid">
+      <div class="booking-intro">
+        <div class="section-label">Book a Stocking</div>
+        <h2>Ready when <em>you are</em></h2>
+        <p>Select your delivery window, share your list in any format, and we'll take it from there. We'll confirm your order and send a grocery estimate within a few hours of booking.</p>
+        <ul class="booking-checklist">
+          <li>At least 24 hours notice required</li>
+          <li>Morning (10am–12pm) or afternoon (3pm–5pm) delivery windows</li>
+          <li>List in any format — text, photo, screenshot, file</li>
+          <li>Include brand preferences, dietary notes, store preferences</li>
+          <li>Completion photo sent when we're done</li>
+        </ul>
+      </div>
+      <div>
+        <div class="booking-form" id="bookingForm">
+          <h3>Request a Stocking</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" required placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Smith">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="jane@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(435) 555-0000">
+          </div>
+
+          <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <input type="text" id="address" name="address" required placeholder="123 Mountain Way, Park City, UT">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="arrival">Arrival Date</label>
+              <input type="date" id="arrival" name="arrival" required>
+            </div>
+            <div class="form-group">
+              <label>Preferred Window</label>
+              <div class="slot-grid" style="margin-bottom:0;">
+                <button type="button" class="slot-btn" id="slotMorning" onclick="selectSlot('morning')">Morning<br><span style="font-size:11px;font-weight:400;color:var(--muted)">10am – 12pm</span></button>
+                <button type="button" class="slot-btn" id="slotAfternoon" onclick="selectSlot('afternoon')">Afternoon<br><span style="font-size:11px;font-weight:400;color:var(--muted)">3pm – 5pm</span></button>
+              </div>
+              <input type="hidden" id="slot" name="slot">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="store">Preferred Store</label>
+            <select id="store" name="store">
+              <option value="smiths">Smith's (Kroger)</option>
+              <option value="wholefoods">Whole Foods</option>
+              <option value="no-pref">No preference</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Grocery List</label>
+            <div class="file-upload-area" id="uploadArea" onclick="document.getElementById('listFile').click()" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragleave="handleDragLeave(event)">
+              <input type="file" id="listFile" name="listFile" accept="image/*,.pdf,.txt,.doc,.docx" onchange="handleFileSelect(event)">
+              <div class="file-upload-icon">📋</div>
+              <div class="file-upload-text"><strong>Upload your list</strong><br>or drag and drop here</div>
+              <div class="file-upload-accepted">Photos, screenshots, PDFs, Word docs, text files</div>
+              <div class="file-selected" id="fileSelected" hidden></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="listText">Or type / paste your list</label>
+            <textarea id="listText" name="listText" placeholder="E.g.: Whole milk (organic), eggs, sourdough bread, butter, coffee (Starbucks dark roast), olive oil, pasta..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Brand preferences, dietary notes, add-ons</label>
+            <textarea id="notes" name="notes" placeholder="E.g.: Name brands preferred, no nuts, Costco add-on please, liquor store run for 2 bottles of Meiomi Pinot Noir..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Chocolate Chip Cookies <span style="color:var(--muted);font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;">— $35 per dozen</span></label>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <button type="button" onclick="adjustCookies(-1)" style="width:36px;height:36px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--fg);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">−</button>
+              <span id="cookieQty" style="font-size:18px;font-weight:600;min-width:24px;text-align:center;">0</span>
+              <button type="button" onclick="adjustCookies(1)" style="width:36px;height:36px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);color:var(--fg);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">+</button>
+              <span id="cookieTotal" style="font-size:13px;color:var(--muted);"></span>
+            </div>
+            <div id="cookieStyleRow" style="display:none;gap:10px;">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;font-size:14px;font-weight:400;letter-spacing:0;">
+                <input type="radio" name="cookie_style" value="baked" id="cookieBaked" style="accent-color:var(--sage);" checked> Fresh-baked
+              </label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;font-size:14px;font-weight:400;letter-spacing:0;">
+                <input type="radio" name="cookie_style" value="dough" id="cookieDough" style="accent-color:var(--sage);"> Frozen cookie dough
+              </label>
+            </div>
+            <input type="hidden" id="cookieQtyHidden" name="cookie_dozens" value="0">
+          </div>
+
+          <div class="calendar-placeholder" style="margin-bottom:18px; text-align:left; padding:18px 20px;">
+            <p><strong style="display:block;margin-bottom:6px;">💳 How payment works</strong>After we confirm your booking, we'll send a Square payment link to hold your estimated total. Your card is authorized but not charged. Once we complete the shop, we capture the actual amount — you only pay for what we bought.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="orderType">Order Type</label>
+            <select id="orderType" name="orderType">
+              <option value="standard">Standard (first time / guest) — cost + 20% + $50 delivery</option>
+              <option value="member">Member (Home Watch / Rental client) — cost + 20%</option>
+            </select>
+          </div>
+
+          <p style="font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.5;">After submitting, we'll confirm availability and send a Square payment link for your estimated total. No charge until after delivery.</p>
+          <button type="button" class="form-submit" onclick="submitForm()">Request Stocking →</button>
+        </div>
+        <div id="formSuccess" hidden>
+          <strong>Request received!</strong>
+          We'll review your list and send a grocery estimate within a few hours. If you have questions in the meantime, reach us at <strong>abby@hammerrealtyutah.com</strong> or <strong>(435) 513-2171</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Questions</div>
+    <h2 class="section-title">What people <em>usually ask</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">How do I send my grocery list?</div>
+        <div class="faq-a">Any format works — type it in the box, upload a photo, screenshot, PDF, or Word doc. We'll figure out the rest. Include brand preferences, organic preferences, and any dietary restrictions.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Where do you shop?</div>
+        <div class="faq-a">Smith's (Kroger) and Whole Foods are our primary stores — choose your preference when booking. For bulk items, we can add a Costco run (+$75 for the drive to Salt Lake City). Specialty stores available on request.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does payment work?</div>
+        <div class="faq-a">After we confirm your booking, we'll send a Square link to authorize your card for the estimated total. Your card is held but not charged. Once we complete the shop, we capture the actual amount — adjusted up or down based on the real receipt. If anything changes, we void the hold and nothing is charged.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if an item is out of stock?</div>
+        <div class="faq-a">We'll do our best to find the item at another store or locate a comparable substitute. If we can't track it down, we'll reach out before making a swap. If we can't reach you in time, we'll use our best judgment and note any substitutions in the completion message.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What areas do you serve?</div>
+        <div class="faq-a">Park City, Deer Valley, and the surrounding Summit County area. If you're not sure whether your property is in our range, reach out and we'll confirm.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you put the groceries away?</div>
+        <div class="faq-a">Yes — everything is delivered and put away before you arrive. We'll need access to the property (a code or key arrangement). You'll receive a completion photo when we're done.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Hammer Realty & Co.</div>
+      <div class="footer-sub">A division of Logical Move Brokerage<br>Salt Lake · Davis · Utah · Cache · Summit Counties<br>© 2026 · Utah Licensed Real Estate</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://hammerrealtyutah.com">Home</a>
+      <a href="/manage.html">Manage</a>
+      <a href="/home-watch.html">Home Watch</a>
+      <a href="/vacation-rental-management.html">Rental Management</a>
+      <a href="https://hammerrealtyutah.com/#contact">Contact</a>
+      <a href="tel:4355132171">(435) 513-2171</a>
+      <a href="mailto:abby@hammerrealtyutah.com">abby@hammerrealtyutah.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+let selectedSlot = '';
+let selectedFile = null;
+
+function selectSlot(slot) {
+  selectedSlot = slot;
+  document.getElementById('slot').value = slot;
+  document.getElementById('slotMorning').classList.toggle('selected', slot === 'morning');
+  document.getElementById('slotAfternoon').classList.toggle('selected', slot === 'afternoon');
+}
+
+function handleFileSelect(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  selectedFile = file;
+  const el = document.getElementById('fileSelected');
+  el.textContent = '✓ ' + file.name;
+  el.hidden = false;
+}
+
+function handleDragOver(e) {
+  e.preventDefault();
+  document.getElementById('uploadArea').classList.add('drag-over');
+}
+function handleDragLeave(e) {
+  document.getElementById('uploadArea').classList.remove('drag-over');
+}
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('uploadArea').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (!file) return;
+  selectedFile = file;
+  const el = document.getElementById('fileSelected');
+  el.textContent = '✓ ' + file.name;
+  el.hidden = false;
+}
+
+function submitForm() {
+  const required = ['fname', 'email', 'address', 'arrival'];
+  for (const id of required) {
+    const el = document.getElementById(id);
+    if (!el.value.trim()) {
+      el.focus();
+      el.style.borderColor = '#C0392B';
+      setTimeout(() => el.style.borderColor = '', 2000);
+      return;
+    }
+  }
+
+  // Build Formspree payload via fetch
+  const data = new FormData();
+  data.append('name', document.getElementById('fname').value + ' ' + document.getElementById('lname').value);
+  data.append('email', document.getElementById('email').value);
+  data.append('phone', document.getElementById('phone').value);
+  data.append('address', document.getElementById('address').value);
+  data.append('arrival', document.getElementById('arrival').value);
+  data.append('slot', selectedSlot || 'Not selected');
+  data.append('list_text', document.getElementById('listText').value);
+  data.append('notes', document.getElementById('notes').value);
+  data.append('store', document.getElementById('store').value);
+  const cookieQty = parseInt(document.getElementById('cookieQtyHidden').value);
+  if (cookieQty > 0) {
+    const style = document.querySelector('input[name="cookie_style"]:checked')?.value || 'baked';
+    data.append('cookie_dozens', cookieQty);
+    data.append('cookie_style', style);
+  }
+  data.append('order_type', document.getElementById('orderType').value);
+  if (selectedFile) data.append('list_file', selectedFile);
+
+  // TODO: Replace mdeavdbz with your actual Formspree form ID
+  fetch('https://formspree.io/f/mdeavdbz', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(r => {
+    if (r.ok) {
+      document.getElementById('bookingForm').hidden = true;
+      document.getElementById('formSuccess').hidden = false;
+    } else {
+      alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.');
+    }
+  }).catch(() => {
+    alert('Could not send. Please email abby@hammerrealtyutah.com or call (435) 513-2171.');
+  });
+}
+
+function adjustCookies(delta) {
+  const qty = Math.max(0, parseInt(document.getElementById('cookieQtyHidden').value) + delta);
+  document.getElementById('cookieQtyHidden').value = qty;
+  document.getElementById('cookieQty').textContent = qty;
+  document.getElementById('cookieTotal').textContent = qty > 0 ? `$${qty * 35} total` : '';
+  document.getElementById('cookieStyleRow').style.display = qty > 0 ? 'flex' : 'none';
+}
+
+// Set date minimum to tomorrow
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+document.getElementById('arrival').min = tomorrow.toISOString().split('T')[0];
+</script>

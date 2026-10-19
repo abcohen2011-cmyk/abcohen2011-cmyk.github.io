@@ -1,0 +1,441 @@
+<title>Park City Vacation Rental Co-Hosting</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+:root {
+  --cream:       #F5F3EE;
+  --warm-white:  #FAFAF8;
+  --charcoal:    #1E1E1C;
+  --stone:       #8C8880;
+  --stone-light: #D6D3CE;
+  --sage:        #7A9E87;
+  --sage-light:  #EBF0EC;
+  --sage-dark:   #5C7D69;
+  --radius:      3px;
+  --radius-lg:   8px;
+  --max:         1080px;
+  --bg:          var(--warm-white);
+  --surface:     #FFFFFF;
+  --fg:          var(--charcoal);
+  --muted:       var(--stone);
+  --border:      var(--stone-light);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#171715;--surface:#1E1E1C;--fg:#F0EDE8;--muted:#7A7772;--border:#333330;
+    --cream:#1E1E1C;--warm-white:#171715;--sage-light:#1A2B1F;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:#171715;--surface:#1E1E1C;--fg:#F0EDE8;--muted:#7A7772;--border:#333330;
+  --cream:#1E1E1C;--warm-white:#171715;--sage-light:#1A2B1F;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.6;}
+
+nav{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:env(safe-area-inset-top,0px);z-index:50;}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px;}
+.nav-logo{font-family:'DM Serif Display',Georgia,serif;font-size:17px;color:var(--fg);text-decoration:none;white-space:nowrap;}
+.nav-logo em{color:var(--sage);font-style:normal;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--fg);}
+.nav-cta{font-size:13px;font-weight:500;color:var(--sage-dark);text-decoration:none;border:1px solid var(--sage);border-radius:var(--radius);padding:7px 16px;white-space:nowrap;transition:background 0.15s;}
+.nav-cta:hover{background:var(--sage-light);}
+@media(max-width:700px){.nav-links{display:none;}}
+
+.hero{background:var(--cream);border-bottom:1px solid var(--border);padding:72px max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+.hero-inner{max-width:var(--max);margin:0 auto;}
+.hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);margin-bottom:16px;}
+.hero-headline{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(34px,5vw,56px);line-height:1.1;color:var(--fg);text-wrap:balance;max-width:760px;margin-bottom:20px;}
+.hero-headline em{font-style:italic;color:var(--sage);}
+.hero-desc{color:var(--muted);font-size:16px;max-width:560px;margin-bottom:40px;line-height:1.7;}
+.hero-fee-row{display:flex;gap:48px;flex-wrap:wrap;align-items:center;padding:28px 32px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);max-width:620px;}
+.hero-fee-item{}
+.hero-fee-num{font-family:'DM Serif Display',Georgia,serif;font-size:40px;color:var(--fg);line-height:1;}
+.hero-fee-label{font-size:13px;color:var(--muted);margin-top:4px;}
+.hero-fee-divider{width:1px;height:48px;background:var(--border);}
+.hero-fee-detail{font-size:13px;color:var(--muted);line-height:1.65;max-width:260px;}
+.hero-cta{display:inline-block;margin-top:28px;background:var(--charcoal);color:#fff;text-decoration:none;border-radius:var(--radius);padding:13px 28px;font-size:14px;font-weight:600;letter-spacing:0.04em;transition:background 0.15s;}
+.hero-cta:hover{background:var(--sage-dark);}
+
+.section{padding:72px max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));border-bottom:1px solid var(--border);}
+.section-inner{max-width:var(--max);margin:0 auto;}
+.section-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;}
+.section-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(24px,3vw,34px);line-height:1.2;color:var(--fg);text-wrap:balance;margin-bottom:16px;}
+.section-title em{font-style:italic;}
+.section-desc{color:var(--muted);max-width:560px;margin-bottom:48px;line-height:1.7;}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;}
+.service-card.included{border-left:3px solid var(--sage);}
+.service-tag{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:10px;}
+.service-title{font-weight:600;font-size:16px;color:var(--fg);margin-bottom:8px;}
+.service-desc{font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* What's yours / ours split */
+.split-table{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:740px;}
+@media(max-width:600px){.split-table{grid-template-columns:1fr;}}
+.split-col-head{font-weight:600;font-size:14px;color:var(--fg);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.split-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.split-list li{font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:flex-start;}
+.split-list li::before{content:"→";color:var(--sage);font-weight:600;flex-shrink:0;}
+
+/* Earnings section */
+.earnings-section{background:var(--cream);}
+.earnings-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+@media(max-width:700px){.earnings-grid{grid-template-columns:1fr;gap:32px;}}
+.earnings-example{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;}
+.earnings-example h4{font-family:'DM Serif Display',Georgia,serif;font-size:18px;color:var(--fg);margin-bottom:20px;}
+.earnings-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;}
+.earnings-row:last-of-type{border-bottom:none;}
+.earnings-row.total{font-weight:600;color:var(--fg);padding-top:14px;border-top:2px solid var(--border);}
+.earnings-label{color:var(--muted);}
+.earnings-value{color:var(--fg);font-variant-numeric:tabular-nums;}
+.earnings-value.positive{color:var(--sage-dark);}
+.earnings-value.deduct{color:var(--stone);}
+.earnings-note{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.6;}
+
+/* Inquiry form */
+.inquiry-section{background:var(--warm-white);}
+.inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+@media(max-width:760px){.inquiry-grid{grid-template-columns:1fr;gap:40px;}}
+.inquiry-intro h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(26px,3vw,36px);line-height:1.2;color:var(--fg);text-wrap:balance;margin-bottom:16px;}
+.inquiry-intro h2 em{font-style:italic;}
+.inquiry-intro p{color:var(--muted);line-height:1.7;margin-bottom:20px;font-size:15px;}
+.inquiry-promise{background:var(--sage-light);border:1px solid var(--sage);border-radius:var(--radius-lg);padding:20px 24px;}
+.inquiry-promise strong{color:var(--sage-dark);display:block;margin-bottom:6px;font-size:15px;}
+.inquiry-promise p{font-size:14px;color:var(--sage-dark);line-height:1.6;margin:0;}
+
+.form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;}
+.form-card h3{font-family:'DM Serif Display',Georgia,serif;font-size:20px;color:var(--fg);margin-bottom:24px;}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:18px;}
+.form-group label{font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);}
+.form-group input,.form-group select,.form-group textarea{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:10px 13px;font-size:14px;font-family:'Inter',system-ui,sans-serif;color:var(--fg);outline:none;transition:border-color 0.15s;width:100%;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--sage);}
+.form-group textarea{min-height:90px;resize:vertical;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:480px){.form-row{grid-template-columns:1fr;}}
+.form-submit{width:100%;background:var(--charcoal);color:#fff;border:none;border-radius:var(--radius);padding:14px;font-size:14px;font-weight:600;font-family:'Inter',system-ui,sans-serif;cursor:pointer;letter-spacing:0.04em;transition:background 0.15s;}
+.form-submit:hover{background:var(--sage-dark);}
+#vrSuccess{background:var(--sage-light);border:1px solid var(--sage);border-radius:var(--radius-lg);padding:24px;text-align:center;color:var(--sage-dark);font-size:14px;line-height:1.6;}
+#vrSuccess strong{display:block;font-size:17px;margin-bottom:8px;font-family:'DM Serif Display',Georgia,serif;}
+
+.faq-list{display:flex;flex-direction:column;max-width:680px;}
+.faq-item{border-top:1px solid var(--border);padding:20px 0;}
+.faq-item:last-child{border-bottom:1px solid var(--border);}
+.faq-q{font-weight:600;font-size:15px;color:var(--fg);margin-bottom:8px;}
+.faq-a{font-size:14px;color:var(--muted);line-height:1.7;}
+
+footer{background:var(--charcoal);color:var(--stone-light);padding:40px max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:max(40px,env(safe-area-inset-bottom,0px));}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start;}
+.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:16px;color:#fff;margin-bottom:6px;}
+.footer-sub{font-size:12px;color:var(--stone);line-height:1.6;}
+.footer-links{display:flex;flex-direction:column;gap:8px;}
+.footer-links a{font-size:13px;color:var(--stone-light);text-decoration:none;transition:color 0.15s;}
+.footer-links a:hover{color:#fff;}
+</style>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://hammerrealtyutah.com">Hammer Realty <em>&</em> Co.</a>
+    <ul class="nav-links">
+      <li><a href="https://hammerrealtyutah.com/#pillars">Buy</a></li>
+      <li><a href="https://hammerrealtyutah.com/#pillars">Build</a></li>
+      <li><a href="/manage.html" class="active">Manage</a></li>
+      <li><a href="https://hammerrealtyutah.com/#about">About</a></li>
+      <li><a href="https://hammerrealtyutah.com/#portfolio">Portfolio</a></li>
+      <li><a href="https://hammerrealtyutah.com/#reviews">Reviews</a></li>
+    </ul>
+    <a class="nav-cta" href="#inquire">Get Started →</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Vacation Rental Co-Hosting · Park City & Deer Valley</div>
+    <h1 class="hero-headline">More bookings. <em>Less work.</em> Same property.</h1>
+    <p class="hero-desc">We handle guest communication, calendar management, and the day-to-day coordination of your Park City rental — so you earn more without the inbox full of messages.</p>
+    <div class="hero-fee-row">
+      <div class="hero-fee-item">
+        <div class="hero-fee-num">15%</div>
+        <div class="hero-fee-label">of gross rental income</div>
+      </div>
+      <div class="hero-fee-divider"></div>
+      <div class="hero-fee-detail">Flat co-hosting fee. No setup costs, no monthly minimums. Basics (soap, coffee, paper towels, toilet paper) included. You keep everything else.</div>
+    </div>
+    <a class="hero-cta" href="#inquire">Let's Talk About Your Rental →</a>
+  </div>
+</section>
+
+<!-- What we handle -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">What We Handle</div>
+    <h2 class="section-title">The parts that eat up <em>your time</em></h2>
+    <p class="section-desc">Co-hosting means we're the point of contact for guests — before, during, and after their stay. You stay in the loop without being on call.</p>
+    <div class="services-grid">
+      <div class="service-card included">
+        <div class="service-tag">Included</div>
+        <div class="service-title">Guest Communication</div>
+        <div class="service-desc">Inquiry responses, pre-arrival details, check-in instructions, and post-stay follow-up. Guests get quick, professional replies at any hour.</div>
+      </div>
+      <div class="service-card included">
+        <div class="service-tag">Included</div>
+        <div class="service-title">Calendar Management</div>
+        <div class="service-desc">We maintain your Airbnb / VRBO calendar — blocking dates, coordinating availability, and making sure the schedule stays clean.</div>
+      </div>
+      <div class="service-card included">
+        <div class="service-tag">Included</div>
+        <div class="service-title">Cleaner Coordination</div>
+        <div class="service-desc">We schedule and confirm your cleaning team for every turnover. You keep your cleaners — we just handle the scheduling logistics.</div>
+      </div>
+      <div class="service-card included">
+        <div class="service-tag">Included</div>
+        <div class="service-title">Basic Restocking</div>
+        <div class="service-desc">Soap, coffee, paper towels, and toilet paper restocked as part of the 15% fee. Replacement items (sheets, towels, kitchenware) are separate at cost.</div>
+      </div>
+      <div class="service-card included">
+        <div class="service-tag">Included</div>
+        <div class="service-title">Issue Escalation</div>
+        <div class="service-desc">If a guest has a problem — a broken appliance, a maintenance issue — we coordinate the response with your maintenance team and keep you informed.</div>
+      </div>
+      <div class="service-card included">
+        <div class="service-tag">Included</div>
+        <div class="service-title">Review Management</div>
+        <div class="service-desc">We respond to guest reviews promptly and professionally, helping protect and build your listing's reputation on Airbnb and VRBO.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What you handle vs us -->
+<section class="section" style="background:var(--cream);">
+  <div class="section-inner">
+    <div class="section-label">Responsibilities</div>
+    <h2 class="section-title">What's yours, <em>what's ours</em></h2>
+    <p class="section-desc">Co-hosting is a partnership. Here's how the responsibilities split so expectations stay clear from day one.</p>
+    <div class="split-table">
+      <div>
+        <div class="split-col-head">We handle (Hammer Realty & Co.)</div>
+        <ul class="split-list">
+          <li>Guest messaging & communication</li>
+          <li>Calendar management & blocking</li>
+          <li>Cleaner scheduling & coordination</li>
+          <li>Basic supply restocking</li>
+          <li>Maintenance issue escalation</li>
+          <li>Guest review responses</li>
+          <li>Check-in / check-out logistics</li>
+        </ul>
+      </div>
+      <div>
+        <div class="split-col-head">You handle (the owner)</div>
+        <ul class="split-list">
+          <li>Airbnb / VRBO listing setup & pricing</li>
+          <li>Cleaning team (we schedule them)</li>
+          <li>Maintenance contractors (we schedule them)</li>
+          <li>Replacement supplies at cost</li>
+          <li>Major financial decisions</li>
+          <li>Insurance & taxes</li>
+          <li>HOA rules & compliance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Earnings example -->
+<section class="section earnings-section">
+  <div class="section-inner">
+    <div class="earnings-grid">
+      <div>
+        <div class="section-label">The Math</div>
+        <h2 class="section-title">What a typical month <em>looks like</em></h2>
+        <p style="color:var(--muted);line-height:1.7;margin-bottom:24px;">A Park City 3-bedroom during ski season can earn $6,000–$12,000/month in gross rental income. The 15% co-hosting fee is designed to feel like a no-brainer compared to what you get back in time and expertise.</p>
+        <ul class="split-list">
+          <li>No setup fees or contracts</li>
+          <li>Month-to-month — cancel anytime</li>
+          <li>You see all booking income directly</li>
+          <li>We invoice monthly for the 15%</li>
+        </ul>
+      </div>
+      <div class="earnings-example">
+        <h4>Example: Ski Season Month</h4>
+        <div class="earnings-row">
+          <span class="earnings-label">Gross rental income</span>
+          <span class="earnings-value positive">$8,500</span>
+        </div>
+        <div class="earnings-row">
+          <span class="earnings-label">Co-hosting fee (15%)</span>
+          <span class="earnings-value deduct">− $1,275</span>
+        </div>
+        <div class="earnings-row">
+          <span class="earnings-label">Cleaning fees (pass-through)</span>
+          <span class="earnings-value deduct">− $600</span>
+        </div>
+        <div class="earnings-row">
+          <span class="earnings-label">Platform fees (Airbnb est.)</span>
+          <span class="earnings-value deduct">− $255</span>
+        </div>
+        <div class="earnings-row total">
+          <span>Your net</span>
+          <span class="earnings-value positive">~$6,370</span>
+        </div>
+        <div class="earnings-note">Example only. Actual income varies by listing, pricing strategy, occupancy, and season. Cleaning fees are set by your cleaning team and passed through at cost.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inquiry form -->
+<section class="section inquiry-section" id="inquire">
+  <div class="section-inner">
+    <div class="inquiry-grid">
+      <div class="inquiry-intro">
+        <div class="section-label">Get Started</div>
+        <h2>Tell us about <em>your listing</em></h2>
+        <p>Whether you're brand new to short-term rentals or looking for a co-host to take the load off, we'd love to talk. Fill out the form and we'll follow up within 24 hours.</p>
+        <div class="inquiry-promise">
+          <strong>What to expect after you reach out</strong>
+          <p>We'll schedule a quick call — usually 20–30 minutes — to learn about your listing, discuss your goals, and answer any questions. If it's a good fit, we can typically start within 1–2 weeks.</p>
+        </div>
+      </div>
+      <div>
+        <div class="form-card" id="vrForm">
+          <h3>Rental Co-Hosting Inquiry</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vr-fname">First Name</label>
+              <input type="text" id="vr-fname" name="fname" required placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="vr-lname">Last Name</label>
+              <input type="text" id="vr-lname" name="lname" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="vr-email">Email</label>
+            <input type="email" id="vr-email" name="email" required placeholder="jane@email.com">
+          </div>
+          <div class="form-group">
+            <label for="vr-phone">Phone</label>
+            <input type="tel" id="vr-phone" name="phone" placeholder="(435) 555-0000">
+          </div>
+          <div class="form-group">
+            <label for="vr-address">Property Address</label>
+            <input type="text" id="vr-address" name="address" required placeholder="123 Mountain Way, Park City, UT">
+          </div>
+          <div class="form-group">
+            <label for="vr-platform">Current Platform</label>
+            <select id="vr-platform" name="platform">
+              <option value="">Select one</option>
+              <option value="airbnb">Airbnb</option>
+              <option value="vrbo">VRBO</option>
+              <option value="both">Both Airbnb & VRBO</option>
+              <option value="not-listed">Not listed yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="vr-bedrooms">Bedrooms</label>
+            <select id="vr-bedrooms" name="bedrooms">
+              <option value="">Select one</option>
+              <option value="studio">Studio / 1BR</option>
+              <option value="2br">2 Bedrooms</option>
+              <option value="3br">3 Bedrooms</option>
+              <option value="4br">4 Bedrooms</option>
+              <option value="5plus">5+ Bedrooms</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="vr-notes">What's your biggest challenge right now?</label>
+            <textarea id="vr-notes" name="notes" placeholder="E.g.: Managing guest messages, coordinating cleaners, want to list but don't know where to start..."></textarea>
+          </div>
+          <button type="button" class="form-submit" onclick="submitVR()">Send Inquiry →</button>
+        </div>
+        <div id="vrSuccess" hidden>
+          <strong>We'll be in touch soon.</strong>
+          Expect a reply within 24 hours to schedule a call. In the meantime, reach us at <strong>abby@hammerrealtyutah.com</strong> or <strong>(435) 513-2171</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--cream);">
+  <div class="section-inner">
+    <div class="section-label">Questions</div>
+    <h2 class="section-title">What owners <em>usually ask</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Do I have to switch my listing to your account?</div>
+        <div class="faq-a">No. You keep your Airbnb or VRBO listing under your account and receive income directly. We're added as a co-host — which gives us access to manage messages, calendar, and bookings without taking over the listing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I want to use the property myself?</div>
+        <div class="faq-a">Just let us know your dates and we'll block them on the calendar. Your personal use always takes priority — that's your home first and a rental second.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you handle pricing and listing optimization?</div>
+        <div class="faq-a">We maintain the calendar and can advise on pricing strategy, but major listing changes and pricing decisions stay with you. We're currently focused on co-hosting operations rather than full listing management. As we grow, full management services may follow.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What about cleaning? Do you provide that?</div>
+        <div class="faq-a">We coordinate your existing cleaning team — scheduling them for every turnover, confirming completion, and handling any issues. We don't supply the cleaners ourselves, but can recommend local teams if you need one.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is there a minimum contract length?</div>
+        <div class="faq-a">No. Co-hosting is month to month. We can start quickly and you can end the arrangement with 30 days notice. We'd rather build a long-term relationship than lock you into anything.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I also get Home Watch for my property?</div>
+        <div class="faq-a">Yes, and it works well together. Home Watch visits are typically scheduled between guest stays. Co-hosting clients receive member pricing on Grocery Stocking as well.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Hammer Realty & Co.</div>
+      <div class="footer-sub">A division of Logical Move Brokerage<br>Salt Lake · Davis · Utah · Cache · Summit Counties<br>© 2026 · Utah Licensed Real Estate</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://hammerrealtyutah.com">Home</a>
+      <a href="/manage.html">Manage</a>
+      <a href="/home-watch.html">Home Watch</a>
+      <a href="/grocery-stocking.html">Grocery Stocking</a>
+      <a href="https://hammerrealtyutah.com/#contact">Contact</a>
+      <a href="tel:4355132171">(435) 513-2171</a>
+      <a href="mailto:abby@hammerrealtyutah.com">abby@hammerrealtyutah.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function submitVR() {
+  const required = ['vr-fname','vr-email','vr-address'];
+  for (const id of required) {
+    const el = document.getElementById(id);
+    if (!el.value.trim()) { el.focus(); el.style.borderColor='#C0392B'; setTimeout(()=>el.style.borderColor='',2000); return; }
+  }
+  const data = new FormData();
+  data.append('name', document.getElementById('vr-fname').value + ' ' + document.getElementById('vr-lname').value);
+  data.append('email', document.getElementById('vr-email').value);
+  data.append('phone', document.getElementById('vr-phone').value);
+  data.append('address', document.getElementById('vr-address').value);
+  data.append('platform', document.getElementById('vr-platform').value);
+  data.append('bedrooms', document.getElementById('vr-bedrooms').value);
+  data.append('notes', document.getElementById('vr-notes').value);
+  data.append('service', 'Vacation Rental Co-Hosting — 15%');
+  // TODO: Replace mbgdekbd
+  fetch('https://formspree.io/f/mbgdekbd', { method:'POST', body:data, headers:{'Accept':'application/json'} })
+    .then(r => {
+      if (r.ok) { document.getElementById('vrForm').hidden=true; document.getElementById('vrSuccess').hidden=false; }
+      else { alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.'); }
+    }).catch(()=>{ alert('Could not send. Email abby@hammerrealtyutah.com or call (435) 513-2171.'); });
+}
+</script>
