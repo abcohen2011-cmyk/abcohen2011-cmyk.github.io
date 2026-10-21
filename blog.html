@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Commercial Real Estate Blog | Hammer Realty &amp; Co.</title>
+<meta name="description" content="Practical advice for Utah businesses navigating commercial leases, tenant representation, and real estate decisions. Written by Abby Hammer, Hammer Realty &amp; Co."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --cream: #F5F3EE;
+  --warm-white: #FAFAF8;
+  --charcoal: #1E1E1C;
+  --stone: #8C8880;
+  --stone-light: #D6D3CE;
+  --sage: #7A9E87;
+  --sage-light: #EBF0EC;
+  --sage-dark: #5C7D69;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 3px;
+  --radius-lg: 8px;
+  --max: 1080px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--warm-white); color: var(--charcoal); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,250,248,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--stone-light); height: 64px; display: flex; align-items: center; }
+.nav-inner { max-width: var(--max); margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 max(1.5rem, env(safe-area-inset-left,0px)); padding-right: max(1.5rem, env(safe-area-inset-right,0px)); }
+.nav-logo { font-family: var(--font-display); font-size: 1.05rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; }
+.nav-logo span { color: var(--sage); }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; font-weight: 400; color: var(--stone); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--charcoal); }
+.nav-dropdown { position: relative; }
+.nav-dropdown > a::after { content: ' ▾'; font-size: 0.58rem; vertical-align: middle; }
+.nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--warm-white); border: 1px solid var(--stone-light); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 0.4rem 0; margin-top: 8px; min-width: 185px; white-space: nowrap; z-index: 200; }
+.nav-dropdown-menu a { display: block; padding: 0.5rem 1.2rem; font-size: 0.75rem; color: var(--stone); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s, background 0.15s; border-bottom: 1px solid var(--stone-light); }
+.nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown-menu a:hover { color: var(--charcoal); background: var(--cream); }
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu::before { content: ""; position: absolute; top: -8px; left: 0; right: 0; height: 8px; }
+.nav-cta { font-size: 0.78rem !important; font-weight: 500 !important; color: var(--warm-white) !important; background: var(--charcoal); padding: 0.45rem 1.1rem; border-radius: 3px; letter-spacing: 0.02em !important; text-transform: none !important; transition: background 0.2s !important; text-decoration: none; white-space: nowrap; }
+.nav-cta:hover { background: var(--sage-dark) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--warm-white); border-bottom: 1px solid var(--stone-light); padding: 1.25rem 1.5rem; flex-direction: column; gap: 0; z-index: 99; }
+.mobile-menu a { font-size: 0.92rem; color: var(--charcoal); text-decoration: none; padding: 0.55rem 0; border-bottom: 1px solid var(--stone-light); }
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a.sub { padding-left: 1.25rem; font-size: 0.82rem; color: var(--stone); }
+.mobile-menu.open { display: flex; }
+@media (max-width: 700px) { .nav-links { display: none; } .hamburger { display: flex; } }
+
+.page-header {
+  padding: 120px 2rem 5rem;
+  background: var(--cream);
+  border-bottom: 1px solid var(--stone-light);
+}
+.page-header-inner { max-width: var(--max); margin: 0 auto; }
+.eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.page-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--charcoal); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
+.page-desc { font-size: 1rem; color: var(--stone); font-weight: 300; max-width: 520px; line-height: 1.8; }
+
+.blog-main { max-width: var(--max); margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: start; }
+
+/* Post list */
+.post-list { display: flex; flex-direction: column; gap: 0; }
+.post-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--stone-light);
+  text-decoration: none;
+  color: inherit;
+  transition: none;
+}
+.post-card:first-child { padding-top: 0; }
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+.post-date { font-size: 0.72rem; font-weight: 400; color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase; }
+.post-tag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  background: var(--sage-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+}
+.post-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+  color: var(--charcoal);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s;
+}
+.post-card:hover .post-title { color: var(--sage-dark); }
+.post-excerpt { font-size: 0.9rem; color: var(--stone); font-weight: 300; line-height: 1.8; margin-bottom: 1.25rem; max-width: 580px; }
+.post-read-more { font-size: 0.78rem; font-weight: 500; color: var(--sage-dark); letter-spacing: 0.03em; border-bottom: 1px solid rgba(92,125,105,0.35); padding-bottom: 2px; display: inline-block; transition: color 0.2s, border-color 0.2s; }
+.post-card:hover .post-read-more { color: var(--charcoal); border-color: var(--charcoal); }
+
+/* Sidebar */
+.sidebar { display: flex; flex-direction: column; gap: 2rem; position: sticky; top: 90px; }
+.sidebar-card { background: var(--cream); border: 1px solid var(--stone-light); border-radius: var(--radius-lg); padding: 1.75rem; }
+.sidebar-title { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); margin-bottom: 1.25rem; }
+.sidebar-bio { font-size: 0.85rem; color: var(--charcoal); line-height: 1.75; font-weight: 300; margin-bottom: 1.25rem; }
+.sidebar-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+.sidebar-contact a { font-size: 0.82rem; color: var(--sage-dark); text-decoration: none; border-bottom: 1px solid rgba(92,125,105,0.3); padding-bottom: 1px; display: inline-block; transition: color 0.2s; }
+.sidebar-contact a:hover { color: var(--charcoal); }
+.sidebar-topics { display: flex; flex-direction: column; gap: 0; }
+.sidebar-topic { font-size: 0.82rem; color: var(--stone); padding: 0.55rem 0; border-bottom: 1px solid var(--stone-light); font-weight: 300; }
+.sidebar-topic:last-child { border-bottom: none; }
+.sidebar-topic::before { content: '→ '; color: var(--sage); }
+
+footer { background: var(--charcoal); padding: 3rem 2rem; }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo { font-family: var(--font-display); font-size: 1rem; color: rgba(250,250,248,0.5); text-decoration: none; }
+.footer-logo span { color: var(--sage); }
+.footer-text { font-size: 0.72rem; color: rgba(250,250,248,0.22); line-height: 1.6; }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.78rem; color: rgba(250,250,248,0.35); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--sage); }
+
+.fade { opacity: 0; transform: translateY(12px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fade.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .fade { opacity: 1; transform: none; } }
+
+@media (max-width: 800px) {
+  .blog-main { grid-template-columns: 1fr; gap: 3rem; }
+  .sidebar { position: static; }
+}
+@media (max-width: 500px) {
+  .page-header { padding: 100px 1.25rem 3rem; }
+  .blog-main { padding: 3rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="commercial.html">Commercial</a>
+        <div class="nav-dropdown-menu">
+          <a href="tenant-representation.html">Tenant Representation</a>
+          <a href="industrial-flex-space.html">Industrial &amp; Flex</a>
+          <a href="buyer-representation.html">Buyer Representation</a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <a href="manage.html">Vacation Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="grocery-stocking.html">Grocery Stocking</a>
+          <a href="home-watch.html">Home Watch</a>
+        </div>
+      </li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#inquiry" class="nav-cta">Tell Us What You Need</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="commercial.html" onclick="toggleMenu()">Commercial</a>
+  <a href="tenant-representation.html" onclick="toggleMenu()" class="sub">↳ Tenant Representation</a>
+  <a href="industrial-flex-space.html" onclick="toggleMenu()" class="sub">↳ Industrial &amp; Flex</a>
+  <a href="buyer-representation.html" onclick="toggleMenu()" class="sub">↳ Buyer Representation</a>
+  <a href="manage.html" onclick="toggleMenu()">Vacation Services</a>
+  <a href="grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
+  <a href="home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
+  <a href="blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#about" onclick="toggleMenu()">About</a>
+  <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+  <a href="index.html#inquiry" onclick="toggleMenu()">Tell Us What You Need</a>
+</div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow">Hammer Realty &amp; Co.</div>
+    <h1 class="page-title">Commercial Real Estate,<br>Explained Plainly.</h1>
+    <p class="page-desc">Practical advice for Utah businesses navigating leases, renewals, and real estate decisions — written by Abby Hammer.</p>
+  </div>
+</div>
+
+<div class="blog-main">
+  <div class="post-list">
+
+    <!-- MOST RECENT POST FIRST — duplicate this block for each new post -->
+    <a href="blog/when-to-start-lease-renewal-search.html" class="post-card fade">
+      <div class="post-meta">
+        <span class="post-date">October 21, 2026</span>
+        <span class="post-tag">Lease Renewal</span>
+      </div>
+      <div class="post-title">When Should You Start Your Commercial Lease Renewal Search?</div>
+      <p class="post-excerpt">Most Utah businesses wait too long. By the time the landlord brings up renewal, the window to negotiate — or walk — has already closed. Here's how to time it right.</p>
+      <span class="post-read-more">Read article →</span>
+    </a>
+
+    <!-- Add new posts above this comment -->
+
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-card fade">
+      <div class="sidebar-title">About the Author</div>
+      <p class="sidebar-bio">Abby Hammer is a commercial tenant and buyer representative based in Utah, operating through Hammer Realty &amp; Co. and Logical Move Brokerage.</p>
+      <div class="sidebar-contact">
+        <a href="mailto:abby@hammerrealtyutah.com">abby@hammerrealtyutah.com</a>
+        <a href="tel:4355132171">435-513-2171</a>
+      </div>
+    </div>
+    <div class="sidebar-card fade">
+      <div class="sidebar-title">Topics</div>
+      <div class="sidebar-topics">
+        <div class="sidebar-topic">Lease Renewal</div>
+        <div class="sidebar-topic">Tenant Representation</div>
+        <div class="sidebar-topic">Industrial &amp; Flex Space</div>
+        <div class="sidebar-topic">Lease Negotiation</div>
+        <div class="sidebar-topic">Buying Commercial Property</div>
+        <div class="sidebar-topic">Utah Market</div>
+      </div>
+    </div>
+    <div class="sidebar-card fade">
+      <div class="sidebar-title">Looking for Space?</div>
+      <p class="sidebar-bio" style="margin-bottom:1rem;">Tell us what you need and we'll reach out to discuss your options.</p>
+      <a href="index.html#inquiry" style="display:block;background:var(--charcoal);color:var(--warm-white);text-align:center;padding:0.75rem 1rem;border-radius:3px;text-decoration:none;font-size:0.82rem;font-weight:500;transition:background 0.2s;" onmouseover="this.style.background='#5C7D69'" onmouseout="this.style.background='#1E1E1C'">Tell Us What You Need</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <p class="footer-text">© 2026 Hammer Realty &amp; Co. · A Division of Logical Move Brokerage · Licensed in Utah<br>435-513-2171 · abby@hammerrealtyutah.com</p>
+    <div class="footer-links">
+      <a href="https://logicalmove.com" target="_blank" rel="noopener">Logical Move</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="blog.html">Blog</a>
+      <a href="mailto:abby@hammerrealtyutah.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: 0.06 });
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

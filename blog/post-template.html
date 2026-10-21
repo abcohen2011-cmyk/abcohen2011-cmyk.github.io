@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  ============================================================
+  HOW TO USE THIS TEMPLATE
+  ============================================================
+  1. Duplicate this file and rename it with a descriptive slug:
+     e.g. blog/nnn-leases-utah-explainer.html
+
+  2. Fill in the SEO fields below (title, description, dates,
+     headline, deck).
+
+  3. Update the JSON-LD block with the same headline/date info.
+
+  4. Write your post inside <div class="article-body">.
+     Available elements:
+       <h2>Section heading</h2>
+       <h3>Sub-heading</h3>
+       <p>Body paragraph</p>
+       <ul><li>Bullet item</li></ul>
+       <ol><li>Numbered item</li></ol>
+
+       <!-- Callout box: -->
+       <div class="callout"><p>Highlighted tip or note.</p></div>
+
+       <!-- Timeline: copy/paste rows as needed -->
+       <div class="timeline">
+         <div class="timeline-row highlight">
+           <div class="timeline-time"><span>Label<span class="sub">sub-label</span></span></div>
+           <div class="timeline-content">
+             <div class="timeline-label">Title</div>
+             <div class="timeline-desc">Description.</div>
+           </div>
+         </div>
+       </div>
+
+  5. Update the CTA strip at the bottom of the article with a
+     relevant link and headline.
+
+  6. Add this post to blog.html:
+     - Copy the <a class="post-card"> block in blog.html
+     - Update href, date, tag, title, and excerpt
+     - Add it ABOVE the previous most-recent post
+
+  7. Delete these instructions before publishing.
+  ============================================================
+-->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- EDIT: Page title for browser tab and Google -->
+<title>POST TITLE HERE | Hammer Realty &amp; Co.</title>
+<!-- EDIT: Meta description (under 160 characters) -->
+<meta name="description" content="META DESCRIPTION HERE"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "POST TITLE HERE",
+  "datePublished": "YYYY-MM-DD",
+  "dateModified": "YYYY-MM-DD",
+  "author": {
+    "@type": "Person",
+    "name": "Abby Hammer",
+    "url": "https://hammerrealtyutah.com/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hammer Realty & Co.",
+    "url": "https://hammerrealtyutah.com"
+  },
+  "description": "META DESCRIPTION HERE"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --cream: #F5F3EE;
+  --warm-white: #FAFAF8;
+  --charcoal: #1E1E1C;
+  --stone: #8C8880;
+  --stone-light: #D6D3CE;
+  --sage: #7A9E87;
+  --sage-light: #EBF0EC;
+  --sage-dark: #5C7D69;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 3px;
+  --radius-lg: 8px;
+  --max: 1080px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--warm-white); color: var(--charcoal); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,250,248,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--stone-light); height: 64px; display: flex; align-items: center; }
+.nav-inner { max-width: var(--max); margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 max(1.5rem, env(safe-area-inset-left,0px)); padding-right: max(1.5rem, env(safe-area-inset-right,0px)); }
+.nav-logo { font-family: var(--font-display); font-size: 1.05rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; }
+.nav-logo span { color: var(--sage); }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; font-weight: 400; color: var(--stone); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--charcoal); }
+.nav-dropdown { position: relative; }
+.nav-dropdown > a::after { content: ' ▾'; font-size: 0.58rem; vertical-align: middle; }
+.nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--warm-white); border: 1px solid var(--stone-light); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 0.4rem 0; margin-top: 8px; min-width: 185px; white-space: nowrap; z-index: 200; }
+.nav-dropdown-menu a { display: block; padding: 0.5rem 1.2rem; font-size: 0.75rem; color: var(--stone); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s, background 0.15s; border-bottom: 1px solid var(--stone-light); }
+.nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown-menu a:hover { color: var(--charcoal); background: var(--cream); }
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu::before { content: ""; position: absolute; top: -8px; left: 0; right: 0; height: 8px; }
+.nav-cta { font-size: 0.78rem !important; font-weight: 500 !important; color: var(--warm-white) !important; background: var(--charcoal); padding: 0.45rem 1.1rem; border-radius: 3px; letter-spacing: 0.02em !important; text-transform: none !important; transition: background 0.2s !important; text-decoration: none; white-space: nowrap; }
+.nav-cta:hover { background: var(--sage-dark) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--warm-white); border-bottom: 1px solid var(--stone-light); padding: 1.25rem 1.5rem; flex-direction: column; gap: 0; z-index: 99; }
+.mobile-menu a { font-size: 0.92rem; color: var(--charcoal); text-decoration: none; padding: 0.55rem 0; border-bottom: 1px solid var(--stone-light); }
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a.sub { padding-left: 1.25rem; font-size: 0.82rem; color: var(--stone); }
+.mobile-menu.open { display: flex; }
+@media (max-width: 700px) { .nav-links { display: none; } .hamburger { display: flex; } }
+
+.article-header { padding: 120px 2rem 4rem; background: var(--cream); border-bottom: 1px solid var(--stone-light); }
+.article-header-inner { max-width: 740px; margin: 0 auto; }
+.article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.article-back { font-size: 0.72rem; font-weight: 400; color: var(--stone); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+.article-back:hover { color: var(--charcoal); }
+.article-tag { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage-dark); background: var(--sage-light); padding: 0.2rem 0.6rem; border-radius: 2px; }
+.article-date { font-size: 0.72rem; color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase; }
+.article-headline { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.8rem); color: var(--charcoal); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+.article-deck { font-size: 1.1rem; color: var(--stone); font-weight: 300; line-height: 1.8; max-width: 600px; }
+.article-byline { display: flex; align-items: center; gap: 0.85rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--stone-light); }
+.byline-avatar { width: 42px; height: 42px; background: var(--charcoal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 0.85rem; color: var(--sage); flex-shrink: 0; overflow: hidden; }
+.byline-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; }
+.byline-name { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); }
+.byline-role { font-size: 0.75rem; color: var(--stone); }
+
+.article-wrap { max-width: 740px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+.article-body h2 { font-family: var(--font-display); font-size: clamp(1.3rem, 2.2vw, 1.75rem); color: var(--charcoal); letter-spacing: -0.02em; line-height: 1.25; margin: 2.75rem 0 1rem; }
+.article-body h3 { font-size: 1rem; font-weight: 500; color: var(--charcoal); margin: 2rem 0 0.65rem; letter-spacing: 0.01em; }
+.article-body p { font-size: 1rem; color: var(--charcoal); line-height: 1.9; font-weight: 300; margin-bottom: 1.5rem; }
+.article-body p strong { font-weight: 500; }
+.article-body ul, .article-body ol { margin: 0 0 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.article-body li { font-size: 1rem; color: var(--charcoal); line-height: 1.75; font-weight: 300; }
+.article-body a { color: var(--sage-dark); text-decoration: none; border-bottom: 1px solid rgba(92,125,105,0.4); padding-bottom: 1px; transition: color 0.2s; }
+.article-body a:hover { color: var(--charcoal); }
+
+.callout { background: var(--sage-light); border-left: 3px solid var(--sage); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; padding: 1.5rem 1.75rem; margin: 2.5rem 0; }
+.callout p { margin-bottom: 0; font-size: 0.95rem; color: var(--charcoal); }
+.callout p + p { margin-top: 0.75rem; }
+.callout strong { font-weight: 500; }
+
+.timeline { margin: 2.5rem 0; display: flex; flex-direction: column; gap: 0; border: 1px solid var(--stone-light); border-radius: var(--radius-lg); overflow: hidden; }
+.timeline-row { display: grid; grid-template-columns: 160px 1fr; border-bottom: 1px solid var(--stone-light); }
+.timeline-row:last-child { border-bottom: none; }
+.timeline-time { padding: 1.25rem 1.5rem; background: var(--cream); border-right: 1px solid var(--stone-light); display: flex; align-items: center; }
+.timeline-time span { font-size: 0.78rem; font-weight: 500; color: var(--charcoal); letter-spacing: 0.04em; line-height: 1.4; }
+.timeline-time .sub { display: block; font-size: 0.68rem; font-weight: 400; color: var(--stone); letter-spacing: 0.02em; margin-top: 0.2rem; }
+.timeline-content { padding: 1.25rem 1.5rem; }
+.timeline-label { font-size: 0.8rem; font-weight: 500; color: var(--charcoal); margin-bottom: 0.35rem; }
+.timeline-desc { font-size: 0.82rem; color: var(--stone); font-weight: 300; line-height: 1.7; }
+.timeline-row.highlight .timeline-time { background: var(--sage-light); }
+.timeline-row.highlight .timeline-time span { color: var(--sage-dark); }
+.timeline-row.highlight .timeline-label { color: var(--sage-dark); }
+
+.article-cta { background: var(--charcoal); border-radius: var(--radius-lg); padding: 2.5rem; margin: 3.5rem 0 0; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.article-cta-text h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--warm-white); margin-bottom: 0.4rem; }
+.article-cta-text p { font-size: 0.875rem; color: rgba(250,250,248,0.5); font-weight: 300; line-height: 1.7; }
+.article-cta-btn { background: var(--sage); color: var(--warm-white); text-decoration: none; padding: 0.8rem 1.5rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 500; white-space: nowrap; transition: background 0.2s; flex-shrink: 0; }
+.article-cta-btn:hover { background: var(--sage-dark); }
+
+footer { background: var(--charcoal); padding: 3rem 2rem; }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo { font-family: var(--font-display); font-size: 1rem; color: rgba(250,250,248,0.5); text-decoration: none; }
+.footer-logo span { color: var(--sage); }
+.footer-text { font-size: 0.72rem; color: rgba(250,250,248,0.22); line-height: 1.6; }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.78rem; color: rgba(250,250,248,0.35); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--sage); }
+
+@media (max-width: 600px) {
+  .article-header { padding: 100px 1.25rem 3rem; }
+  .article-wrap { padding: 2.5rem 1.25rem 4rem; }
+  .timeline-row { grid-template-columns: 1fr; }
+  .timeline-time { border-right: none; border-bottom: 1px solid var(--stone-light); padding: 0.85rem 1.25rem; }
+  .timeline-content { padding: 1rem 1.25rem; }
+  .article-cta { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="../commercial.html">Commercial</a>
+        <div class="nav-dropdown-menu">
+          <a href="../tenant-representation.html">Tenant Representation</a>
+          <a href="../industrial-flex-space.html">Industrial &amp; Flex</a>
+          <a href="../buyer-representation.html">Buyer Representation</a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <a href="../manage.html">Vacation Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="../grocery-stocking.html">Grocery Stocking</a>
+          <a href="../home-watch.html">Home Watch</a>
+        </div>
+      </li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a href="../index.html#inquiry" class="nav-cta">Tell Us What You Need</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../commercial.html" onclick="toggleMenu()">Commercial</a>
+  <a href="../tenant-representation.html" onclick="toggleMenu()" class="sub">↳ Tenant Representation</a>
+  <a href="../industrial-flex-space.html" onclick="toggleMenu()" class="sub">↳ Industrial &amp; Flex</a>
+  <a href="../buyer-representation.html" onclick="toggleMenu()" class="sub">↳ Buyer Representation</a>
+  <a href="../manage.html" onclick="toggleMenu()">Vacation Services</a>
+  <a href="../grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
+  <a href="../home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
+  <a href="../blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="../index.html#about" onclick="toggleMenu()">About</a>
+  <a href="../index.html#contact" onclick="toggleMenu()">Contact</a>
+  <a href="../index.html#inquiry" onclick="toggleMenu()">Tell Us What You Need</a>
+</div>
+
+<header class="article-header">
+  <div class="article-header-inner">
+    <div class="article-meta">
+      <a href="../blog.html" class="article-back">← Blog</a>
+      <!-- EDIT: Change tag to match topic (e.g. Lease Renewal, Tenant Rep, Utah Market) -->
+      <span class="article-tag">TOPIC TAG</span>
+      <!-- EDIT: Publication date, written out -->
+      <span class="article-date">Month DD, YYYY</span>
+    </div>
+    <!-- EDIT: Article headline -->
+    <h1 class="article-headline">Your Article Headline Goes Here</h1>
+    <!-- EDIT: One-sentence deck that expands on the headline -->
+    <p class="article-deck">A one-sentence summary that tells the reader why they should keep reading. Keep it under 30 words.</p>
+    <div class="article-byline">
+      <div class="byline-avatar"><img src="../Headshot.png" alt="Abby Hammer"/></div>
+      <div>
+        <div class="byline-name">Abby Hammer</div>
+        <div class="byline-role">Hammer Realty &amp; Co. · Logical Move Brokerage</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <!-- =============================================
+         WRITE YOUR POST CONTENT BELOW THIS LINE
+         ============================================= -->
+
+    <p>Opening paragraph. Hook the reader with the core tension or insight. What does most people get wrong about this topic? What's the thing worth understanding?</p>
+
+    <h2>First Section Heading</h2>
+
+    <p>Body paragraph. Use <strong>bold</strong> sparingly for key phrases you want to stand out.</p>
+
+    <ul>
+      <li>Bullet point one</li>
+      <li>Bullet point two</li>
+      <li>Bullet point three</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Key takeaway or tip:</strong> Use this box to highlight an important point, a caveat, or a concrete action item.</p>
+    </div>
+
+    <h2>Second Section Heading</h2>
+
+    <p>Continue the article. Keep paragraphs short — 3–5 sentences is usually right. One idea per paragraph.</p>
+
+    <!-- =============================================
+         END OF ARTICLE CONTENT
+         ============================================= -->
+
+    <!-- EDIT: Update CTA headline, body, link href, and button text -->
+    <div class="article-cta">
+      <div class="article-cta-text">
+        <h3>CTA Headline</h3>
+        <p>One sentence explaining what you're offering. No commitment required.</p>
+      </div>
+      <a href="../index.html#inquiry" class="article-cta-btn">Tell Us What You Need →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../index.html" class="footer-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <p class="footer-text">© 2026 Hammer Realty &amp; Co. · A Division of Logical Move Brokerage · Licensed in Utah<br>435-513-2171 · abby@hammerrealtyutah.com</p>
+    <div class="footer-links">
+      <a href="https://logicalmove.com" target="_blank" rel="noopener">Logical Move</a>
+      <a href="../commercial.html">Commercial</a>
+      <a href="../blog.html">Blog</a>
+      <a href="mailto:abby@hammerrealtyutah.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+</script>
+</body>
+</html>
