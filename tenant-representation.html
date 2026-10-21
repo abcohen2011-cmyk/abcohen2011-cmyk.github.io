@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Commercial Tenant Representation | Salt Lake City & Northern Utah | Hammer Realty & Co.</title>
+<meta name="description" content="Commercial lease negotiation and tenant representation for businesses in Salt Lake City and Northern Utah. Hammer Realty & Co. works exclusively on your side — never the landlord's."/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Commercial Tenant Representation",
+  "provider": { "@type": "RealEstateAgent", "name": "Hammer Realty & Co.", "url": "https://hammerrealtyutah.com" },
+  "areaServed": { "@type": "State", "name": "Utah" },
+  "description": "Commercial tenant representation for lease renewals, relocations, and new spaces in Salt Lake City and Northern Utah.",
+  "url": "https://hammerrealtyutah.com/tenant-representation.html"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --cream:#F5F3EE;--warm-white:#FAFAF8;--charcoal:#1E1E1C;--stone:#8C8880;
+  --stone-light:#D6D3CE;--sage:#7A9E87;--sage-light:#EBF0EC;--sage-dark:#5C7D69;
+  --font-display:'DM Serif Display',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;
+  --radius:3px;--radius-lg:8px;--max:1080px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --warm-white:#171715;--cream:#1E1E1C;--charcoal:#F0EDE8;--stone:#9A9690;
+    --stone-light:#333330;--sage-light:#1A2B1F;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"] {
+  --warm-white:#171715;--cream:#1E1E1C;--charcoal:#F0EDE8;--stone:#9A9690;
+  --stone-light:#333330;--sage-light:#1A2B1F;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--warm-white);color:var(--charcoal);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+/* HERO */
+.hero{min-height:82vh;display:flex;align-items:center;padding:120px 2rem 5rem;background:var(--charcoal);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80&auto=format&fit=crop&crop=center') center/cover;opacity:0.18;}
+.hero-inner{max-width:var(--max);margin:0 auto;width:100%;position:relative;z-index:1;}
+.hero-eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;}
+.hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--sage);}
+.hero-headline{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.5rem);line-height:1.1;color:var(--warm-white);margin-bottom:1.5rem;letter-spacing:-0.02em;max-width:700px;}
+.hero-headline em{font-style:italic;color:var(--sage);}
+.hero-sub{font-size:1rem;color:rgba(250,250,248,0.6);font-weight:300;line-height:1.85;max-width:540px;margin-bottom:2.5rem;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:3.5rem;}
+.btn-primary{background:var(--sage);color:var(--warm-white);border:none;padding:0.85rem 1.75rem;border-radius:var(--radius);font-family:var(--font-body);font-size:0.875rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s;}
+.btn-primary:hover{background:var(--sage-dark);}
+.btn-ghost{font-size:0.875rem;color:rgba(250,250,248,0.6);text-decoration:none;border-bottom:1px solid rgba(250,250,248,0.25);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
+.btn-ghost:hover{color:var(--warm-white);border-color:rgba(250,250,248,0.6);}
+.hero-trust{display:flex;gap:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;}
+.hero-trust-item{font-size:0.75rem;color:rgba(250,250,248,0.4);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:0.6rem;}
+.hero-trust-item::before{content:'';width:5px;height:5px;background:var(--sage);border-radius:50%;flex-shrink:0;}
+
+/* STRIP */
+.strip{padding:3rem 2rem;background:var(--cream);border-bottom:1px solid var(--stone-light);}
+.strip-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}
+.strip-item-label{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.35rem;font-weight:500;}
+.strip-item-value{font-family:var(--font-display);font-size:1rem;color:var(--charcoal);line-height:1.35;}
+.strip-item-value em{font-style:italic;color:var(--stone);}
+
+/* SECTIONS */
+.section{padding:5.5rem 2rem;}
+.section--cream{background:var(--cream);}
+.section--dark{background:var(--charcoal);}
+.section-inner{max-width:var(--max);margin:0 auto;}
+.eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;}
+.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,3.2vw,2.5rem);color:var(--charcoal);line-height:1.2;letter-spacing:-0.02em;margin-bottom:1.25rem;}
+.section-title em{font-style:italic;color:var(--stone);}
+.section-title--light{color:var(--warm-white);}
+.section-title--light em{color:rgba(250,250,248,0.4);}
+.section-body{font-size:0.95rem;color:var(--stone);font-weight:300;line-height:1.85;max-width:580px;margin-bottom:2.5rem;}
+
+/* WHAT WE DO */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--stone-light);border:1.5px solid var(--stone-light);border-radius:var(--radius-lg);overflow:hidden;margin-top:2.5rem;}
+.service-card{background:var(--warm-white);padding:2.25rem 1.75rem;}
+.service-icon{width:40px;height:40px;background:var(--sage-light);border:1px solid rgba(122,158,135,0.25);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;}
+.service-icon svg{width:18px;height:18px;stroke:var(--sage-dark);fill:none;stroke-width:1.5;}
+.service-title{font-family:var(--font-display);font-size:1.15rem;color:var(--charcoal);margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.service-desc{font-size:0.85rem;color:var(--stone);font-weight:300;line-height:1.75;}
+
+/* PROCESS — dark bg */
+.process-list{display:flex;flex-direction:column;gap:0;margin-top:3rem;}
+.process-step{display:grid;grid-template-columns:52px 1fr;gap:0 2rem;padding:2rem 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.process-step:first-child{padding-top:0;}
+.process-step:last-child{border-bottom:none;}
+.process-step-num{font-family:var(--font-display);font-size:1.2rem;color:var(--sage);font-style:italic;padding-top:2px;}
+.process-step h3{font-family:var(--font-display);font-size:1.15rem;color:var(--warm-white);margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.process-step p{font-size:0.875rem;color:rgba(250,250,248,0.45);font-weight:300;line-height:1.8;}
+
+/* TWO-COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.two-col--center{align-items:center;}
+
+/* LEASE TYPES */
+.lease-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;}
+.lease-card{background:var(--warm-white);border:1px solid var(--stone-light);border-radius:var(--radius-lg);padding:1.75rem;}
+.lease-card-name{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:0.4rem;}
+.lease-card-title{font-family:var(--font-display);font-size:1.1rem;color:var(--charcoal);margin-bottom:0.6rem;}
+.lease-card-desc{font-size:0.83rem;color:var(--stone);font-weight:300;line-height:1.7;}
+
+/* ASIDE CARD */
+.aside-card{background:var(--charcoal);border-radius:var(--radius-lg);padding:2.5rem;}
+.aside-quote{font-family:var(--font-display);font-size:1.35rem;color:var(--warm-white);line-height:1.4;letter-spacing:-0.01em;margin-bottom:1.25rem;}
+.aside-quote em{font-style:italic;color:var(--sage);}
+.aside-attr{font-size:0.72rem;color:rgba(250,250,248,0.3);letter-spacing:0.08em;text-transform:uppercase;}
+.aside-points{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem;}
+.aside-point{font-size:0.83rem;color:rgba(250,250,248,0.55);font-weight:300;padding-left:1rem;border-left:2px solid var(--sage);line-height:1.6;}
+
+/* FORM */
+.form-section{background:var(--warm-white);border:1px solid var(--stone-light);border-radius:var(--radius-lg);padding:2.5rem;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:1.75rem;}
+.contact-item-label{font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);margin-bottom:0.35rem;}
+.contact-item-value{font-size:1rem;color:var(--charcoal);}
+.contact-item-value a{color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--stone-light);transition:border-color 0.2s;}
+.contact-item-value a:hover{border-color:var(--sage);}
+.contact-note{padding:1.25rem 1.5rem;background:var(--sage-light);border-radius:var(--radius-lg);font-size:0.85rem;color:var(--charcoal);font-weight:300;line-height:1.75;border-left:3px solid var(--sage);}
+.contact-form{display:flex;flex-direction:column;gap:1.1rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-group{display:flex;flex-direction:column;gap:0.35rem;}
+.form-group label{font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone);}
+.form-group input,.form-group textarea,.form-group select{background:var(--cream);border:1px solid var(--stone-light);border-radius:var(--radius);padding:0.7rem 0.9rem;font-family:var(--font-body);font-size:0.875rem;color:var(--charcoal);outline:none;transition:border-color 0.2s;-webkit-appearance:none;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--stone-light);}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--sage);}
+.form-group textarea{min-height:100px;resize:vertical;}
+.form-submit{background:var(--charcoal);color:var(--warm-white);border:none;padding:0.85rem 1.75rem;border-radius:var(--radius);font-family:var(--font-body);font-size:0.875rem;font-weight:500;cursor:pointer;transition:background 0.2s;}
+.form-submit:hover{background:var(--sage-dark);}
+#formSuccess{display:none;background:var(--sage-light);border:1px solid rgba(122,158,135,0.3);border-radius:var(--radius-lg);padding:2rem;text-align:center;}
+#formSuccess strong{display:block;font-size:1.1rem;font-family:var(--font-display);margin-bottom:0.4rem;}
+
+/* PHOTO BAND */
+.photo-band{width:100%;overflow:hidden;line-height:0;}
+.photo-band img{width:100%;height:340px;object-fit:cover;object-position:center;display:block;}
+@media(max-width:700px){.photo-band img{height:200px;}}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:3rem 2rem;}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+.footer-logo{font-family:var(--font-display);font-size:1rem;color:rgba(250,250,248,0.5);text-decoration:none;}
+.footer-logo span{color:var(--sage);}
+.footer-text{font-size:0.72rem;color:rgba(250,250,248,0.22);line-height:1.6;}
+.footer-links{display:flex;gap:1.5rem;}
+.footer-links a{font-size:0.78rem;color:rgba(250,250,248,0.35);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:var(--sage);}
+
+/* FADE */
+.fade{opacity:0;transform:translateY(14px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.fade.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(30,30,28,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);height:64px;display:flex;align-items:center;}
+.nav-inner{max-width:var(--max);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 max(1.5rem,env(safe-area-inset-left,0px));padding-right:max(1.5rem,env(safe-area-inset-right,0px));}
+.nav-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.05rem;color:rgba(250,250,248,0.85);text-decoration:none;letter-spacing:-0.01em;white-space:nowrap;}
+.nav-logo span{color:var(--sage);}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none;}
+.nav-links a{font-size:0.78rem;font-weight:400;color:rgba(250,250,248,0.45);text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links > li > a:hover,.nav-links > li > a.active{color:rgba(250,250,248,0.9);}
+.nav-dropdown{position:relative;}
+.nav-dropdown>a::after{content:' ▾';font-size:0.58rem;vertical-align:middle;}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--warm-white);border:1px solid var(--stone-light);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:0.4rem 0;margin-top:8px;min-width:185px;white-space:nowrap;z-index:200;}
+.nav-dropdown-menu::before{content:"";position:absolute;top:-8px;left:0;right:0;height:8px;}
+.nav-dropdown-menu a{display:block;padding:0.5rem 1.2rem;font-size:0.75rem;color:var(--stone);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.15s,background 0.15s;border-bottom:1px solid var(--stone-light);}
+.nav-dropdown-menu a:last-child{border-bottom:none;}
+.nav-dropdown-menu a:hover{color:var(--charcoal);background:var(--cream);}
+.nav-dropdown:hover .nav-dropdown-menu{display:block;}
+.nav-cta{font-size:0.78rem!important;font-weight:500!important;color:var(--warm-white)!important;background:var(--sage);padding:0.45rem 1.1rem;border-radius:3px;letter-spacing:0.02em!important;text-transform:none!important;transition:background 0.2s!important;text-decoration:none;white-space:nowrap;}
+.nav-cta:hover{background:var(--sage-dark)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:22px;height:1.5px;background:rgba(250,250,248,0.7);}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--charcoal);border-bottom:1px solid rgba(255,255,255,0.08);padding:1.25rem 1.5rem;flex-direction:column;gap:0;z-index:99;}
+.mobile-menu a{font-size:0.92rem;color:rgba(250,250,248,0.7);text-decoration:none;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a.sub{padding-left:1.25rem;font-size:0.82rem;color:rgba(250,250,248,0.4);}
+.mobile-menu.open{display:flex;}
+@media(max-width:700px){.nav-links{display:none;}.hamburger{display:flex;}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .two-col{grid-template-columns:1fr;gap:3rem;}
+  .services-grid{grid-template-columns:1fr;}
+  .lease-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;gap:3rem;}
+  .footer-inner{flex-direction:column;}
+}
+@media(max-width:600px){
+  .form-row{grid-template-columns:1fr;}
+  .section{padding:4rem 1.25rem;}
+  .hero{padding:100px 1.25rem 4rem;}
+}
+</style>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://hammerrealtyutah.com" class="nav-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="commercial.html" class="active">Commercial</a>
+        <div class="nav-dropdown-menu">
+          <a href="tenant-representation.html">Tenant Representation</a>
+          <a href="industrial-flex-space.html">Industrial &amp; Flex</a>
+          <a href="buyer-representation.html">Buyer Representation</a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <a href="manage.html">Vacation Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="grocery-stocking.html">Grocery Stocking</a>
+          <a href="home-watch.html">Home Watch</a>
+          <a href="vacation-rental-management.html">Co-Hosting</a>
+        </div>
+      </li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Discuss Your Space Needs</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="commercial.html" onclick="toggleMenu()">Commercial</a>
+  <a href="tenant-representation.html" onclick="toggleMenu()" class="sub">↳ Tenant Representation</a>
+  <a href="industrial-flex-space.html" onclick="toggleMenu()" class="sub">↳ Industrial &amp; Flex</a>
+  <a href="buyer-representation.html" onclick="toggleMenu()" class="sub">↳ Buyer Representation</a>
+  <a href="manage.html" onclick="toggleMenu()">Vacation Services</a>
+  <a href="grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
+  <a href="home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
+  <a href="vacation-rental-management.html" onclick="toggleMenu()" class="sub">↳ Co-Hosting</a>
+  <a href="index.html#about" onclick="toggleMenu()">About</a>
+  <a href="#contact" onclick="toggleMenu()">Discuss Your Space Needs</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Commercial Tenant Representation · Salt Lake City &amp; Northern Utah</div>
+    <h1 class="hero-headline">The landlord has a broker.<br><em>Now you do too.</em></h1>
+    <p class="hero-sub">We represent commercial tenants throughout Utah — lease renewals, relocations, new spaces, and everything in between. We never represent landlords, which means our advice is always yours alone.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Discuss Your Lease</a>
+      <a href="#how-it-works" class="btn-ghost">How It Works</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item">Tenant Side Only</div>
+      <div class="hero-trust-item">No Dual Agency — Ever</div>
+      <div class="hero-trust-item">Office · Retail · Industrial</div>
+      <div class="hero-trust-item">SLC &amp; Northern Utah</div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <div class="fade">
+      <div class="strip-item-label">Who We Represent</div>
+      <div class="strip-item-value">Tenants — <em>never landlords</em></div>
+    </div>
+    <div class="fade">
+      <div class="strip-item-label">Negotiation Focus</div>
+      <div class="strip-item-value">Total cost — <em>not just rent</em></div>
+    </div>
+    <div class="fade">
+      <div class="strip-item-label">Approach</div>
+      <div class="strip-item-value">Multiple options — <em>always leverage</em></div>
+    </div>
+    <div class="fade">
+      <div class="strip-item-label">Conflicts of Interest</div>
+      <div class="strip-item-value">Zero — <em>by design</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE NEGOTIATE -->
+<section class="section">
+  <div class="section-inner">
+    <div class="eyebrow">What We Negotiate</div>
+    <h2 class="section-title">More than the monthly rate.<br><em>Every line of the lease.</em></h2>
+    <p class="section-body">Base rent is just the starting point. A commercial lease is a multi-year financial commitment, and there are dozens of terms that affect your total cost and your flexibility down the road.</p>
+    <div class="services-grid">
+      <div class="service-card fade">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div class="service-title">Base Rent &amp; Escalations</div>
+        <div class="service-desc">Negotiating a lower starting rate is valuable, but so is capping annual rent increases. We look at both — and the total cost over the full lease term, not just year one.</div>
+      </div>
+      <div class="service-card fade">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="service-title">Tenant Improvement Allowance</div>
+        <div class="service-desc">Most landlords have room to contribute to your build-out. Negotiating TI allowances can offset thousands in upfront costs — and most tenants don't ask.</div>
+      </div>
+      <div class="service-card fade">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="service-title">Operating Expenses &amp; NNN</div>
+        <div class="service-desc">What you're actually responsible for under gross, NNN, or modified gross structures varies enormously. We break it down so you understand your total occupancy cost.</div>
+      </div>
+      <div class="service-card fade">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="service-title">Renewal &amp; Expansion Options</div>
+        <div class="service-desc">Options to renew, expand into adjacent space, or terminate early protect your flexibility as your business grows. These terms are negotiable — but only at the start.</div>
+      </div>
+      <div class="service-card fade">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="service-title">Free Rent &amp; Concessions</div>
+        <div class="service-desc">In a competitive market, landlords may offer free rent periods during build-out or shortly after move-in. We know where there's room and how to ask.</div>
+      </div>
+      <div class="service-card fade">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="service-title">Lease Renewals</div>
+        <div class="service-desc">Renewing a lease is not a formality — it's a negotiation. Your leverage is highest before you signal you're staying. We help you use that window strategically.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BAND -->
+<div class="photo-band">
+  <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80&auto=format&fit=crop&crop=center" alt="Commercial office space in Salt Lake City" loading="lazy"/>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section section--dark" id="how-it-works">
+  <div class="section-inner">
+    <div class="eyebrow" style="color:var(--sage);">The Process</div>
+    <h2 class="section-title section-title--light">How tenant rep works — <em>from first call to signed lease.</em></h2>
+    <div class="process-list">
+      <div class="process-step fade">
+        <div class="process-step-num">01</div>
+        <div>
+          <h3>We learn your requirements</h3>
+          <p>Space size, location, lease term, budget, must-haves and deal-breakers. We also ask about your business — how it operates, how fast it's growing, what you've outgrown. The requirements drive everything.</p>
+        </div>
+      </div>
+      <div class="process-step fade">
+        <div class="process-step-num">02</div>
+        <div>
+          <h3>We survey the market together</h3>
+          <p>We identify available spaces that match your criteria and tour the strongest candidates with you. If your lease isn't expiring for a while, we can give you an honest read on the market now — with no pressure to act.</p>
+        </div>
+      </div>
+      <div class="process-step fade">
+        <div class="process-step-num">03</div>
+        <div>
+          <h3>We open multiple negotiations at once</h3>
+          <p>This is the core of tenant rep strategy. When you're in active conversation with more than one landlord, you have leverage. We structure the process to keep you in control of the timeline — not the other way around.</p>
+        </div>
+      </div>
+      <div class="process-step fade">
+        <div class="process-step-num">04</div>
+        <div>
+          <h3>We analyze proposals — all the way through</h3>
+          <p>We build out the true total cost of each option: base rent, escalations, NNN charges, TI allowances, free rent, and any other terms that affect what you actually pay over the full lease term.</p>
+        </div>
+      </div>
+      <div class="process-step fade">
+        <div class="process-step-num">05</div>
+        <div>
+          <h3>We negotiate on your behalf</h3>
+          <p>We represent you through lease negotiations and work with your attorney on the legal review. Our goal is the best possible outcome — not a deal closed quickly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEASE STRUCTURES -->
+<section class="section section--cream">
+  <div class="section-inner">
+    <div class="two-col">
+      <div>
+        <div class="eyebrow">Lease Structures</div>
+        <h2 class="section-title">Know what you're <em>actually signing.</em></h2>
+        <p class="section-body">Commercial leases come in several structures, and the difference in what you're responsible for can be substantial. We explain every term before you commit.</p>
+        <div class="lease-grid">
+          <div class="lease-card fade">
+            <div class="lease-card-name">Gross Lease</div>
+            <div class="lease-card-title">One flat monthly rent</div>
+            <div class="lease-card-desc">Landlord covers operating expenses — taxes, insurance, maintenance. Simpler to budget, often higher base rent.</div>
+          </div>
+          <div class="lease-card fade">
+            <div class="lease-card-name">NNN / Triple Net</div>
+            <div class="lease-card-title">Base rent + your share of expenses</div>
+            <div class="lease-card-desc">You pay property taxes, insurance, and maintenance on top of rent. Lower base, but total cost varies. Common in retail and industrial.</div>
+          </div>
+          <div class="lease-card fade">
+            <div class="lease-card-name">Modified Gross</div>
+            <div class="lease-card-title">Negotiated split of expenses</div>
+            <div class="lease-card-desc">A hybrid: some expenses included, some passed through. The details matter. Every modified gross lease is different.</div>
+          </div>
+          <div class="lease-card fade">
+            <div class="lease-card-name">Percentage Lease</div>
+            <div class="lease-card-title">Base rent + % of revenue</div>
+            <div class="lease-card-desc">Base rent plus a percentage of your gross sales above a threshold. Common in retail, especially in high-traffic centers.</div>
+          </div>
+        </div>
+      </div>
+      <div class="aside-card fade">
+        <div class="aside-quote">"The landlord's broker has negotiated this lease dozens of times.<br><em>Now you have someone in your corner who has too.</em>"</div>
+        <div class="aside-attr">Hammer Realty &amp; Co. · Tenant-Side Only</div>
+        <div class="aside-points">
+          <div class="aside-point">We never represent both sides of a transaction</div>
+          <div class="aside-point">We open competing negotiations to give you real leverage</div>
+          <div class="aside-point">We explain every term before you sign anything</div>
+          <div class="aside-point">We stay involved through the legal review process</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div>
+          <div class="eyebrow">Get Started</div>
+          <h2 class="section-title">Tell us about <em>your lease situation.</em></h2>
+          <p class="section-body">Whether you're six months out from renewal, actively looking, or just want an honest read on the market — reach out. No pressure, no commitment.</p>
+        </div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-value"><a href="mailto:abby@hammerrealtyutah.com">abby@hammerrealtyutah.com</a></div>
+        </div>
+        <div>
+          <div class="contact-item-label">Phone</div>
+          <div class="contact-item-value"><a href="tel:+14355132171">(435) 513-2171</a></div>
+        </div>
+        <div class="contact-note">
+          <strong style="display:block;font-weight:500;margin-bottom:0.35rem;">Transparent representation from day one.</strong>
+          In many commercial leasing transactions, tenant representation compensation is addressed through the transaction's negotiated brokerage arrangements. We explain any representation agreements and potential fees clearly before we begin.
+        </div>
+      </div>
+      <div class="form-section">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdeaqlyl" method="POST" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required/>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Acme Co."/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required/>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(801) 555-0100"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="situation">Lease Situation</label>
+            <select id="situation" name="situation">
+              <option value="">Select one…</option>
+              <option value="Renewal coming up">Renewal coming up (12–18 months)</option>
+              <option value="Actively looking">Actively looking for new space</option>
+              <option value="Need to relocate">Need to relocate</option>
+              <option value="Want market intel">Want to understand the market</option>
+              <option value="Other">Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us more</label>
+            <textarea id="message" name="message" placeholder="Location, space type, rough size, timeline — anything helpful…"></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Tenant Representation Inquiry — hammerrealtyutah.com"/>
+          <button type="submit" class="form-submit">Send Inquiry →</button>
+        </form>
+        <div id="formSuccess">
+          <strong>We'll be in touch soon.</strong>
+          <p style="font-size:0.875rem;color:var(--stone);margin-top:0.4rem;">Abby will reach out within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="https://hammerrealtyutah.com" class="footer-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <div class="footer-text">© 2024 Hammer Realty &amp; Co. · A Division of Logical Move Brokerage<br>Licensed in Utah · abby@hammerrealtyutah.com</div>
+    <div class="footer-links">
+      <a href="https://hammerrealtyutah.com">Home</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="manage.html">Vacation Services</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade').forEach(f => io.observe(f));
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  try {
+    const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{'Accept':'application/json'} });
+    if (res.ok) { form.style.display='none'; document.getElementById('formSuccess').style.display='block'; }
+    else { alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.'); }
+  } catch { alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.'); }
+}
+</script>
+</body>
+</html>
