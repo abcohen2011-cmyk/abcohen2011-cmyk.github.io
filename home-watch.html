@@ -180,19 +180,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
   <div class="nav-inner">
     <a href="https://hammerrealtyutah.com" class="nav-logo">Hammer Realty <em>&amp;</em> Co.</a>
     <ul class="nav-links">
-      <li><a href="commercial.html">Commercial</a></li>
       <li class="nav-dropdown">
-        <a href="/manage.html">Manage</a>
+        <a href="commercial.html">Commercial</a>
         <div class="nav-dropdown-menu">
-          <a href="/vacation-rental-management.html">Vacation Rental</a>
-          <a href="/home-watch.html" class="active">Home Watch</a>
-          <a href="/grocery-stocking.html">Grocery Stocking</a>
+          <a href="commercial.html">Tenant Representation</a>
+          <a href="commercial.html">Industrial &amp; Flex</a>
+          <a href="commercial.html">Buyer Representation</a>
         </div>
       </li>
-      <li><a href="https://hammerrealtyutah.com/#about">About</a></li>
-      <li><a href="https://hammerrealtyutah.com/#portfolio">Portfolio</a></li>
-      <li><a href="https://hammerrealtyutah.com/#reviews">Reviews</a></li>
-      <li><a href="https://hammerrealtyutah.com/#contact" class="nav-cta">Get in Touch</a></li>
+      <li class="nav-dropdown">
+        <a href="manage.html">Vacation Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="grocery-stocking.html">Grocery Stocking</a>
+          <a href="home-watch.html">Home Watch</a>
+          <a href="vacation-rental-management.html">Co-Hosting</a>
+        </div>
+      </li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Discuss Your Space Needs</a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -201,14 +207,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="commercial.html" onclick="toggleMenu()">Commercial</a>
-  <a href="/manage.html" onclick="toggleMenu()">Manage</a>
-  <a href="/vacation-rental-management.html" onclick="toggleMenu()" class="sub">↳ Vacation Rental</a>
-  <a href="/home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
-  <a href="/grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
-  <a href="https://hammerrealtyutah.com/#about" onclick="toggleMenu()">About</a>
-  <a href="https://hammerrealtyutah.com/#portfolio" onclick="toggleMenu()">Portfolio</a>
-  <a href="https://hammerrealtyutah.com/#reviews" onclick="toggleMenu()">Reviews</a>
-  <a href="https://hammerrealtyutah.com/#contact" onclick="toggleMenu()">Get in Touch</a>
+  <a href="commercial.html" onclick="toggleMenu()" class="sub">↳ Tenant Representation</a>
+  <a href="commercial.html" onclick="toggleMenu()" class="sub">↳ Industrial &amp; Flex</a>
+  <a href="commercial.html" onclick="toggleMenu()" class="sub">↳ Buyer Representation</a>
+  <a href="manage.html" onclick="toggleMenu()">Vacation Services</a>
+  <a href="grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
+  <a href="home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
+  <a href="vacation-rental-management.html" onclick="toggleMenu()" class="sub">↳ Co-Hosting</a>
+  <a href="index.html#about" onclick="toggleMenu()">About</a>
+  <a href="index.html#contact" onclick="toggleMenu()">Discuss Your Space Needs</a>
 </div><!-- Hero -->
 <section class="hero">
   <div class="hero-inner">
@@ -261,7 +268,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
       <div class="included-card">
         <div class="included-icon">🔐</div>
         <div class="included-title">Security Spot Check</div>
-        <div class="included-desc">All entry points confirmed locked. Any signs of unauthorized entry or unusual activity reported immediately.</div>
+        <div class="included-desc">All entry points confirmed locked. Any visible signs of unauthorized entry or unusual activity are noted and reported in your inspection report.</div>
       </div>
       <div class="included-card">
         <div class="included-icon">📸</div>
@@ -324,14 +331,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
       </div>
       <div class="report-list-content">
         <div class="section-label">After Every Visit</div>
-        <h3>You'll know what we found — <em>within the hour.</em></h3>
-        <p>Every inspection ends with a photo report sent directly to you. Items that need attention are called out clearly. Items that are fine are confirmed just as clearly — because peace of mind is the whole point.</p>
+        <h3>You'll know what we found — <em>after every visit.</em></h3>
+        <p>Every inspection ends with a photo report sent directly to you. Visible items that need attention are called out clearly. Items that are fine are confirmed just as clearly — because peace of mind is the whole point.</p>
         <ul class="check-list">
           <li>Timestamped report with photos</li>
-          <li>Any concerns flagged with context</li>
-          <li>Vendor follow-up coordinated on your behalf</li>
+          <li>Visible concerns flagged with context</li>
+          <li>Vendor referrals available on request</li>
           <li>Visit history available on request</li>
-          <li>Emergency contact available between visits</li>
         </ul>
       </div>
     </div>

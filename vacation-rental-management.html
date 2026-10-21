@@ -182,19 +182,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
   <div class="nav-inner">
     <a href="https://hammerrealtyutah.com" class="nav-logo">Hammer Realty <em>&amp;</em> Co.</a>
     <ul class="nav-links">
-      <li><a href="commercial.html">Commercial</a></li>
       <li class="nav-dropdown">
-        <a href="/manage.html">Manage</a>
+        <a href="commercial.html">Commercial</a>
         <div class="nav-dropdown-menu">
-          <a href="/vacation-rental-management.html" class="active">Vacation Rental</a>
-          <a href="/home-watch.html">Home Watch</a>
-          <a href="/grocery-stocking.html">Grocery Stocking</a>
+          <a href="commercial.html">Tenant Representation</a>
+          <a href="commercial.html">Industrial &amp; Flex</a>
+          <a href="commercial.html">Buyer Representation</a>
         </div>
       </li>
-      <li><a href="https://hammerrealtyutah.com/#about">About</a></li>
-      <li><a href="https://hammerrealtyutah.com/#portfolio">Portfolio</a></li>
-      <li><a href="https://hammerrealtyutah.com/#reviews">Reviews</a></li>
-      <li><a href="https://hammerrealtyutah.com/#contact" class="nav-cta">Get in Touch</a></li>
+      <li class="nav-dropdown">
+        <a href="manage.html">Vacation Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="grocery-stocking.html">Grocery Stocking</a>
+          <a href="home-watch.html">Home Watch</a>
+          <a href="vacation-rental-management.html">Co-Hosting</a>
+        </div>
+      </li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Discuss Your Space Needs</a></li>
     </ul>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -203,29 +209,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="commercial.html" onclick="toggleMenu()">Commercial</a>
-  <a href="/manage.html" onclick="toggleMenu()">Manage</a>
-  <a href="/vacation-rental-management.html" onclick="toggleMenu()" class="sub">↳ Vacation Rental</a>
-  <a href="/home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
-  <a href="/grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
-  <a href="https://hammerrealtyutah.com/#about" onclick="toggleMenu()">About</a>
-  <a href="https://hammerrealtyutah.com/#portfolio" onclick="toggleMenu()">Portfolio</a>
-  <a href="https://hammerrealtyutah.com/#reviews" onclick="toggleMenu()">Reviews</a>
-  <a href="https://hammerrealtyutah.com/#contact" onclick="toggleMenu()">Get in Touch</a>
+  <a href="commercial.html" onclick="toggleMenu()" class="sub">↳ Tenant Representation</a>
+  <a href="commercial.html" onclick="toggleMenu()" class="sub">↳ Industrial &amp; Flex</a>
+  <a href="commercial.html" onclick="toggleMenu()" class="sub">↳ Buyer Representation</a>
+  <a href="manage.html" onclick="toggleMenu()">Vacation Services</a>
+  <a href="grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
+  <a href="home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
+  <a href="vacation-rental-management.html" onclick="toggleMenu()" class="sub">↳ Co-Hosting</a>
+  <a href="index.html#about" onclick="toggleMenu()">About</a>
+  <a href="index.html#contact" onclick="toggleMenu()">Discuss Your Space Needs</a>
 </div><!-- Hero -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Vacation Rental Co-Hosting · Park City & Deer Valley</div>
-    <h1 class="hero-headline">More bookings. <em>Less work.</em> Same property.</h1>
-    <p class="hero-desc">We handle guest communication, calendar management, and the day-to-day coordination of your Park City rental — so you earn more without the inbox full of messages.</p>
-    <div class="hero-fee-row">
-      <div class="hero-fee-item">
-        <div class="hero-fee-num">15%</div>
-        <div class="hero-fee-label">of gross rental income</div>
-      </div>
-      <div class="hero-fee-divider"></div>
-      <div class="hero-fee-detail">Flat co-hosting fee. No setup costs, no monthly minimums. Basics (soap, coffee, paper towels, toilet paper) included. You keep everything else.</div>
-    </div>
-    <a class="hero-cta" href="#inquire">Let's Talk About Your Rental →</a>
+    <h1 class="hero-headline">Personalized Vacation Rental Support <em>in Park City</em></h1>
+    <p class="hero-desc">We offer selective co-hosting support for Park City and Deer Valley vacation rentals. Services are customized based on your property's needs and our operational capacity — reach out to start a conversation.</p>
+    <a class="hero-cta" href="#inquire">Inquire About Co-Hosting →</a>
   </div>
 </section>
 
@@ -242,32 +241,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
     <p class="section-desc">Co-hosting means we're the point of contact for guests — before, during, and after their stay. You stay in the loop without being on call.</p>
     <div class="services-grid">
       <div class="service-card included">
-        <div class="service-tag">Included</div>
+        <div class="service-tag">Available</div>
         <div class="service-title">Guest Communication</div>
-        <div class="service-desc">Inquiry responses, pre-arrival details, check-in instructions, and post-stay follow-up. Guests get quick, professional replies at any hour.</div>
+        <div class="service-desc">Inquiry responses, pre-arrival details, check-in instructions, and post-stay follow-up. Guests receive professional, timely replies.</div>
       </div>
       <div class="service-card included">
-        <div class="service-tag">Included</div>
+        <div class="service-tag">Available</div>
         <div class="service-title">Calendar Management</div>
         <div class="service-desc">We maintain your Airbnb / VRBO calendar — blocking dates, coordinating availability, and making sure the schedule stays clean.</div>
       </div>
       <div class="service-card included">
-        <div class="service-tag">Included</div>
+        <div class="service-tag">Available</div>
         <div class="service-title">Cleaner Coordination</div>
         <div class="service-desc">We schedule and confirm your cleaning team for every turnover. You keep your cleaners — we just handle the scheduling logistics.</div>
       </div>
       <div class="service-card included">
-        <div class="service-tag">Included</div>
+        <div class="service-tag">Available</div>
         <div class="service-title">Basic Restocking</div>
-        <div class="service-desc">Soap, coffee, paper towels, and toilet paper restocked as part of the 15% fee. Replacement items (sheets, towels, kitchenware) are separate at cost.</div>
+        <div class="service-desc">Soap, coffee, paper towels, and toilet paper. Replacement items (sheets, towels, kitchenware) are separate at cost.</div>
       </div>
       <div class="service-card included">
-        <div class="service-tag">Included</div>
+        <div class="service-tag">Available</div>
         <div class="service-title">Issue Escalation</div>
         <div class="service-desc">If a guest has a problem — a broken appliance, a maintenance issue — we coordinate the response with your maintenance team and keep you informed.</div>
       </div>
       <div class="service-card included">
-        <div class="service-tag">Included</div>
+        <div class="service-tag">Available</div>
         <div class="service-title">Review Management</div>
         <div class="service-desc">We respond to guest reviews promptly and professionally, helping protect and build your listing's reputation on Airbnb and VRBO.</div>
       </div>
@@ -310,60 +309,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
   </div>
 </section>
 
-<!-- Earnings example -->
-<section class="section earnings-section">
-  <div class="section-inner">
-    <div class="earnings-grid">
-      <div>
-        <div class="section-label">The Math</div>
-        <h2 class="section-title">What a typical month <em>looks like</em></h2>
-        <p style="color:var(--muted);line-height:1.7;margin-bottom:24px;">A Park City 3-bedroom during ski season can earn $6,000–$12,000/month in gross rental income. The 15% co-hosting fee is designed to feel like a no-brainer compared to what you get back in time and expertise.</p>
-        <ul class="split-list">
-          <li>No setup fees or contracts</li>
-          <li>Month-to-month — cancel anytime</li>
-          <li>You see all booking income directly</li>
-          <li>We invoice monthly for the 15%</li>
-        </ul>
-      </div>
-      <div class="earnings-example">
-        <h4>Example: Ski Season Month</h4>
-        <div class="earnings-row">
-          <span class="earnings-label">Gross rental income</span>
-          <span class="earnings-value positive">$8,500</span>
-        </div>
-        <div class="earnings-row">
-          <span class="earnings-label">Co-hosting fee (15%)</span>
-          <span class="earnings-value deduct">− $1,275</span>
-        </div>
-        <div class="earnings-row">
-          <span class="earnings-label">Cleaning fees (pass-through)</span>
-          <span class="earnings-value deduct">− $600</span>
-        </div>
-        <div class="earnings-row">
-          <span class="earnings-label">Platform fees (Airbnb est.)</span>
-          <span class="earnings-value deduct">− $255</span>
-        </div>
-        <div class="earnings-row total">
-          <span>Your net</span>
-          <span class="earnings-value positive">~$6,370</span>
-        </div>
-        <div class="earnings-note">Example only. Actual income varies by listing, pricing strategy, occupancy, and season. Cleaning fees are set by your cleaning team and passed through at cost.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Inquiry form -->
 <section class="section inquiry-section" id="inquire">
   <div class="section-inner">
     <div class="inquiry-grid">
       <div class="inquiry-intro">
         <div class="section-label">Get Started</div>
-        <h2>Tell us about <em>your listing</em></h2>
-        <p>Whether you're brand new to short-term rentals or looking for a co-host to take the load off, we'd love to talk. Fill out the form and we'll follow up within 24 hours.</p>
+        <h2>Inquire about <em>co-hosting support</em></h2>
+        <p>We work selectively with Park City and Deer Valley vacation rental owners. Share a few details about your property and we'll be in touch to explore whether it's a good fit.</p>
         <div class="inquiry-promise">
-          <strong>What to expect after you reach out</strong>
-          <p>We'll schedule a quick call — usually 20–30 minutes — to learn about your listing, discuss your goals, and answer any questions. If it's a good fit, we can typically start within 1–2 weeks.</p>
+          <strong>What to expect</strong>
+          <p>We'll review your inquiry and reach out to schedule a brief call — typically 20–30 minutes — to learn about your listing and discuss your goals. We'll be honest about whether we can help.</p>
         </div>
       </div>
       <div>
@@ -419,8 +375,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
           <button type="button" class="form-submit" onclick="submitVR()">Send Inquiry →</button>
         </div>
         <div id="vrSuccess" hidden>
-          <strong>We'll be in touch soon.</strong>
-          Expect a reply within 24 hours to schedule a call. In the meantime, reach us at <strong>abby@hammerrealtyutah.com</strong> or <strong>(435) 513-2171</strong>.
+          <strong>Inquiry received.</strong>
+          We'll review your information and reach out to schedule a call. You can also reach us directly at <strong>abby@hammerrealtyutah.com</strong> or <strong>(435) 513-2171</strong>.
         </div>
       </div>
     </div>
@@ -494,7 +450,7 @@ function submitVR() {
   data.append('platform', document.getElementById('vr-platform').value);
   data.append('bedrooms', document.getElementById('vr-bedrooms').value);
   data.append('notes', document.getElementById('vr-notes').value);
-  data.append('service', 'Vacation Rental Co-Hosting — 15%');
+  data.append('service', 'Vacation Rental Co-Hosting Inquiry');
   // TODO: Replace mbgdekbd
   fetch('https://formspree.io/f/mbgdekbd', { method:'POST', body:data, headers:{'Accept':'application/json'} })
     .then(r => {
