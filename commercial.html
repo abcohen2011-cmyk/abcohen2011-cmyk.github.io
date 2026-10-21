@@ -1,0 +1,556 @@
+<title>Utah Commercial Real Estate | Tenant & Buyer Rep | Hammer Realty & Co.</title>
+<meta name="description" content="Commercial tenant representation and buyer advocacy in Salt Lake City and Northern Utah. We help businesses find office, retail, and industrial space — working exclusively for you, never the landlord."/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Hammer Realty & Co. — Commercial",
+  "url": "https://hammerrealtyutah.com/commercial.html",
+  "email": "abby@hammerrealtyutah.com",
+  "areaServed": {
+    "@type": "State",
+    "name": "Utah"
+  },
+  "founder": { "@type": "Person", "name": "Abby Hammer" },
+  "description": "Commercial tenant representation and buyer advocacy for businesses in Salt Lake City and Northern Utah. Office, retail, and industrial space.",
+  "serviceType": "Commercial Real Estate Tenant Representation"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<style>
+:root {
+  --cream: #F5F3EE;
+  --warm-white: #FAFAF8;
+  --charcoal: #1E1E1C;
+  --stone: #8C8880;
+  --stone-light: #D6D3CE;
+  --sage: #7A9E87;
+  --sage-light: #EBF0EC;
+  --sage-dark: #5C7D69;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 3px;
+  --radius-lg: 8px;
+  --max: 1080px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --warm-white:#171715;--cream:#1E1E1C;--charcoal:#F0EDE8;--stone:#9A9690;
+    --stone-light:#333330;--sage-light:#1A2B1F;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"] {
+  --warm-white:#171715;--cream:#1E1E1C;--charcoal:#F0EDE8;--stone:#9A9690;
+  --stone-light:#333330;--sage-light:#1A2B1F;color-scheme:dark;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--warm-white); color: var(--charcoal); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+/* HERO */
+.hero { min-height: 90vh; display: flex; align-items: center; padding: 120px 2rem 6rem; background: var(--charcoal); position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&auto=format&fit=crop') center/cover; opacity: 0.12; }
+.hero-inner { max-width: var(--max); margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+.hero-eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+.hero-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--sage); }
+.hero-headline { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.1; color: var(--warm-white); margin-bottom: 1.5rem; letter-spacing: -0.02em; max-width: 680px; }
+.hero-headline em { font-style: italic; color: var(--sage); }
+.hero-sub { font-size: 1.05rem; color: rgba(250,250,248,0.6); font-weight: 300; line-height: 1.85; max-width: 520px; margin-bottom: 2.5rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 3.5rem; }
+.btn-primary { background: var(--sage); color: var(--warm-white); border: none; padding: 0.85rem 1.75rem; border-radius: var(--radius); font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
+.btn-primary:hover { background: var(--sage-dark); }
+.btn-ghost { font-size: 0.875rem; color: rgba(250,250,248,0.6); text-decoration: none; border-bottom: 1px solid rgba(250,250,248,0.25); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+.btn-ghost:hover { color: var(--warm-white); border-color: rgba(250,250,248,0.6); }
+.hero-trust { display: flex; gap: 2.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap; }
+.hero-trust-item { font-size: 0.78rem; color: rgba(250,250,248,0.4); letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 0.6rem; }
+.hero-trust-item::before { content: ''; width: 6px; height: 6px; background: var(--sage); border-radius: 50%; flex-shrink: 0; }
+
+/* PHILOSOPHY STRIP */
+.philosophy { padding: 3.5rem 2rem; background: var(--cream); border-bottom: 1px solid var(--stone-light); }
+.philosophy-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; }
+.philosophy-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.4rem; font-weight: 500; }
+.philosophy-value { font-family: var(--font-display); font-size: 1rem; color: var(--charcoal); line-height: 1.35; }
+.philosophy-value em { font-style: italic; color: var(--stone); }
+
+/* SECTIONS */
+.section { padding: 6rem 2rem; }
+.section--cream { background: var(--cream); }
+.section--dark { background: var(--charcoal); }
+.section-inner { max-width: var(--max); margin: 0 auto; }
+.eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); margin-bottom: 1rem; }
+.section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--charcoal); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+.section-title em { font-style: italic; color: var(--stone); }
+.section-title--light { color: var(--warm-white); }
+.section-body { font-size: 1rem; color: var(--stone); font-weight: 300; line-height: 1.85; max-width: 600px; margin-bottom: 3rem; }
+
+/* SPACE TYPES */
+.space-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--stone-light); border: 1.5px solid var(--stone-light); border-radius: var(--radius-lg); overflow: hidden; margin-top: 3rem; }
+.space-type { background: var(--warm-white); padding: 2.5rem 2rem; transition: background 0.25s; }
+.space-type:hover { background: var(--sage-light); }
+.space-type-icon { width: 44px; height: 44px; background: var(--sage-light); border: 1px solid rgba(122,158,135,0.25); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+.space-type-icon svg { width: 20px; height: 20px; stroke: var(--sage-dark); fill: none; stroke-width: 1.5; }
+.space-type h3 { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); margin-bottom: 0.75rem; }
+.space-type-name { font-family: var(--font-display); font-size: 1.5rem; color: var(--charcoal); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+.space-type p { font-size: 0.88rem; color: var(--stone); font-weight: 300; line-height: 1.75; }
+.space-type-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 1.25rem; }
+.space-tag { font-size: 0.66rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--sage-dark); background: var(--sage-light); padding: 3px 9px; border-radius: 20px; border: 1px solid rgba(122,158,135,0.25); }
+
+/* PROCESS */
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); overflow: hidden; margin-top: 3rem; }
+.process-step { background: rgba(255,255,255,0.03); padding: 2rem 1.75rem; }
+.process-num { font-family: var(--font-display); font-size: 2.2rem; color: var(--sage); letter-spacing: -0.03em; line-height: 1; margin-bottom: 1rem; }
+.process-step h3 { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-white); margin-bottom: 0.6rem; }
+.process-step p { font-size: 0.85rem; color: rgba(250,250,248,0.45); font-weight: 300; line-height: 1.75; }
+
+/* WHY US */
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.why-points { display: flex; flex-direction: column; gap: 1.5rem; }
+.why-point { display: flex; align-items: flex-start; gap: 1rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--stone-light); }
+.why-point:last-child { border-bottom: none; padding-bottom: 0; }
+.why-icon { width: 36px; height: 36px; background: var(--sage-light); border: 1px solid rgba(122,158,135,0.25); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.why-icon svg { width: 15px; height: 15px; stroke: var(--sage-dark); fill: none; stroke-width: 2; }
+.why-title { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); margin-bottom: 0.2rem; }
+.why-desc { font-size: 0.825rem; color: var(--stone); font-weight: 300; line-height: 1.7; }
+.why-aside { background: var(--charcoal); border-radius: var(--radius-lg); padding: 3rem; }
+.why-aside-quote { font-family: var(--font-display); font-size: 1.4rem; color: var(--warm-white); line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 1.5rem; }
+.why-aside-quote em { font-style: italic; color: var(--sage); }
+.why-aside-attr { font-size: 0.72rem; color: rgba(250,250,248,0.35); letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* FORM */
+.form-wrap { background: var(--warm-white); border: 1px solid var(--stone-light); border-radius: var(--radius-lg); padding: 3rem; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.contact-info { display: flex; flex-direction: column; gap: 2rem; }
+.contact-item-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); margin-bottom: 0.4rem; }
+.contact-item-value { font-size: 1rem; color: var(--charcoal); }
+.contact-item-value a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid var(--stone-light); transition: border-color 0.2s; }
+.contact-item-value a:hover { border-color: var(--sage); }
+.contact-note { padding: 1.5rem; background: var(--sage-light); border-radius: var(--radius-lg); font-size: 0.875rem; color: var(--charcoal); font-weight: 300; line-height: 1.75; border-left: 3px solid var(--sage); }
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); }
+.form-group input, .form-group textarea, .form-group select { background: var(--cream); border: 1px solid var(--stone-light); border-radius: var(--radius); padding: 0.75rem 1rem; font-family: var(--font-body); font-size: 0.9rem; color: var(--charcoal); outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: var(--stone-light); }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--sage); }
+.form-group textarea { min-height: 110px; resize: vertical; }
+.form-submit { background: var(--charcoal); color: var(--warm-white); border: none; padding: 0.85rem 2rem; border-radius: var(--radius); font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
+.form-submit:hover { background: var(--sage-dark); }
+#formSuccess { display: none; background: var(--sage-light); border: 1px solid rgba(122,158,135,0.3); border-radius: var(--radius-lg); padding: 2rem; text-align: center; }
+#formSuccess strong { display: block; font-size: 1.1rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
+
+/* PHOTO BAND */
+.photo-band { width: 100%; overflow: hidden; line-height: 0; }
+.photo-band img { width: 100%; height: 380px; object-fit: cover; object-position: center; display: block; }
+@media(max-width:700px) { .photo-band img { height: 220px; } }
+
+/* FOOTER */
+footer { background: var(--charcoal); padding: 3rem 2rem; }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo { font-family: var(--font-display); font-size: 1rem; color: rgba(250,250,248,0.5); text-decoration: none; }
+.footer-logo span { color: var(--sage); }
+.footer-text { font-size: 0.72rem; color: rgba(250,250,248,0.22); line-height: 1.6; }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.78rem; color: rgba(250,250,248,0.35); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--sage); }
+
+/* FADE */
+.fade { opacity: 0; transform: translateY(14px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.fade.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .fade { opacity: 1; transform: none; } }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .space-types { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .footer-inner { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .process-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .section { padding: 4rem 1.25rem; }
+  .hero { padding: 120px 1.25rem 4rem; }
+}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(30,30,28,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);height:64px;display:flex;align-items:center;}
+.nav-inner{max-width:var(--max,1200px);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 max(1.5rem,env(safe-area-inset-left,0px));padding-right:max(1.5rem,env(safe-area-inset-right,0px));}
+.nav-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.05rem;color:rgba(250,250,248,0.85);text-decoration:none;letter-spacing:-0.01em;white-space:nowrap;}
+.nav-logo span{color:var(--sage,#7A9E87);}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none;}
+.nav-links a{font-size:0.78rem;font-weight:400;color:rgba(250,250,248,0.45);text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:rgba(250,250,248,0.9);}
+.nav-dropdown{position:relative;}
+.nav-dropdown>a::after{content:' ▾';font-size:0.58rem;vertical-align:middle;}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--warm-white,#FAFAF8);border:1px solid var(--stone-light,#D6D3CE);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.15);padding:0.4rem 0;margin-top:8px;min-width:185px;white-space:nowrap;z-index:200;}
+.nav-dropdown-menu::before{content:"";position:absolute;top:-8px;left:0;right:0;height:8px;}
+.nav-dropdown-menu a{display:block;padding:0.5rem 1.2rem;font-size:0.75rem;color:var(--stone,#8C8880);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.15s,background 0.15s;border-bottom:1px solid var(--stone-light,#D6D3CE);}
+.nav-dropdown-menu a:last-child{border-bottom:none;}
+.nav-dropdown-menu a:hover{color:var(--charcoal,#1E1E1C);background:var(--cream,#F5F3EE);}
+.nav-dropdown:hover .nav-dropdown-menu{display:block;}
+.nav-cta{font-size:0.78rem!important;font-weight:500!important;color:var(--warm-white,#FAFAF8)!important;background:var(--sage,#7A9E87);padding:0.45rem 1.1rem;border-radius:3px;letter-spacing:0.02em!important;text-transform:none!important;transition:background 0.2s!important;text-decoration:none;white-space:nowrap;}
+.nav-cta:hover{background:var(--sage-dark,#5C7D69)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:22px;height:1.5px;background:rgba(250,250,248,0.7);}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--charcoal,#1E1E1C);border-bottom:1px solid rgba(255,255,255,0.08);padding:1.25rem 1.5rem;flex-direction:column;gap:0;z-index:99;}
+.mobile-menu a{font-size:0.92rem;color:rgba(250,250,248,0.7);text-decoration:none;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a.sub{padding-left:1.25rem;font-size:0.82rem;color:rgba(250,250,248,0.4);}
+.mobile-menu.open{display:flex;}
+@media(max-width:700px){.nav-links{display:none;}.hamburger{display:flex;}}
+</style>
+
+<!-- NAV (dark — matches hero) -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://hammerrealtyutah.com" class="nav-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="commercial.html" class="active">Buy / Lease</a>
+        <div class="nav-dropdown-menu">
+          <a href="commercial.html" class="active">Commercial Space</a>
+          <a href="https://hammerrealtyutah.com/#pillars">Residential</a>
+        </div>
+      </li>
+      <li><a href="https://hammerrealtyutah.com/#pillars">Build</a></li>
+      <li class="nav-dropdown">
+        <a href="manage.html">Manage</a>
+        <div class="nav-dropdown-menu">
+          <a href="vacation-rental-management.html">Vacation Rental</a>
+          <a href="home-watch.html">Home Watch</a>
+          <a href="grocery-stocking.html">Grocery Stocking</a>
+        </div>
+      </li>
+      <li><a href="https://hammerrealtyutah.com/#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Find Your Space</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="commercial.html" onclick="toggleMenu()">Commercial Space</a>
+  <a href="https://hammerrealtyutah.com/#pillars" onclick="toggleMenu()" class="sub">↳ Residential</a>
+  <a href="https://hammerrealtyutah.com/#pillars" onclick="toggleMenu()">Build</a>
+  <a href="manage.html" onclick="toggleMenu()">Manage</a>
+  <a href="vacation-rental-management.html" onclick="toggleMenu()" class="sub">↳ Vacation Rental</a>
+  <a href="home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a>
+  <a href="grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
+  <a href="https://hammerrealtyutah.com/#about" onclick="toggleMenu()">About</a>
+  <a href="#contact" onclick="toggleMenu()">Find Your Space</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Commercial Real Estate — Salt Lake City &amp; Northern Utah</div>
+    <h1 class="hero-headline">We find your space.<br><em>We work for you.</em><br>Not the landlord.</h1>
+    <p class="hero-sub">Tenant representation and commercial buyer advocacy for businesses throughout Utah — office, retail, and industrial. No conflicts of interest, ever.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Find Your Space</a>
+      <a href="#process" class="btn-ghost">How It Works</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item">Buyer &amp; Tenant Side Only</div>
+      <div class="hero-trust-item">No Dual Representation</div>
+      <div class="hero-trust-item">Office · Retail · Industrial</div>
+      <div class="hero-trust-item">Salt Lake City &amp; Northern Utah</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY STRIP -->
+<div class="philosophy">
+  <div class="philosophy-inner">
+    <div class="fade">
+      <div class="philosophy-label">Our Side</div>
+      <div class="philosophy-value">You — <em>not the landlord</em></div>
+    </div>
+    <div class="fade">
+      <div class="philosophy-label">Approach</div>
+      <div class="philosophy-value">Requirements <em>first</em></div>
+    </div>
+    <div class="fade">
+      <div class="philosophy-label">Negotiation</div>
+      <div class="philosophy-value">Total cost — <em>not just rent</em></div>
+    </div>
+    <div class="fade">
+      <div class="philosophy-label">Conflicts</div>
+      <div class="philosophy-value">Zero — <em>ever</em></div>
+    </div>
+    <div class="fade">
+      <div class="philosophy-label">Commission</div>
+      <div class="philosophy-value">Paid by landlord — <em>free to you</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- SPACE TYPES -->
+<section class="section" id="services">
+  <div class="section-inner">
+    <div class="eyebrow">What We Help You Find</div>
+    <h2 class="section-title">Office. Retail. <em>Industrial.</em></h2>
+    <p class="section-body">Whether you're a small business outgrowing a lease, a company relocating to Utah, or an owner looking to buy your own building — we know the market and we know how to negotiate it in your favor.</p>
+    <div class="space-types">
+
+      <div class="space-type fade">
+        <div class="space-type-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Space Type</h3>
+        <div class="space-type-name">Office</div>
+        <p>Headquarters, regional offices, tech space, professional suites, and co-working alternatives. We find the right fit for your team size and growth plans — and negotiate lease terms that protect you.</p>
+        <div class="space-type-tags">
+          <span class="space-tag">HQ &amp; Regional</span>
+          <span class="space-tag">Tech &amp; Creative</span>
+          <span class="space-tag">Professional Suites</span>
+          <span class="space-tag">Medical Office</span>
+        </div>
+      </div>
+
+      <div class="space-type fade">
+        <div class="space-type-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Space Type</h3>
+        <div class="space-type-name">Retail</div>
+        <p>Storefronts, end-caps, pads, and inline retail. We analyze foot traffic, co-tenancy, and lease structure so you're not just getting space — you're getting the right location for your business model.</p>
+        <div class="space-type-tags">
+          <span class="space-tag">Storefronts</span>
+          <span class="space-tag">End-Caps</span>
+          <span class="space-tag">Retail Pads</span>
+          <span class="space-tag">Restaurant Space</span>
+        </div>
+      </div>
+
+      <div class="space-type fade">
+        <div class="space-type-icon">
+          <svg viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Space Type</h3>
+        <div class="space-type-name">Industrial</div>
+        <p>Distribution centers, manufacturing facilities, flex space, and yard. Utah's industrial market moves fast — we track available inventory and know what good terms look like before you sign anything.</p>
+        <div class="space-type-tags">
+          <span class="space-tag">Distribution</span>
+          <span class="space-tag">Manufacturing</span>
+          <span class="space-tag">Flex Space</span>
+          <span class="space-tag">Yard / Outdoor</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BAND -->
+<div class="photo-band">
+  <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=80&auto=format&fit=crop&crop=center" alt="Modern office space in Salt Lake City Utah" loading="lazy"/>
+</div>
+
+<!-- PROCESS -->
+<section class="section section--dark" id="process">
+  <div class="section-inner">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="section-title section-title--light">Simple. <em style="color:var(--sage)">Transparent.</em> On your side.</h2>
+    <p class="section-body" style="color:rgba(250,250,248,0.5)">Most businesses don't realize they can have a dedicated advocate throughout the entire commercial real estate process — at no cost to them. Here's how we work.</p>
+    <div class="process-grid">
+      <div class="process-step fade">
+        <div class="process-num">01</div>
+        <h3>Requirements</h3>
+        <p>We start with a deep dive into your needs — space size, location, budget, timeline, and what the space needs to do for your business long-term.</p>
+      </div>
+      <div class="process-step fade">
+        <div class="process-num">02</div>
+        <h3>Search</h3>
+        <p>We survey the market — on-market and off — and filter to the options that actually fit your requirements, so you're not wasting time on tours that go nowhere.</p>
+      </div>
+      <div class="process-step fade">
+        <div class="process-num">03</div>
+        <h3>Compare</h3>
+        <p>We build a clear side-by-side comparison of your top options — total occupancy cost, lease terms, build-out allowances, and deal-breakers — so the decision is easy.</p>
+      </div>
+      <div class="process-step fade">
+        <div class="process-num">04</div>
+        <h3>Negotiate</h3>
+        <p>We negotiate hard on your behalf — on rent, tenant improvement allowances, lease length, renewal options, and every clause that protects you if things change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section--cream" id="why">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <div class="eyebrow">Why Tenant Rep Matters</div>
+        <h2 class="section-title">Your advocate.<br><em>Not their agent.</em></h2>
+        <p class="section-body">The landlord has a broker working to maximize their rent and protect their interests. You should too. Tenant representation costs you nothing — the landlord pays our commission — and the difference it makes in lease terms and total cost is significant.</p>
+        <div class="why-points">
+          <div class="why-point fade">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div>
+              <div class="why-title">Zero conflict of interest</div>
+              <div class="why-desc">We never represent landlords. Our advice is always 100% in your corner — legally and ethically.</div>
+            </div>
+          </div>
+          <div class="why-point fade">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <div>
+              <div class="why-title">Free to you</div>
+              <div class="why-desc">Tenant rep commissions are paid by the landlord — you get full professional representation at no cost.</div>
+            </div>
+          </div>
+          <div class="why-point fade">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <div>
+              <div class="why-title">Market intelligence</div>
+              <div class="why-desc">We know what comparable spaces are leasing for and what landlords are actually willing to negotiate — before you sit down at the table.</div>
+            </div>
+          </div>
+          <div class="why-point fade">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <div>
+              <div class="why-title">End-to-end support</div>
+              <div class="why-desc">From requirements through signed lease — we manage the search, the tours, the LOI, and the lease review so nothing falls through the cracks.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="why-aside">
+          <div class="why-aside-quote">"The landlord's broker works for the landlord. <em>We work for you.</em> That's not a tagline — it's the whole point."</div>
+          <div class="why-aside-attr">Abby Hammer — Founder, Hammer Realty &amp; Co.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div>
+          <div class="eyebrow">Get Started</div>
+          <h2 class="section-title">Tell us about<br><em>your space needs.</em></h2>
+          <p class="section-body">Whether you're just starting to think about a move or actively searching, reach out. We'll have a quick conversation about what you need and whether we're a fit — no pressure, no commitment.</p>
+        </div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-value"><a href="mailto:abby@hammerrealtyutah.com">abby@hammerrealtyutah.com</a></div>
+        </div>
+        <div class="contact-note">
+          <strong style="display:block;font-weight:500;margin-bottom:0.4rem;">Commission is paid by the landlord.</strong>
+          Tenant and buyer representation costs you nothing. You get a full-time advocate at no out-of-pocket expense — that's how commercial real estate works, and we want you to know it upfront.
+        </div>
+      </div>
+      <div>
+        <div class="form-wrap">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdeaqlyl" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required/>
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" placeholder="Acme Co."/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required/>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(801) 555-0100"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="space_type">Type of Space</label>
+                <select id="space_type" name="space_type">
+                  <option value="">Select one…</option>
+                  <option value="Office">Office</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Industrial / Warehouse">Industrial / Warehouse</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sqft">Approximate Square Footage</label>
+                <input type="text" id="sqft" name="sqft" placeholder="e.g. 2,000–4,000 sq ft"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select one…</option>
+                <option value="ASAP">As soon as possible</option>
+                <option value="1-3 months">1–3 months</option>
+                <option value="3-6 months">3–6 months</option>
+                <option value="6-12 months">6–12 months</option>
+                <option value="Just exploring">Just exploring</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" placeholder="Location preferences, must-haves, deal-breakers…"></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Inquiry &rarr;</button>
+          </form>
+          <div id="formSuccess">
+            <strong>We'll be in touch soon.</strong>
+            <p>Thank you — Abby will reach out within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="https://hammerrealtyutah.com" class="footer-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <div class="footer-text">© 2024 Hammer Realty &amp; Co. · A Division of Logical Move Brokerage<br>Licensed in Utah · abby@hammerrealtyutah.com</div>
+    <div class="footer-links">
+      <a href="https://hammerrealtyutah.com">Home</a>
+      <a href="manage.html">Vacation Home Services</a>
+      <a href="https://hammerrealtyutah.com/#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+faders.forEach(f => io.observe(f));
+
+// Form success
+const form = document.getElementById('contactForm');
+if(form) {
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    if(res.ok) {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+  });
+}
+</script>

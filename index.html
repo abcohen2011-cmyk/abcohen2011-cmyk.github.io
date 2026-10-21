@@ -896,7 +896,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
   <div class="nav-inner">
     <a href="#top" class="nav-logo">Hammer Realty <span>&amp; Co.</span></a>
     <ul class="nav-links">
-      <li><a href="#pillars">Buy</a></li>
+      <li class="nav-dropdown">
+        <a href="#pillars">Buy / Lease</a>
+        <div class="nav-dropdown-menu">
+          <a href="commercial.html">Commercial Space</a>
+          <a href="#pillars">Residential</a>
+        </div>
+      </li>
       <li><a href="#pillars">Build</a></li>
       <li class="nav-dropdown">
         <a href="manage.html">Manage</a>
@@ -917,7 +923,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#pillars" onclick="toggleMenu()">Buy</a>
+  <a href="commercial.html" onclick="toggleMenu()">Commercial Space</a>
+  <a href="#pillars" onclick="toggleMenu()" class="sub">↳ Residential</a>
   <a href="#pillars" onclick="toggleMenu()">Build</a>
   <a href="manage.html" onclick="toggleMenu()">Manage</a>
   <a href="vacation-rental-management.html" onclick="toggleMenu()" class="sub">↳ Vacation Rental</a>
@@ -939,23 +946,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
         No dual representation — ever
       </div>
       <h1 class="hero-headline">
-        <span class="strong">Thoughtfully renovating homes.</span>
-        <span class="light">Building lasting value.</span>
-        <span class="strong">Helping clients invest wisely.</span>
+        <span class="strong">Find the right space.</span>
+        <span class="light">Build lasting value.</span>
+        <span class="strong">Protect what you own.</span>
       </h1>
-      <p class="hero-desc">We represent residential and commercial buyers throughout Utah with no conflicts of interest — and we build and manage a portfolio of thoughtfully renovated properties for the long term.</p>
+      <p class="hero-desc">Commercial and residential buyer representation, thoughtful renovations, and full-service vacation home management — all under one roof, all with your interests first.</p>
       <div class="hero-actions">
-        <a href="#pillars" class="btn-primary">How We Work</a>
+        <a href="#pillars" class="btn-primary">See What We Do</a>
         <a href="#contact" class="btn-ghost">Start a Conversation</a>
       </div>
       <div class="hero-stats">
         <div>
-          <div class="hero-stat-num">30+</div>
-          <div class="hero-stat-label">Years Combined<br>Buyer Experience</div>
+          <div class="hero-stat-num">Buyers</div>
+          <div class="hero-stat-label">Residential &amp;<br>Commercial</div>
         </div>
         <div>
           <div class="hero-stat-num">100%</div>
-          <div class="hero-stat-label">Buyers Only —<br>No Dual Representation</div>
+          <div class="hero-stat-label">No Dual<br>Representation</div>
         </div>
         <div>
           <div class="hero-stat-num">3</div>
@@ -1013,14 +1020,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
       <div class="pillar fade">
         <div class="pillar-word">Buy</div>
         <div class="pillar-divider"></div>
-        <h3>Buyer Representation</h3>
-        <p>Representing residential and commercial buyers throughout Utah — with no conflicts of interest. We never practice dual representation, which means every piece of advice, every negotiation, every recommendation is 100% in your corner.<br><br>From first-time buyers to investors acquiring commercial space, the process is the same: thorough analysis, disciplined negotiation, and full due diligence from offer to close.</p>
+        <h3>Buyer &amp; Tenant Representation</h3>
+        <p><strong style="font-weight:500">Residential.</strong> We represent home buyers and investors throughout Utah — no dual agency, ever. From first offer to closing, every recommendation is 100% in your corner.<br><br><strong style="font-weight:500">Commercial.</strong> Office, retail, and industrial space in Salt Lake City and Northern Utah. We negotiate leases and purchases for tenants and buyers — working exclusively on your side, not the landlord's.</p>
         <div class="pillar-tags">
-          <span class="pillar-tag">Residential</span>
-          <span class="pillar-tag">Commercial</span>
+          <span class="pillar-tag">Residential Buyers</span>
+          <span class="pillar-tag">Commercial Tenants</span>
           <span class="pillar-tag">Investment</span>
-          <span class="pillar-tag">Relocation</span>
+          <span class="pillar-tag">No Dual Agency</span>
         </div>
+        <a href="commercial.html" class="pillar-link">Find Your Space →</a>
       </div>
 
       <!-- BUILD -->
