@@ -854,6 +854,87 @@ footer {
   .notify-form { flex-direction: column; }
 }
 
+/* LEASE CTA */
+.lease-cta {
+  background: var(--sage-light);
+  border-top: 1px solid rgba(122,158,135,0.25);
+  border-bottom: 1px solid rgba(122,158,135,0.25);
+  padding: 4.5rem 2rem;
+}
+.lease-cta-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  align-items: center;
+}
+.lease-cta-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  margin-bottom: 0.85rem;
+}
+.lease-cta-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.8vw, 2.2rem);
+  color: var(--charcoal);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.lease-cta-headline em { font-style: italic; color: var(--sage-dark); }
+.lease-cta-body {
+  font-size: 0.95rem;
+  color: var(--stone);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.lease-cta-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+.lease-cta-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--charcoal);
+  font-weight: 400;
+}
+.lease-cta-point::before {
+  content: '→';
+  color: var(--sage-dark);
+  flex-shrink: 0;
+  margin-top: 0.05em;
+}
+.lease-form-card {
+  background: var(--warm-white);
+  border: 1px solid var(--stone-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.lease-form-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  margin-bottom: 0.35rem;
+}
+.lease-form-card p {
+  font-size: 0.8rem;
+  color: var(--stone);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+@media (max-width: 780px) {
+  .lease-cta-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
 /* FADE IN */
 .fade { opacity: 0; transform: translateY(14px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .fade.in { opacity: 1; transform: none; }
@@ -1034,11 +1115,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
         <div class="pillar-word">Manage</div>
         <div class="pillar-divider"></div>
         <h3>Vacation Home Services</h3>
-        <p>Full-service care for vacation homeowners in Park City — so your property is ready when you arrive and earning when you're not there.<br><br>Vacation rental management, home watch inspections, and grocery stocking, all handled by one local team that knows your home.</p>
+        <p>Thoughtful care for vacation homeowners in Park City — so your property is ready when you arrive and looked after when you're not there.<br><br>Home watch inspections, grocery stocking, and selective co-hosting support, all coordinated by one local team that knows your home.</p>
         <div class="pillar-tags">
-          <span class="pillar-tag">Vacation Rental</span>
           <span class="pillar-tag">Home Watch</span>
           <span class="pillar-tag">Grocery Stocking</span>
+          <span class="pillar-tag">Co-Hosting</span>
           <span class="pillar-tag">Park City</span>
         </div>
         <a href="manage.html" class="pillar-link">Vacation Home Services →</a>
@@ -1123,6 +1204,54 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
         <div class="buyers-cta fade">
           <a href="#contact">Is your lease expiring? Let's talk options →</a>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEASE EXPIRATION CTA -->
+<section class="lease-cta" id="lease-options">
+  <div class="lease-cta-inner">
+    <div class="fade">
+      <div class="lease-cta-eyebrow">Lease Expiring in the Next 12–18 Months?</div>
+      <h2 class="lease-cta-headline">Most tenants wait too long. <em>Don't.</em></h2>
+      <p class="lease-cta-body">The window before your lease expires is the most valuable time in any tenant's negotiating position. Landlords know it. Most tenants don't act on it. Starting 12–18 months out gives you the leverage to negotiate renewal terms, explore competing options, and make a deliberate decision — not a rushed one.</p>
+      <div class="lease-cta-points">
+        <div class="lease-cta-point">Review your current lease terms and identify leverage points</div>
+        <div class="lease-cta-point">Survey the market for competing spaces — even if you plan to stay</div>
+        <div class="lease-cta-point">Negotiate renewal rate, TI allowance, and lease structure</div>
+        <div class="lease-cta-point">No obligation to explore — information is your best tool</div>
+      </div>
+      <a href="#contact" class="btn-primary" style="display:inline-block;">Review My Lease Options</a>
+    </div>
+    <div class="lease-form-card fade">
+      <h3>Quick Lease Check-In</h3>
+      <p>Share a few details and we'll be in touch to discuss your options — no commitment required.</p>
+      <div id="leaseForm">
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label for="lc-name" style="font-size:0.8rem;font-weight:500;color:var(--charcoal);display:block;margin-bottom:0.35rem;">Name</label>
+          <input type="text" id="lc-name" name="name" placeholder="Your name" style="width:100%;padding:0.65rem 0.75rem;border:1px solid var(--stone-light);border-radius:var(--radius);font-family:var(--font-body);font-size:0.875rem;background:var(--warm-white);color:var(--charcoal);outline:none;">
+        </div>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label for="lc-email" style="font-size:0.8rem;font-weight:500;color:var(--charcoal);display:block;margin-bottom:0.35rem;">Email</label>
+          <input type="email" id="lc-email" name="email" placeholder="you@company.com" style="width:100%;padding:0.65rem 0.75rem;border:1px solid var(--stone-light);border-radius:var(--radius);font-family:var(--font-body);font-size:0.875rem;background:var(--warm-white);color:var(--charcoal);outline:none;">
+        </div>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label for="lc-expiry" style="font-size:0.8rem;font-weight:500;color:var(--charcoal);display:block;margin-bottom:0.35rem;">Lease expires approximately</label>
+          <select id="lc-expiry" name="lease_expiry" style="width:100%;padding:0.65rem 0.75rem;border:1px solid var(--stone-light);border-radius:var(--radius);font-family:var(--font-body);font-size:0.875rem;background:var(--warm-white);color:var(--charcoal);outline:none;appearance:none;">
+            <option value="">Select a timeframe</option>
+            <option value="0-6mo">Within 6 months</option>
+            <option value="6-12mo">6–12 months</option>
+            <option value="12-18mo">12–18 months</option>
+            <option value="18mo+">More than 18 months</option>
+            <option value="month-to-month">Month-to-month</option>
+          </select>
+        </div>
+        <button type="button" onclick="submitLease()" style="width:100%;padding:0.8rem;background:var(--charcoal);color:var(--warm-white);border:none;border-radius:var(--radius);font-family:var(--font-body);font-size:0.875rem;font-weight:500;cursor:pointer;letter-spacing:0.02em;">Review My Lease Options →</button>
+      </div>
+      <div id="leaseSuccess" hidden style="text-align:center;padding:1rem 0;">
+        <strong style="display:block;margin-bottom:0.5rem;color:var(--charcoal);">We'll be in touch soon.</strong>
+        <span style="font-size:0.85rem;color:var(--stone);">Reach us directly at abby@hammerrealtyutah.com</span>
       </div>
     </div>
   </div>
@@ -1272,6 +1401,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
 <script>
 function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
+}
+async function submitLease() {
+  const name = document.getElementById('lc-name').value.trim();
+  const email = document.getElementById('lc-email').value.trim();
+  const expiry = document.getElementById('lc-expiry').value;
+  if (!name || !email) { alert('Please enter your name and email.'); return; }
+  const data = new FormData();
+  data.append('name', name);
+  data.append('email', email);
+  data.append('lease_expiry', expiry);
+  data.append('_subject', 'Lease Check-In from hammerrealtyutah.com');
+  try {
+    const res = await fetch('https://formspree.io/f/xjygdodw', { method:'POST', body: data, headers:{'Accept':'application/json'} });
+    if (res.ok) {
+      document.getElementById('leaseForm').hidden = true;
+      document.getElementById('leaseSuccess').hidden = false;
+    } else { alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.'); }
+  } catch { alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.'); }
 }
 async function handleSubmit(e) {
   e.preventDefault();
