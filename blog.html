@@ -34,7 +34,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 .nav-logo { font-family: var(--font-display); font-size: 1.05rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; }
 .nav-logo span { color: var(--sage); }
 .nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
-.nav-links a { font-size: 0.78rem; font-weight: 400; color: var(--stone); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a { font-size: 0.78rem; font-weight: 400; color: var(--stone); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; white-space: nowrap; }
 .nav-links a:hover, .nav-links a.active { color: var(--charcoal); }
 .nav-dropdown { position: relative; }
 .nav-dropdown > a::after { content: ' ▾'; font-size: 0.58rem; vertical-align: middle; }
@@ -53,7 +53,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 .mobile-menu a:last-child { border-bottom: none; }
 .mobile-menu a.sub { padding-left: 1.25rem; font-size: 0.82rem; color: var(--stone); }
 .mobile-menu.open { display: flex; }
-@media (max-width: 700px) { .nav-links { display: none; } .hamburger { display: flex; } }
+@media (max-width: 1100px) { .nav-links { display: none; } .hamburger { display: flex; } }
 
 .page-header {
   padding: 120px 2rem 5rem;
@@ -154,14 +154,13 @@ footer { background: var(--charcoal); padding: 3rem 2rem; }
     <ul class="nav-links">
       <li class="nav-dropdown">
         <a href="commercial.html">Commercial</a>
-      <a href="park-city-rental-concierge.html">Residential</a>
         <div class="nav-dropdown-menu">
           <a href="tenant-representation.html">Tenant Representation</a>
           <a href="industrial-flex-space.html">Industrial &amp; Flex</a>
           <a href="buyer-representation.html">Buyer Representation</a>
         </div>
       </li>
-            <li class="nav-dropdown">
+      <li class="nav-dropdown">
         <a href="park-city-rental-concierge.html">Residential</a>
         <div class="nav-dropdown-menu">
           <a href="park-city-rental-concierge.html">Park City Rental Concierge</a>
