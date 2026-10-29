@@ -83,7 +83,7 @@
 body{font-family:var(--font-body);color:var(--charcoal);background:var(--warm-white);line-height:1.6;-webkit-font-smoothing:antialiased;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(30,30,28,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);height:64px;display:flex;align-items:center;}
+nav:not(.footer-links){position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(30,30,28,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);height:64px;display:flex;align-items:center;}
 .nav-inner{max-width:var(--max);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 max(1.5rem,env(safe-area-inset-left,0px));padding-right:max(1.5rem,env(safe-area-inset-right,0px));}
 .nav-logo{font-family:var(--font-display);font-size:1.05rem;color:rgba(250,250,248,0.85);text-decoration:none;letter-spacing:-0.01em;white-space:nowrap;}
 .nav-logo span{color:var(--sage);}
@@ -303,7 +303,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
   <div class="hero-inner">
     <div class="hero-eyebrow">Park City Rental Concierge · Summit County, Utah</div>
     <h1 class="hero-headline">Moving to Park City?<br><em>Let us find your rental.</em></h1>
-    <p class="hero-sub">Relocating from out of state is hard enough without trying to tour apartments from a thousand miles away. For a flat $499, we handle the search, schedule every showing, and do FaceTime walkthroughs so you can choose with confidence before you move.</p>
+    <p class="hero-sub">Relocating from out of state is hard enough without trying to tour homes from a thousand miles away. For a flat $499, we handle the search, schedule your showings, and do FaceTime walkthroughs so you can choose with confidence before you move.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Get Started — $499 Flat Fee</a>
       <a href="#what-we-do" class="btn-ghost">What's Included</a>
@@ -311,7 +311,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
     <div class="hero-trust">
       <div class="hero-trust-item">$499 Flat Fee</div>
       <div class="hero-trust-item">FaceTime Showings Available</div>
-      <div class="hero-trust-item">Lease Review Included</div>
+      <div class="hero-trust-item">Lease Walkthrough Included</div>
       <div class="hero-trust-item">Park City &amp; Summit County</div>
     </div>
   </div>
@@ -333,7 +333,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
       <div class="strip-item-value">FaceTime — <em>always available</em></div>
     </div>
     <div class="fade">
-      <div class="strip-item-label">Lease Review</div>
+      <div class="strip-item-label">Lease Walkthrough</div>
       <div class="strip-item-value">Included — <em>no extra charge</em></div>
     </div>
   </div>
@@ -344,7 +344,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
   <div class="section-inner">
     <div class="eyebrow fade">What's Included</div>
     <h2 class="section-title fade">Everything you need to rent from <em>anywhere.</em></h2>
-    <p class="section-body fade">Most people relocating to Park City don't have the luxury of flying out to tour a dozen apartments. We go in your place — and bring you along on FaceTime.</p>
+    <p class="section-body fade">Photos and video tours can't tell you what a place feels like to live in. We tour every home in person — on your side, not the landlord's — and report what a listing leaves out: condition, smell, noise, natural light. You get an honest picture to decide from, and we bring you along on FaceTime.</p>
 
     <div class="services-grid">
       <div class="service-card fade">
@@ -372,8 +372,8 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
-        <div class="service-title">Lease Review</div>
-        <div class="service-desc">Before you sign anything, we go through the lease with you — flagging unusual clauses, pet policies, maintenance responsibilities, and anything that could surprise you later.</div>
+        <div class="service-title">Lease Walkthrough</div>
+        <div class="service-desc">Before you sign, we walk through the lease with you — explaining the terms, pet policies, maintenance responsibilities, and anything that could surprise you later. Legal questions are referred to an attorney.</div>
       </div>
     </div>
   </div>
@@ -403,14 +403,14 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
         <div class="process-step-num">03</div>
         <div>
           <h3>Showings — in person or over FaceTime</h3>
-          <p>We schedule and attend every showing. If you can't be here, we do a live FaceTime walkthrough at a time that works for your schedule. We'll answer questions in real time and flag anything worth noting.</p>
+          <p>We schedule and attend your showings — up to 10 are included. If you can't be here, we do a live FaceTime walkthrough at a time that works for your schedule. We'll answer questions in real time and flag anything worth noting.</p>
         </div>
       </div>
       <div class="process-step fade">
         <div class="process-step-num">04</div>
         <div>
-          <h3>Apply and review your lease</h3>
-          <p>Once you've found the right place, we review the lease before you sign — checking terms, move-in fees, renewal language, and anything the landlord might have slipped in. You sign with confidence.</p>
+          <h3>Apply and walk through your lease</h3>
+          <p>Once you've found the right place, we guide you through the application and walk through the lease with you before you sign — terms, move-in fees, renewal language, and anything worth negotiating. Legal questions are referred to an attorney.</p>
         </div>
       </div>
     </div>
@@ -424,21 +424,25 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
       <div>
         <div class="eyebrow fade">Why We Offer This</div>
         <h2 class="section-title fade">Park City doesn't have a <em>tenant advocate.</em></h2>
-        <p class="section-body fade" style="margin-bottom:1.5rem;">I kept meeting people who had just moved to Park City and made a rushed rental decision — sometimes because they flew out for a long weekend, saw three places, and picked one under pressure. Other times because they signed a lease sight unseen based on photos alone.</p>
-        <p class="section-body fade" style="margin-bottom:1.5rem;">There was no one in their corner. The landlord had a property manager. The tenant had Zillow and a prayer.</p>
-        <p class="section-body fade">The Rental Concierge exists to fix that — and honestly, it's a relationship I care about building. When the time comes to buy, I want to be the first person you call.</p>
-        <p class="fade" style="font-size:0.75rem;color:var(--stone);margin-top:1.25rem;font-style:italic;">— Abby Hammer, Broker</p>
+        <p class="section-body fade" style="margin-bottom:1.5rem;">Whether you're flying out to see a handful of places in one weekend or relying on video tours, leasing a home is hard when your home base isn't in town. We're here to make that process easier.</p>
+        <p class="section-body fade" style="margin-bottom:1.5rem;">Most renters have no one in their corner. The landlord has a property manager. The tenant has Zillow and a prayer.</p>
+        <p class="section-body fade">The Rental Concierge exists to fix that — and honestly, it's a relationship we care about building. When the time comes to buy, we want to be the first people you call.</p>
+        <p class="fade" style="font-size:0.75rem;color:var(--stone);margin-top:1.25rem;font-style:italic;">— Abby Hammer, Agent</p>
       </div>
       <div class="fade">
         <div class="aside-card">
-          <div class="aside-quote">The <em>$499</em> covers everything — no hidden fees, no per-showing charges, no commission.</div>
+          <div class="aside-quote"><em>$499</em> Flat Rate*</div>
           <div class="aside-points">
-            <div class="aside-point">Full rental search across all Park City and Summit County listings</div>
-            <div class="aside-point">Unlimited showings and FaceTime walkthroughs during your search</div>
+            <div class="aside-point">Personalized rental search based on budget, location, and requirements</div>
+            <div class="aside-point">Curated shortlist of suitable available properties</div>
             <div class="aside-point">Direct communication with landlords and property managers</div>
-            <div class="aside-point">Complete lease review before you sign</div>
-            <div class="aside-point">Local knowledge — neighborhoods, commute times, what to watch out for</div>
+            <div class="aside-point">Scheduling and coordination of up to 10 showings</div>
+            <div class="aside-point">In-person or live video tours</div>
+            <div class="aside-point">Application process guidance</div>
+            <div class="aside-point">Lease-term explanation and negotiation assistance within the agent's professional scope</div>
+            <div class="aside-point">One final lease walkthrough, with legal questions referred to an attorney</div>
           </div>
+          <p style="font-size:0.75rem;color:rgba(250,250,248,0.4);font-style:italic;line-height:1.6;margin-top:1.5rem;">*Call to confirm pricing. Covers one household for a 30-day service period. Additional services available by agreement.</p>
         </div>
       </div>
     </div>
@@ -458,10 +462,6 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
       <div class="faq-item fade">
         <div class="faq-q">What if I don't end up renting anything?</div>
         <div class="faq-a">We'll work hard to find you the right fit. If the Park City rental market genuinely doesn't have what you need at your budget — which we'll know quickly — we'll tell you honestly. The fee covers the search work; it is not refundable if you ultimately decide not to rent.</div>
-      </div>
-      <div class="faq-item fade">
-        <div class="faq-q">How far does $499 go in Park City rentals?</div>
-        <div class="faq-a">Park City's rental market is competitive and pricing reflects its resort-town status. We'll set honest expectations on your first call. One- and two-bedroom options exist at a range of price points, and proximity to the ski resorts makes a significant difference in rent.</div>
       </div>
       <div class="faq-item fade">
         <div class="faq-q">Do you handle furnished vacation rentals?</div>
