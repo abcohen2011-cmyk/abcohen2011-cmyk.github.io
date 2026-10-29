@@ -4,14 +4,14 @@
 <meta charset="UTF-8"/>
 <link rel="canonical" href="https://hammerrealtyutah.com/park-city-rental-concierge.html"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Park City Rental Concierge | $499 Flat Fee | Hammer Realty &amp; Co.</title>
-<meta name="description" content="Relocating to Park City? Our Rental Concierge service finds suitable rentals, arranges in-person and FaceTime showings, and reviews your lease — all for a $499 flat fee."/>
+<title>Park City Rental Concierge | Relocation &amp; Rental Assistance</title>
+<meta name="description" content="Relocating to Park City, Utah? Get help finding long-term rentals, coordinating showings, taking virtual tours, and navigating leases for a $499 flat fee."/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Park City Rental Concierge",
-  "description": "Flat-fee residential rental concierge for people relocating to Park City, Utah. We find suitable rentals, arrange showings, conduct FaceTime tours, and review leases.",
+  "description": "Flat-fee rental assistance for people relocating to Park City, Utah. We help find long-term rentals, coordinate showings, conduct FaceTime tours, and provide lease guidance and negotiation support.",
   "provider": {
     "@type": "RealEstateAgent",
     "name": "Hammer Realty & Co.",
@@ -156,7 +156,9 @@ nav:not(.footer-links){position:fixed;top:0;left:0;right:0;z-index:100;backgroun
 
 /* SERVICES GRID */
 .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:var(--stone-light);border:1.5px solid var(--stone-light);border-radius:var(--radius-lg);overflow:hidden;margin-top:2.5rem;}
+.services-grid--three{grid-template-columns:repeat(3,1fr);}
 .service-card{background:var(--warm-white);padding:2.25rem 1.75rem;}
+#relocating .service-card{background:var(--cream);}
 .service-icon{width:40px;height:40px;background:var(--sage-light);border:1px solid rgba(122,158,135,0.25);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;}
 .service-icon svg{width:18px;height:18px;stroke:var(--sage-dark);fill:none;stroke-width:1.5;}
 .service-title{font-family:var(--font-display);font-size:1.15rem;color:var(--charcoal);margin-bottom:0.5rem;letter-spacing:-0.01em;}
@@ -201,7 +203,9 @@ nav:not(.footer-links){position:fixed;top:0;left:0;right:0;z-index:100;backgroun
 .form-section{background:var(--warm-white);border:1px solid var(--stone-light);border-radius:var(--radius-lg);padding:2.5rem;}
 .contact-form{display:flex;flex-direction:column;gap:1.1rem;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.form-group{display:flex;flex-direction:column;gap:0.35rem;}
+.form-group{display:flex;flex-direction:column;gap:0.35rem;min-width:0;}
+.contact-grid>*{min-width:0;}
+.form-group select{width:100%;min-width:0;}
 .form-group label{font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone);}
 .form-group input,.form-group textarea,.form-group select{background:var(--cream);border:1px solid var(--stone-light);border-radius:var(--radius);padding:0.7rem 0.9rem;font-family:var(--font-body);font-size:0.875rem;color:var(--charcoal);outline:none;transition:border-color 0.2s;-webkit-appearance:none;}
 .form-group input::placeholder,.form-group textarea::placeholder{color:var(--stone-light);}
@@ -221,7 +225,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
 .footer-logo{font-family:var(--font-display);font-size:1rem;color:rgba(250,250,248,0.5);text-decoration:none;}
 .footer-logo span{color:var(--sage);}
 .footer-text{font-size:0.72rem;color:rgba(250,250,248,0.22);line-height:1.6;}
-.footer-links{display:flex;gap:1.5rem;}
+.footer-links{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;}
 .footer-links a{font-size:0.78rem;color:rgba(250,250,248,0.35);text-decoration:none;transition:color 0.2s;}
 .footer-links a:hover{color:var(--sage);}
 
@@ -233,7 +237,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
 /* RESPONSIVE */
 @media(max-width:900px){
   .two-col{grid-template-columns:1fr;gap:3rem;}
-  .services-grid{grid-template-columns:1fr;}
+  .services-grid,.services-grid--three{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;gap:3rem;}
   .footer-inner{flex-direction:column;}
 }
@@ -303,7 +307,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
   <div class="hero-inner">
     <div class="hero-eyebrow">Park City Rental Concierge · Summit County, Utah</div>
     <h1 class="hero-headline">Moving to Park City?<br><em>Let us find your rental.</em></h1>
-    <p class="hero-sub">Relocating from out of state is hard enough without trying to tour homes from a thousand miles away. For a flat $499, we handle the search, schedule your showings, and do FaceTime walkthroughs so you can choose with confidence before you move.</p>
+    <p class="hero-sub">Relocating to Park City? Finding a long-term rental from out of town doesn't have to be overwhelming. We'll help you find suitable properties, coordinate showings, tour homes over FaceTime, and navigate the leasing process — all for a flat $499 fee.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Get Started — $499 Flat Fee</a>
       <a href="#what-we-do" class="btn-ghost">What's Included</a>
@@ -311,7 +315,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
     <div class="hero-trust">
       <div class="hero-trust-item">$499 Flat Fee</div>
       <div class="hero-trust-item">FaceTime Showings Available</div>
-      <div class="hero-trust-item">Lease Walkthrough Included</div>
+      <div class="hero-trust-item">Lease Guidance Included</div>
       <div class="hero-trust-item">Park City &amp; Summit County</div>
     </div>
   </div>
@@ -333,11 +337,34 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
       <div class="strip-item-value">FaceTime — <em>always available</em></div>
     </div>
     <div class="fade">
-      <div class="strip-item-label">Lease Walkthrough</div>
+      <div class="strip-item-label">Lease Guidance &amp; Negotiation</div>
       <div class="strip-item-value">Included — <em>no extra charge</em></div>
     </div>
   </div>
 </div>
+
+<!-- RELOCATION -->
+<section class="section" id="relocating">
+  <div class="section-inner">
+    <div class="eyebrow fade">Relocating to Park City</div>
+    <h2 class="section-title fade">Moving from out of town? We're your <em>eyes on the ground.</em></h2>
+    <p class="section-body fade">Can't make the trip to Park City every time a promising rental becomes available? We'll help coordinate property tours, walk through homes with you over FaceTime, and provide local insight so you can make more informed decisions from wherever you are.</p>
+    <div class="services-grid services-grid--three">
+      <div class="service-card fade">
+        <div class="service-title">Remote Property Tours</div>
+        <div class="service-desc">See potential homes through live FaceTime walkthroughs when you can't be there in person.</div>
+      </div>
+      <div class="service-card fade">
+        <div class="service-title">Local Rental Search Assistance</div>
+        <div class="service-desc">Get help identifying rental options that fit your budget, preferred neighborhoods, and lifestyle.</div>
+      </div>
+      <div class="service-card fade">
+        <div class="service-title">Showing Coordination</div>
+        <div class="service-desc">Spend less time arranging appointments and more time preparing for your move.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- WHAT WE DO -->
 <section class="section section--cream" id="what-we-do">
@@ -372,8 +399,8 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
-        <div class="service-title">Lease Walkthrough</div>
-        <div class="service-desc">Before you sign, we walk through the lease with you — explaining the terms, pet policies, maintenance responsibilities, and anything that could surprise you later. Legal questions are referred to an attorney.</div>
+        <div class="service-title">Lease Guidance &amp; Negotiation Support</div>
+        <div class="service-desc">We'll help you understand the practical terms of your proposed lease, including rent, deposits, pet policies, renewal provisions, and maintenance responsibilities. We can also help communicate and negotiate lease terms on your behalf. For legal interpretation or advice, we recommend consulting a qualified attorney.</div>
       </div>
     </div>
   </div>
@@ -409,8 +436,8 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
       <div class="process-step fade">
         <div class="process-step-num">04</div>
         <div>
-          <h3>Apply and walk through your lease</h3>
-          <p>Once you've found the right place, we guide you through the application and walk through the lease with you before you sign — terms, move-in fees, renewal language, and anything worth negotiating. Legal questions are referred to an attorney.</p>
+          <h3>Apply, with lease guidance &amp; negotiation support</h3>
+          <p>Once you've found the right place, we guide you through the application and help you understand the practical terms of the lease — rent, deposits, pet policies, renewal provisions, and maintenance responsibilities. We can also communicate and negotiate terms with the landlord on your behalf. For legal interpretation or advice, we recommend consulting a qualified attorney.</p>
         </div>
       </div>
     </div>
@@ -423,11 +450,15 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
     <div class="two-col">
       <div>
         <div class="eyebrow fade">Why We Offer This</div>
-        <h2 class="section-title fade">Park City doesn't have a <em>tenant advocate.</em></h2>
-        <p class="section-body fade" style="margin-bottom:1.5rem;">Whether you're flying out to see a handful of places in one weekend or relying on video tours, leasing a home is hard when your home base isn't in town. We're here to make that process easier.</p>
-        <p class="section-body fade" style="margin-bottom:1.5rem;">Most renters have no one in their corner. The landlord has a property manager. The tenant has Zillow and a prayer.</p>
-        <p class="section-body fade">The Rental Concierge exists to fix that — and honestly, it's a relationship we care about building. When the time comes to buy, we want to be the first people you call.</p>
-        <p class="fade" style="font-size:0.75rem;color:var(--stone);margin-top:1.25rem;font-style:italic;">— Abby Hammer, Agent</p>
+        <h2 class="section-title fade">Renters deserve <em>representation, too.</em></h2>
+        <p class="section-body fade" style="margin-bottom:1.5rem;">Finding a long-term rental in Park City can be challenging, especially when you're relocating from another city or state. Between competitive listings, unfamiliar neighborhoods, and coordinating showings from afar, there's a lot to manage.</p>
+        <p class="section-body fade">Most rental listings are marketed on behalf of property owners. Park City Rental Concierge offers renters a local real estate professional focused on helping them navigate the search, explore their options, and make informed leasing decisions.</p>
+        <div class="fade" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--stone-light);">
+          <p class="section-body" style="margin-bottom:1.25rem;">Moving to a new community is exciting, but finding the right place to live can be overwhelming, especially when you're searching from hundreds of miles away.</p>
+          <p class="section-body" style="margin-bottom:1.25rem;">We created Park City Rental Concierge to make that process easier. As your local Park City rental agents, we help renters find suitable properties, coordinate showings, and navigate the leasing process with someone local on their side.</p>
+          <p class="section-body">Whether you're moving across the country or just across town, our goal is to make finding your next home simpler and less stressful.</p>
+          <p style="font-size:0.8rem;color:var(--stone);margin-top:1.5rem;line-height:1.7;"><span style="font-family:var(--font-display);font-size:1.05rem;color:var(--charcoal);">Abby Hammer</span><br>Utah Licensed Real Estate Agent<br>Logical Move Brokerage</p>
+        </div>
       </div>
       <div class="fade">
         <div class="aside-card">
@@ -439,8 +470,8 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
             <div class="aside-point">Scheduling and coordination of up to 10 showings</div>
             <div class="aside-point">In-person or live video tours</div>
             <div class="aside-point">Application process guidance</div>
-            <div class="aside-point">Lease-term explanation and negotiation assistance within the agent's professional scope</div>
-            <div class="aside-point">One final lease walkthrough, with legal questions referred to an attorney</div>
+            <div class="aside-point">Lease guidance &amp; negotiation support within the agent's professional scope</div>
+            <div class="aside-point">One final lease guidance session before you sign, with legal questions referred to an attorney</div>
           </div>
           <p style="font-size:0.75rem;color:rgba(250,250,248,0.4);font-style:italic;line-height:1.6;margin-top:1.5rem;">*Call to confirm pricing. Covers one household for a 30-day service period. Additional services available by agreement.</p>
         </div>
@@ -456,6 +487,18 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
     <h2 class="section-title fade">Things people ask <em>us.</em></h2>
     <div class="faq-list">
       <div class="faq-item fade">
+        <div class="faq-q">Can you help me find a rental if I currently live out of state?</div>
+        <div class="faq-a">Absolutely. Helping people relocate to Park City is a primary focus of our service. We can coordinate property showings, provide live virtual walkthroughs, and help you evaluate rental options before you arrive.</div>
+      </div>
+      <div class="faq-item fade">
+        <div class="faq-q">Do I have to visit Park City in person?</div>
+        <div class="faq-a">Not necessarily. We can assist with remote property tours and coordination, although individual landlords or property managers may have their own application, verification, or in-person requirements.</div>
+      </div>
+      <div class="faq-item fade">
+        <div class="faq-q">Do you only work with people relocating to Park City?</div>
+        <div class="faq-a">No. While we specialize in helping people relocate, we also assist local renters looking for their next long-term home.</div>
+      </div>
+      <div class="faq-item fade">
         <div class="faq-q">When is the $499 due?</div>
         <div class="faq-a">Due at the start of the engagement — once we've had an initial call and agreed on your search criteria. It covers the full process from search through lease signing.</div>
       </div>
@@ -465,7 +508,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
       </div>
       <div class="faq-item fade">
         <div class="faq-q">Do you handle furnished vacation rentals?</div>
-        <div class="faq-a">Our focus is longer-term residential rentals — typically 6-month or 12-month leases. For furnished short-term stays, check our Vacation Services, or we can point you toward the right resources.</div>
+        <div class="faq-a">Our focus is Park City long-term rentals — typically 6-month or 12-month leases. For furnished short-term stays, check our Vacation Services, or we can point you toward the right resources.</div>
       </div>
       <div class="faq-item fade">
         <div class="faq-q">Can I meet you in person before committing?</div>
@@ -504,7 +547,8 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
       </div>
       <div class="fade">
         <div class="form-section">
-          <form class="contact-form" id="rentalForm" onsubmit="submitRentalForm(event)">
+          <form class="contact-form" id="rentalForm" action="https://formspree.io/f/xjygdodw" method="POST" onsubmit="submitRentalForm(event)">
+            <input type="hidden" name="_subject" value="Park City Rental Concierge Inquiry — hammerrealtyutah.com"/>
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
@@ -522,6 +566,40 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
             <div class="form-group">
               <label for="phone">Phone (optional)</label>
               <input type="tel" id="phone" name="phone" placeholder="801-555-0100"/>
+            </div>
+            <div class="form-group">
+              <label for="relocation">Are you relocating to Park City? (optional)</label>
+              <select id="relocation" name="relocation_status">
+                <option value="" selected>Select one</option>
+                <option>Yes, from out of state</option>
+                <option>Yes, from elsewhere in Utah</option>
+                <option>Already live in Park City / Summit County</option>
+                <option>Just exploring a move</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ptype">What type of home are you looking for? (optional)</label>
+                <select id="ptype" name="property_type">
+                  <option value="" selected>Select one</option>
+                  <option>Apartment / Condo</option>
+                  <option>Townhome</option>
+                  <option>Single-Family Home</option>
+                  <option>Open to Any</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="beds">How many bedrooms do you need? (optional)</label>
+                <select id="beds" name="bedrooms">
+                  <option value="" selected>Select one</option>
+                  <option>Studio</option>
+                  <option>1 Bedroom</option>
+                  <option>2 Bedrooms</option>
+                  <option>3 Bedrooms</option>
+                  <option>4+ Bedrooms</option>
+                  <option>Flexible</option>
+                </select>
+              </div>
             </div>
             <div class="form-group">
               <label for="timeline">Move-In Timeline</label>
@@ -547,7 +625,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
             </div>
             <div class="form-group">
               <label for="notes">Tell us a bit about what you're looking for</label>
-              <textarea id="notes" name="notes" placeholder="Bedrooms needed, pets, ski access important, commuting to SLC, etc."></textarea>
+              <textarea id="notes" name="notes" placeholder="Pets, ski access, commuting to SLC, preferred neighborhoods, etc."></textarea>
             </div>
             <button type="submit" class="form-submit">Send Message</button>
           </form>
@@ -565,7 +643,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
 <footer>
   <div class="footer-inner">
     <a href="https://hammerrealtyutah.com" class="footer-logo">Hammer Realty <span>&amp; Co.</span></a>
-    <div class="footer-text">A Division of Logical Move Brokerage · Park City, Utah</div>
+    <div class="footer-text">Abby Hammer | Utah Licensed Real Estate Agent<br>A Division of Logical Move Brokerage · Park City, Utah</div>
     <nav class="footer-links">
       <a href="commercial.html">Commercial</a>
       <a href="park-city-rental-concierge.html">Residential</a>
@@ -588,10 +666,16 @@ const io=new IntersectionObserver(entries=>{
 fades.forEach(el=>io.observe(el));
 
 // Form
-function submitRentalForm(e){
+async function submitRentalForm(e){
   e.preventDefault();
-  document.getElementById('rentalForm').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
+  const form=e.target, btn=form.querySelector('.form-submit');
+  btn.disabled=true;
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(res.ok){form.style.display='none';document.getElementById('formSuccess').style.display='block';}
+    else{alert('Something went wrong. Please email abby@hammerrealtyutah.com or call 435-513-2171 directly.');}
+  }catch{alert('Something went wrong. Please email abby@hammerrealtyutah.com or call 435-513-2171 directly.');}
+  btn.disabled=false;
 }
 </script>
 </body>
