@@ -516,7 +516,8 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
       </div>
       <div class="fade">
         <div class="form-section">
-          <form class="contact-form" id="buyerForm" onsubmit="submitBuyerForm(event)">
+          <form class="contact-form" id="buyerForm" action="https://formspree.io/f/xjygdodw" method="POST" onsubmit="submitBuyerForm(event)">
+            <input type="hidden" name="_subject" value="Residential Buyer Inquiry — hammerrealtyutah.com"/>
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
@@ -598,10 +599,16 @@ const io=new IntersectionObserver(entries=>{
 },{threshold:0.12});
 fades.forEach(el=>io.observe(el));
 
-function submitBuyerForm(e){
+async function submitBuyerForm(e){
   e.preventDefault();
-  document.getElementById('buyerForm').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
+  const form=e.target, btn=form.querySelector('.form-submit');
+  btn.disabled=true;
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(res.ok){form.style.display='none';document.getElementById('formSuccess').style.display='block';}
+    else{alert('Something went wrong. Please email abby@hammerrealtyutah.com or call 435-513-2171 directly.');}
+  }catch{alert('Something went wrong. Please email abby@hammerrealtyutah.com or call 435-513-2171 directly.');}
+  btn.disabled=false;
 }
 </script>
 </body>
