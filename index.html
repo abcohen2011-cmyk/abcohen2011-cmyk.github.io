@@ -1379,7 +1379,7 @@ footer { background: var(--charcoal); padding: 3rem 2rem; }
         </div>
       </div>
       <div class="fade">
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjygdodw" method="POST" onsubmit="handleSubmit(event)">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xyeepawb" method="POST" onsubmit="handleSubmit(event)">
           <input type="hidden" name="_subject" value="Contact Form — hammerrealtyutah.com"/>
           <div class="form-row">
             <div class="form-group">
@@ -1478,7 +1478,7 @@ async function submitInquiry() {
   data.append('phone', document.getElementById('iq-phone').value);
   data.append('_subject', 'Commercial Space Inquiry — hammerrealtyutah.com');
   try {
-    const res = await fetch('https://formspree.io/f/xjygdodw', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    const res = await fetch('https://formspree.io/f/xyeepawb', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
     if (res.ok) {
       document.getElementById('step2').classList.add('hidden');
       document.getElementById('inquirySuccess').style.display = 'block';
@@ -1498,7 +1498,7 @@ async function submitLease() {
   data.append('lease_expiry', expiry);
   data.append('_subject', 'Lease Check-In — hammerrealtyutah.com');
   try {
-    const res = await fetch('https://formspree.io/f/xjygdodw', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    const res = await fetch('https://formspree.io/f/xyeepawb', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
     if (res.ok) {
       document.getElementById('leaseForm').hidden = true;
       document.getElementById('leaseSuccess').hidden = false;
