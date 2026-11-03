@@ -44,9 +44,15 @@
   </url>
   <url>
     <loc>https://hammerrealtyutah.com/blog.html</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hammerrealtyutah.com/blog/does-commercial-tenant-representation-cost-money.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hammerrealtyutah.com/blog/commercial-lease-expiring-12-month-action-plan.html</loc>
