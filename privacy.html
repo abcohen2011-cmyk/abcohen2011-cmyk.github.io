@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2XKZFN2SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L2XKZFN2SK');
+</script>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy | Hammer Realty &amp; Co.</title>
+<meta name="description" content="How Hammer Realty &amp; Co. collects, uses, and protects information submitted through hammerrealtyutah.com."/>
+<link rel="canonical" href="https://hammerrealtyutah.com/privacy.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --cream: #F5F3EE;
+  --warm-white: #FAFAF8;
+  --charcoal: #1E1E1C;
+  --stone: #8C8880;
+  --stone-light: #D6D3CE;
+  --sage: #7A9E87;
+  --sage-light: #EBF0EC;
+  --sage-dark: #5C7D69;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 3px;
+  --radius-lg: 8px;
+  --max: 1080px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--warm-white); color: var(--charcoal); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,250,248,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--stone-light); height: 64px; display: flex; align-items: center; }
+.nav-inner { max-width: var(--max); margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 max(1.5rem, env(safe-area-inset-left,0px)); padding-right: max(1.5rem, env(safe-area-inset-right,0px)); }
+.nav-logo { font-family: var(--font-display); font-size: 1.05rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; }
+.nav-logo span { color: var(--sage); }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; font-weight: 400; color: var(--stone); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: var(--charcoal); }
+.nav-dropdown { position: relative; }
+.nav-dropdown > a::after { content: ' ▾'; font-size: 0.58rem; vertical-align: middle; }
+.nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--warm-white); border: 1px solid var(--stone-light); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 0.4rem 0; margin-top: 8px; min-width: 185px; white-space: nowrap; z-index: 200; }
+.nav-dropdown-menu a { display: block; padding: 0.5rem 1.2rem; font-size: 0.75rem; color: var(--stone); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s, background 0.15s; border-bottom: 1px solid var(--stone-light); }
+.nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown-menu a:hover { color: var(--charcoal); background: var(--cream); }
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu::before { content: ""; position: absolute; top: -8px; left: 0; right: 0; height: 8px; }
+.nav-cta { font-size: 0.78rem !important; font-weight: 500 !important; color: var(--warm-white) !important; background: var(--charcoal); padding: 0.45rem 1.1rem; border-radius: 3px; letter-spacing: 0.02em !important; text-transform: none !important; transition: background 0.2s !important; text-decoration: none; white-space: nowrap; }
+.nav-cta:hover { background: var(--sage-dark) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--warm-white); border-bottom: 1px solid var(--stone-light); padding: 1.25rem 1.5rem; flex-direction: column; gap: 0; z-index: 99; }
+.mobile-menu a { font-size: 0.92rem; color: var(--charcoal); text-decoration: none; padding: 0.55rem 0; border-bottom: 1px solid var(--stone-light); }
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a.sub { padding-left: 1.25rem; font-size: 0.82rem; color: var(--stone); }
+.mobile-menu.open { display: flex; }
+@media (max-width: 1100px) { .nav-links { display: none; } .hamburger { display: flex; } }
+
+.article-header { padding: 120px 2rem 4rem; background: var(--cream); border-bottom: 1px solid var(--stone-light); }
+.article-header-inner { max-width: 740px; margin: 0 auto; }
+.article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.article-back { font-size: 0.72rem; font-weight: 400; color: var(--stone); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+.article-back:hover { color: var(--charcoal); }
+.article-tag { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage-dark); background: var(--sage-light); padding: 0.2rem 0.6rem; border-radius: 2px; }
+.article-date { font-size: 0.72rem; color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase; }
+.article-headline { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.8rem); color: var(--charcoal); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+.article-deck { font-size: 1.1rem; color: var(--stone); font-weight: 300; line-height: 1.8; max-width: 600px; }
+.article-byline { display: flex; align-items: center; gap: 0.85rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--stone-light); }
+.byline-avatar { width: 42px; height: 42px; background: var(--charcoal); border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+.byline-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; }
+.byline-name { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); }
+.byline-role { font-size: 0.75rem; color: var(--stone); }
+
+.article-wrap { max-width: 740px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+.article-body h2 { font-family: var(--font-display); font-size: clamp(1.3rem, 2.2vw, 1.75rem); color: var(--charcoal); letter-spacing: -0.02em; line-height: 1.25; margin: 2.75rem 0 1rem; }
+.article-body h3 { font-size: 1rem; font-weight: 500; color: var(--charcoal); margin: 2rem 0 0.65rem; letter-spacing: 0.01em; }
+.article-body p { font-size: 1rem; color: var(--charcoal); line-height: 1.9; font-weight: 300; margin-bottom: 1.5rem; }
+.article-body p strong { font-weight: 500; }
+.article-body ul, .article-body ol { margin: 0 0 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.article-body li { font-size: 1rem; color: var(--charcoal); line-height: 1.75; font-weight: 300; }
+.article-body a { color: var(--sage-dark); text-decoration: none; border-bottom: 1px solid rgba(92,125,105,0.4); padding-bottom: 1px; transition: color 0.2s; }
+.article-body a:hover { color: var(--charcoal); }
+
+.callout { background: var(--sage-light); border-left: 3px solid var(--sage); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; padding: 1.5rem 1.75rem; margin: 2.5rem 0; }
+.callout p { margin-bottom: 0; font-size: 0.95rem; color: var(--charcoal); }
+.callout p + p { margin-top: 0.75rem; }
+.callout strong { font-weight: 500; }
+
+.article-cta { background: var(--charcoal); border-radius: var(--radius-lg); padding: 2.5rem; margin: 3.5rem 0 0; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.article-cta-text h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--warm-white); margin-bottom: 0.4rem; }
+.article-cta-text p { font-size: 0.875rem; color: rgba(250,250,248,0.5); font-weight: 300; line-height: 1.7; }
+.article-cta-btn { background: var(--sage); color: var(--warm-white); text-decoration: none; padding: 0.8rem 1.5rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 500; white-space: nowrap; transition: background 0.2s; flex-shrink: 0; }
+.article-cta-btn:hover { background: var(--sage-dark); }
+.article-body .article-disclaimer { font-size: 0.8rem; color: var(--stone); font-style: italic; line-height: 1.7; margin: 2rem 0 0; }
+
+footer { background: var(--charcoal); padding: 3rem 2rem; }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo { font-family: var(--font-display); font-size: 1rem; color: rgba(250,250,248,0.5); text-decoration: none; }
+.footer-logo span { color: var(--sage); }
+.footer-text { font-size: 0.72rem; color: rgba(250,250,248,0.22); line-height: 1.6; }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.78rem; color: rgba(250,250,248,0.35); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--sage); }
+
+@media (max-width: 600px) {
+  .article-header { padding: 100px 1.25rem 3rem; }
+  .article-wrap { padding: 2.5rem 1.25rem 4rem; }
+  .article-cta { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
+  .article-cta-btn { white-space: normal; }
+}
+/* Brand logo (H mark + wordmark) */
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; }
+.brand-mark { height: 38px; width: auto; flex-shrink: 0; overflow: visible; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.nav-logo .brand-text, .footer-logo .brand-text { color: inherit; }
+.nav-logo .brand-name, .footer-logo .brand-name { font-family: 'Times New Roman', Times, Tinos, 'Liberation Serif', serif; font-size: 1.35rem; font-weight: 400; font-style: normal; letter-spacing: -0.01em; color: inherit; }
+.nav-logo .brand-tag, .footer-logo .brand-tag { font-family: 'Inter', system-ui, sans-serif; font-size: 0.5rem; font-weight: 400; font-style: normal; letter-spacing: 0.3em; text-transform: uppercase; color: #7A9E87; margin-top: 0.35rem; white-space: nowrap; }
+.footer-logo .brand-mark { height: 32px; }
+.footer-logo .brand-name { font-size: 1.15rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo brand" aria-label="Hammer Realty &amp; Co. home"><svg class="brand-mark" viewBox="0 20 100 136" aria-hidden="true" focusable="false"><rect x="0" y="20" width="12" height="112" rx="2" fill="currentColor"/><rect x="64" y="44" width="12" height="112" rx="2" fill="currentColor"/><line x1="4.75" y1="71.9" x2="76.25" y2="62.7" stroke="#7A9E87" stroke-width="9.5" stroke-linecap="round"/><circle cx="91.5" cy="143.5" r="7.75" fill="#7A9E87"/></svg><span class="brand-text"><span class="brand-name">Hammer Realty</span><span class="brand-tag">&amp; Co. · Buy · Build · Manage</span></span></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="commercial.html">Commercial</a>
+        <div class="nav-dropdown-menu">
+          <a href="tenant-representation.html">Tenant Representation</a>
+          <a href="industrial-flex-space.html">Industrial &amp; Flex</a>
+          <a href="buyer-representation.html">Buyer Representation</a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <a href="park-city-rental-concierge.html">Residential</a>
+        <div class="nav-dropdown-menu">
+          <a href="park-city-rental-concierge.html">Park City Rental Concierge</a>
+          <a href="residential-buyer-representation.html">Residential Buyer Rep</a>
+        </div>
+      </li>
+      <!-- HIDDEN-VACATION <li class="nav-dropdown">
+        <a href="manage.html">Vacation Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="grocery-stocking.html">Grocery Stocking</a>
+          <a href="home-watch.html">Home Watch</a>
+        </div>
+      </li> -->
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#inquiry" class="nav-cta">Tell Us What You Need</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="commercial.html" onclick="toggleMenu()">Commercial</a>
+  <a href="tenant-representation.html" onclick="toggleMenu()" class="sub">↳ Tenant Representation</a>
+  <a href="industrial-flex-space.html" onclick="toggleMenu()" class="sub">↳ Industrial &amp; Flex</a>
+  <a href="buyer-representation.html" onclick="toggleMenu()" class="sub">↳ Buyer Representation</a>
+  <a href="park-city-rental-concierge.html" onclick="toggleMenu()">Residential</a>
+  <a href="park-city-rental-concierge.html" onclick="toggleMenu()" class="sub">&#8627; Park City Rental Concierge</a>
+  <a href="residential-buyer-representation.html" onclick="toggleMenu()" class="sub">&#8627; Residential Buyer Rep</a>
+  <!-- HIDDEN-VACATION <a href="manage.html" onclick="toggleMenu()">Vacation Services</a>
+  <a href="grocery-stocking.html" onclick="toggleMenu()" class="sub">↳ Grocery Stocking</a>
+  <a href="home-watch.html" onclick="toggleMenu()" class="sub">↳ Home Watch</a> -->
+  <a href="blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#about" onclick="toggleMenu()">About</a>
+  <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+  <a href="index.html#inquiry" onclick="toggleMenu()">Tell Us What You Need</a>
+</div>
+
+<header class="article-header">
+  <div class="article-header-inner">
+    <div class="article-meta">
+      <a href="index.html" class="article-back">← Home</a>
+      <span class="article-date">Effective November 3, 2026</span>
+    </div>
+    <h1 class="article-headline">Privacy Policy</h1>
+    <p class="article-deck">What we collect through this website, how we use it, and the choices you have.</p>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <p>This policy explains what information Hammer Realty &amp; Co. collects through hammerrealtyutah.com, how we use it, and the choices you have. Hammer Realty &amp; Co. is a division of Logical Move Brokerage.</p>
+
+    <h2>Information you give us</h2>
+
+    <p>When you fill out a form on this site, we collect the information you enter. Depending on the form, that may include:</p>
+
+    <ul>
+      <li>Your name, email address, and phone number</li>
+      <li>Details about your search, such as budget, timeline, location, property type, square footage, or number of bedrooms</li>
+      <li>Your current lease's expiration date</li>
+      <li>Anything you write in a message or notes field</li>
+    </ul>
+
+    <p>You can also contact us directly by email or phone, in which case we receive whatever you choose to share.</p>
+
+    <h2>Information collected automatically</h2>
+
+    <p>We use <strong>Google Analytics</strong> to understand how visitors use the site. It collects information such as the pages you view, how you arrived at the site, your browser and device type, and your approximate location (city or region, based on your IP address). It also records when a form is submitted successfully, but not what you entered in the form. Google Analytics uses cookies to do this.</p>
+
+    <p>Like most websites, this site also loads some content from other providers, and they receive basic technical information (such as your IP address and browser type) when your browser requests it:</p>
+
+    <ul>
+      <li><strong>GitHub Pages</strong> hosts the site and may keep server logs for security and reliability.</li>
+      <li><strong>Google Fonts</strong> provides the site's typefaces.</li>
+      <li><strong>Unsplash</strong> provides some of the site's photographs.</li>
+    </ul>
+
+    <h2>How we use your information</h2>
+
+    <ul>
+      <li>To respond to your inquiry and provide the real estate services you ask about</li>
+      <li>To keep records of our client communications and transactions, as required of real estate licensees and our brokerage</li>
+      <li>To understand which pages and services are useful and improve the site</li>
+    </ul>
+
+    <p>We do not sell your personal information, and we do not use it for advertising.</p>
+
+    <h2>Who we share it with</h2>
+
+    <ul>
+      <li><strong>Service providers</strong> that run parts of the site for us: Formspree (which delivers form submissions to us), Google (Analytics), and GitHub (hosting). They process information on our behalf under their own privacy terms.</li>
+      <li><strong>Logical Move Brokerage</strong>, our supervising brokerage, as needed for transactions and required recordkeeping.</li>
+      <li><strong>Others involved in your transaction</strong>, such as landlords, property managers, or sellers, only as needed to provide the services you ask for.</li>
+      <li><strong>Authorities</strong>, if required by law.</li>
+    </ul>
+
+    <h2>How long we keep it</h2>
+
+    <p>We keep inquiry and client information for as long as needed to work with you and to meet brokerage and legal recordkeeping requirements. Analytics data is kept according to the retention settings in our Google Analytics account.</p>
+
+    <h2>Your choices</h2>
+
+    <ul>
+      <li><strong>Analytics:</strong> you can block or delete cookies in your browser settings, or install Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Analytics opt-out browser add-on</a>.</li>
+      <li><strong>Your information:</strong> you can ask us what information we have about you, or ask us to correct or delete it, by contacting us below. Some records may need to be kept to meet legal or brokerage requirements.</li>
+    </ul>
+
+    <h2>Children</h2>
+
+    <p>This site is not directed to children under 13, and we do not knowingly collect information from them.</p>
+
+    <h2>Changes to this policy</h2>
+
+    <p>If we change this policy, we'll update it on this page and change the effective date above.</p>
+
+    <h2>Contact us</h2>
+
+    <p>Questions about this policy or your information? Email <a href="mailto:abby@hammerrealtyutah.com">abby@hammerrealtyutah.com</a> or call <a href="tel:4355132171">435-513-2171</a>.</p>
+
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo brand" aria-label="Hammer Realty &amp; Co. home"><svg class="brand-mark" viewBox="0 20 100 136" aria-hidden="true" focusable="false"><rect x="0" y="20" width="12" height="112" rx="2" fill="currentColor"/><rect x="64" y="44" width="12" height="112" rx="2" fill="currentColor"/><line x1="4.75" y1="71.9" x2="76.25" y2="62.7" stroke="#7A9E87" stroke-width="9.5" stroke-linecap="round"/><circle cx="91.5" cy="143.5" r="7.75" fill="#7A9E87"/></svg><span class="brand-text"><span class="brand-name">Hammer Realty</span><span class="brand-tag">&amp; Co. · Buy · Build · Manage</span></span></a>
+    <p class="footer-text">© 2026 Hammer Realty &amp; Co. · A Division of Logical Move Brokerage · Licensed in Utah<br>435-513-2171 · abby@hammerrealtyutah.com</p>
+    <div class="footer-links">
+      <a href="https://logicalmove.com" target="_blank" rel="noopener">Logical Move</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="blog.html">Blog</a>
+      <a href="mailto:abby@hammerrealtyutah.com">Email</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+</script>
+</body>
+</html>
