@@ -258,13 +258,22 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
   .hero{padding:100px 1.25rem 4rem;}
   .strip-inner{grid-template-columns:1fr 1fr;}
 }
+/* Brand logo (H mark + wordmark) */
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; }
+.brand-mark { height: 38px; width: auto; flex-shrink: 0; overflow: visible; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.nav-logo .brand-text, .footer-logo .brand-text { color: inherit; }
+.nav-logo .brand-name, .footer-logo .brand-name { font-family: 'Times New Roman', Times, Tinos, 'Liberation Serif', serif; font-size: 1.35rem; font-weight: 400; font-style: normal; letter-spacing: -0.01em; color: inherit; }
+.nav-logo .brand-tag, .footer-logo .brand-tag { font-family: 'Inter', system-ui, sans-serif; font-size: 0.5rem; font-weight: 400; font-style: normal; letter-spacing: 0.3em; text-transform: uppercase; color: #7A9E87; margin-top: 0.35rem; white-space: nowrap; }
+.footer-logo .brand-mark { height: 32px; }
+.footer-logo .brand-name { font-size: 1.15rem; }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a href="https://hammerrealtyutah.com" class="nav-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <a href="https://hammerrealtyutah.com" class="nav-logo brand" aria-label="Hammer Realty &amp; Co. home"><svg class="brand-mark" viewBox="0 20 100 136" aria-hidden="true" focusable="false"><rect x="0" y="20" width="12" height="112" rx="2" fill="currentColor"/><rect x="64" y="44" width="12" height="112" rx="2" fill="currentColor"/><line x1="4.75" y1="71.9" x2="76.25" y2="62.7" stroke="#7A9E87" stroke-width="9.5" stroke-linecap="round"/><circle cx="91.5" cy="143.5" r="7.75" fill="#7A9E87"/></svg><span class="brand-text"><span class="brand-name">Hammer Realty</span><span class="brand-tag">&amp; Co. · Buy · Build · Manage</span></span></a>
     <ul class="nav-links">
       <li class="nav-dropdown">
         <a href="commercial.html">Commercial</a>
@@ -653,7 +662,7 @@ footer{background:var(--charcoal);padding:3rem max(1.5rem,env(safe-area-inset-le
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <a href="https://hammerrealtyutah.com" class="footer-logo">Hammer Realty <span>&amp; Co.</span></a>
+    <a href="https://hammerrealtyutah.com" class="footer-logo brand" aria-label="Hammer Realty &amp; Co. home"><svg class="brand-mark" viewBox="0 20 100 136" aria-hidden="true" focusable="false"><rect x="0" y="20" width="12" height="112" rx="2" fill="currentColor"/><rect x="64" y="44" width="12" height="112" rx="2" fill="currentColor"/><line x1="4.75" y1="71.9" x2="76.25" y2="62.7" stroke="#7A9E87" stroke-width="9.5" stroke-linecap="round"/><circle cx="91.5" cy="143.5" r="7.75" fill="#7A9E87"/></svg><span class="brand-text"><span class="brand-name">Hammer Realty</span><span class="brand-tag">&amp; Co. · Buy · Build · Manage</span></span></a>
     <div class="footer-text">Abby Hammer | Utah Licensed Real Estate Agent<br>A Division of Logical Move Brokerage · Park City, Utah</div>
     <nav class="footer-links">
       <a href="commercial.html">Commercial</a>
