@@ -1076,10 +1076,18 @@ function submitForm() {
   if (selectedFile) data.append('list_file', selectedFile);
 
   // TODO: Replace mdeavdbz with your actual Formspree form ID
-  fetch('https://formspree.io/f/mdeavdbz', {
+  const send = body => fetch('https://formspree.io/f/mdeavdbz', {
     method: 'POST',
-    body: data,
+    body,
     headers: { 'Accept': 'application/json' }
+  });
+  // File uploads need a paid Formspree plan; if the send with an attachment fails,
+  // resend without it and flag that the customer has a list file to email over.
+  send(data).then(r => {
+    if (r.ok || !selectedFile) return r;
+    data.delete('list_file');
+    data.append('list_file_note', `Customer attached "${selectedFile.name}" but it could not be uploaded. Ask them to email it.`);
+    return send(data);
   }).then(r => {
     if (r.ok) {
       document.getElementById('bookingForm').hidden = true;

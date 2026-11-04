@@ -231,6 +231,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(30,30,28,0.9
 .nav-logo .brand-tag, .footer-logo .brand-tag { font-family: 'Inter', system-ui, sans-serif; font-size: 0.5rem; font-weight: 400; font-style: normal; letter-spacing: 0.3em; text-transform: uppercase; color: #7A9E87; margin-top: 0.35rem; white-space: nowrap; }
 .footer-logo .brand-mark { height: 32px; }
 .footer-logo .brand-name { font-size: 1.15rem; }
+/* Let layout columns shrink to the screen on small phones */
+.contact-grid > *, .lease-cta-inner > *, .services-grid > *, .form-row > *, .form-group { min-width: 0; }
+.contact-form select, .contact-form input, .lease-form-card select, .lease-form-card input { max-width: 100%; }
 </style>
 
 <!-- NAV (dark — matches hero) -->

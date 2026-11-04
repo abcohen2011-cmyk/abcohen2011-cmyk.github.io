@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /blog/post-template.html
 
 Sitemap: https://hammerrealtyutah.com/sitemap.xml
