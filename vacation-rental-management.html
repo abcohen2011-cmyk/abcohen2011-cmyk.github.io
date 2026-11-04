@@ -1,4 +1,12 @@
 <meta charset="UTF-8"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2XKZFN2SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L2XKZFN2SK');
+</script>
 <link rel="icon" href="/favicon.ico" sizes="any"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
@@ -468,7 +476,7 @@ function submitVR() {
   // TODO: Replace mbgdekbd
   fetch('https://formspree.io/f/mbgdekbd', { method:'POST', body:data, headers:{'Accept':'application/json'} })
     .then(r => {
-      if (r.ok) { document.getElementById('vrForm').hidden=true; document.getElementById('vrSuccess').hidden=false; }
+      if (r.ok) { document.getElementById('vrForm').hidden=true; document.getElementById('vrSuccess').hidden=false; if (window.gtag) gtag('event', 'generate_lead', { form_name: 'vacation_rental' }); }
       else { alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.'); }
     }).catch(()=>{ alert('Could not send. Email abby@hammerrealtyutah.com or call (435) 513-2171.'); });
 }

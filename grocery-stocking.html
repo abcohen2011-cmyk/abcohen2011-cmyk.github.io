@@ -1,4 +1,12 @@
 <meta charset="UTF-8"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2XKZFN2SK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L2XKZFN2SK');
+</script>
 <link rel="icon" href="/favicon.ico" sizes="any"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
@@ -1066,7 +1074,7 @@ function submitForm() {
   }).then(r => {
     if (r.ok) {
       document.getElementById('bookingForm').hidden = true;
-      document.getElementById('formSuccess').hidden = false;
+      document.getElementById('formSuccess').hidden = false; if (window.gtag) gtag('event', 'generate_lead', { form_name: 'grocery_stocking' });
     } else {
       alert('Something went wrong. Please email abby@hammerrealtyutah.com directly.');
     }
