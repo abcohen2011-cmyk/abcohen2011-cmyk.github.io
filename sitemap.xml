@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://hammerrealtyutah.com/blog.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -81,6 +81,12 @@
   <url>
     <loc>https://hammerrealtyutah.com/blog/renew-or-relocate-commercial-lease-utah.html</loc>
     <lastmod>2026-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hammerrealtyutah.com/blog/warehouse-space-for-lease-salt-lake-city.html</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
